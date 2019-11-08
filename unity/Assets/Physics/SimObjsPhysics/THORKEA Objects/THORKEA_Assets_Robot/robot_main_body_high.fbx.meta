@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 4b7e7537b56f71745803671bd1aa07f0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: robot_ar_tag_high
+    100002: robot_battery_high
+    100004: robot_cam_mount_high
+    100006: robot_camera_link_high
+    100008: robot_elbow_link_high
+    100010: robot_finger_l_high
+    100012: robot_finger_r_high
+    100014: robot_forearm_link_high
+    100016: robot_gripper_link_high
+    100018: //RootNode
+    100020: robot_main_wheel_l_high
+    100022: robot_main_wheel_r_high
+    100024: robot_mobile_base_high
+    100026: robot_plate_bottom_high
+    100028: robot_plate_top_high
+    100030: robot_roll_link_high
+    100032: robot_shoulder_link_high
+    100034: robot_tilt_link_high
+    100036: robot_wrist_link_high
+    400000: robot_ar_tag_high
+    400002: robot_battery_high
+    400004: robot_cam_mount_high
+    400006: robot_camera_link_high
+    400008: robot_elbow_link_high
+    400010: robot_finger_l_high
+    400012: robot_finger_r_high
+    400014: robot_forearm_link_high
+    400016: robot_gripper_link_high
+    400018: //RootNode
+    400020: robot_main_wheel_l_high
+    400022: robot_main_wheel_r_high
+    400024: robot_mobile_base_high
+    400026: robot_plate_bottom_high
+    400028: robot_plate_top_high
+    400030: robot_roll_link_high
+    400032: robot_shoulder_link_high
+    400034: robot_tilt_link_high
+    400036: robot_wrist_link_high
+    2100000: _1_-_Default
+    2100002: lambert2
+    2100004: _1_-_Default1
+    2300000: robot_ar_tag_high
+    2300002: robot_battery_high
+    2300004: robot_cam_mount_high
+    2300006: robot_camera_link_high
+    2300008: robot_elbow_link_high
+    2300010: robot_finger_l_high
+    2300012: robot_finger_r_high
+    2300014: robot_forearm_link_high
+    2300016: robot_gripper_link_high
+    2300018: //RootNode
+    2300020: robot_main_wheel_l_high
+    2300022: robot_main_wheel_r_high
+    2300024: robot_mobile_base_high
+    2300026: robot_plate_bottom_high
+    2300028: robot_plate_top_high
+    2300030: robot_roll_link_high
+    2300032: robot_shoulder_link_high
+    2300034: robot_tilt_link_high
+    2300036: robot_wrist_link_high
+    3300000: robot_ar_tag_high
+    3300002: robot_battery_high
+    3300004: robot_cam_mount_high
+    3300006: robot_camera_link_high
+    3300008: robot_elbow_link_high
+    3300010: robot_finger_l_high
+    3300012: robot_finger_r_high
+    3300014: robot_forearm_link_high
+    3300016: robot_gripper_link_high
+    3300018: //RootNode
+    3300020: robot_main_wheel_l_high
+    3300022: robot_main_wheel_r_high
+    3300024: robot_mobile_base_high
+    3300026: robot_plate_bottom_high
+    3300028: robot_plate_top_high
+    3300030: robot_roll_link_high
+    3300032: robot_shoulder_link_high
+    3300034: robot_tilt_link_high
+    3300036: robot_wrist_link_high
+    4300000: robot_main_body_high
+    4300002: robot_cam_mount_high
+    4300004: robot_tilt_link_high
+    4300006: robot_roll_link_high
+    4300008: robot_camera_link_high
+    4300010: robot_plate_bottom_high
+    4300012: robot_plate_top_high
+    4300014: robot_mobile_base_high
+    4300016: robot_shoulder_link_high
+    4300018: robot_elbow_link_high
+    4300020: robot_forearm_link_high
+    4300022: robot_wrist_link_high
+    4300024: robot_gripper_link_high
+    4300026: robot_finger_r_high
+    4300028: robot_finger_l_high
+    4300030: robot_ar_tag_high
+    4300032: robot_battery_high
+    4300034: robot_main_wheel_l_high
+    4300036: robot_main_wheel_r_high
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _1_-_Default
+    second: {fileID: 2100000, guid: c2c0be61b2155fb4d87237966a88dab8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _1_-_Default1
+    second: {fileID: 2100000, guid: db45dbecd8dbd3a428a096d3e6ab77c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 97e3a87b1c9c93744be863636078320e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
