@@ -5673,12 +5673,12 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                 }
             }
 
-            ScreenSpaceAmbientOcclusion script = GameObject.Find("FirstPersonCharacter").GetComponent<ScreenSpaceAmbientOcclusion>();
-            if (action.quality == "Low" || action.quality == "Very Low") {
-                script.enabled = false;
-            } else {
-                script.enabled = true;
-            }
+            // ScreenSpaceAmbientOcclusion script = GameObject.Find("FirstPersonCharacter").GetComponent<ScreenSpaceAmbientOcclusion>();
+            // if (action.quality == "Low" || action.quality == "Very Low") {
+            //     script.enabled = false;
+            // } else {
+            //     script.enabled = true;
+            // }
             actionFinished(true);
         }
 

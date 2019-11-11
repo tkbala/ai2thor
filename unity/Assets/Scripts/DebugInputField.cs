@@ -546,6 +546,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         break;
                     }
 
+                case "cqs":
+                    {
+                        ServerAction action = new ServerAction();
+                        action.action = "ChangeQuality";
+                        action.quality = "Ultra";
+                        PhysicsController.ProcessControlCommand(action);
+                        break;
+                    }
+
                 case "neutral":
                     {
                         ServerAction action = new ServerAction();
