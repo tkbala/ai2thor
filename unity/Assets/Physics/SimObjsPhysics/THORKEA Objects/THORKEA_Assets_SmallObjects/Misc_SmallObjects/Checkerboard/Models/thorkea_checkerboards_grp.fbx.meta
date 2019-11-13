@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 1bf548cb821e56e4499b7c4570bd66e0
+guid: 8c095cccee159fa44b0ff9d0adfbecc8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: checkerboard_1
+    100000: thorkea_checkerboard_1
     100002: //RootNode
-    400000: checkerboard_1
+    400000: thorkea_checkerboard_1
     400002: //RootNode
     2100000: checkerboard_primary_mat
-    2300000: checkerboard_1
-    3300000: checkerboard_1
-    4300000: checkerboard_1
+    2300000: thorkea_checkerboard_1
+    3300000: thorkea_checkerboard_1
+    4300000: thorkea_checkerboard_1
   externalObjects: {}
   materials:
     importMaterials: 1
