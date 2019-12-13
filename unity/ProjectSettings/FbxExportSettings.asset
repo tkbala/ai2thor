@@ -20,18 +20,18 @@
             "Unity_Export_Post",
             "."
         ],
-        "selectedFbxPath": 1,
+        "selectedFbxPath": 0,
         "selectedPrefabPath": 0,
         "dccOptionNames": [],
         "dccOptionPaths": [],
         "exportModelSettingsSerialize": {
             "exportFormat": 1,
             "animatedSkinnedMesh": false,
-            "mayaCompatibleNaming": true,
+            "mayaCompatibleNaming": false,
             "include": 0,
             "lodLevel": 0,
             "objectPosition": 0,
-            "exportUnrendered": true
+            "exportUnrendered": false
         },
         "convertToPrefabSettingsSerialize": {
             "exportFormat": 1,

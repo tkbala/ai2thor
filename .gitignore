@@ -50,6 +50,7 @@ venv/
 .coverage
 coverage_html/
 
+unity/Assets/LODs
 unity/Assets/Plugins/Isolationist
 unity/Assets/Plugins/Isolationist.meta
 unity/Assets/Plugins/Editor
@@ -81,6 +82,8 @@ unity/Assets/Editor/Simplygon.dll
 unity/Assets/Editor/Simplygon.dll.meta
 unity/Assets/Editor/SimplygonReadMe.txt
 unity/Assets/Editor/SimplygonReadMe.txt.meta
+unity/Assets/Editor/SimplygonShadingNetworkSetup.json
+unity/Assets/Editor/SimplygonShadingNetworkSetup.json.meta
 
 unity/Assets/Physics/SimObjsPhysics/Kitchen Objects/Potatoes/Materials/PotatoSlice_AlbedoTransparency.png.meta
 unity/Assets/Physics/SimObjsPhysics/Kitchen Objects/Potatoes/Materials/PotatoSlice_Normal.png.meta
