@@ -629,38 +629,51 @@ def pending_travis_build():
     for b in res.json()["builds"]:
         return dict(branch=b["branch"]["name"], commit_id=b["commit"]["sha"])
 
+def rsync_build_root(build_root):
+
+    os.makedirs(build_root, exist_ok=True)
+    subprocess.check_call("rsync -auv --exclude 'Library' --delete unity %s" % build_root, shell=True)
+
 
 @task
 def ci_build(context):
     import fcntl
+    from multiprocessing import Process
 
     lock_f = open(os.path.join(os.environ["HOME"], ".ci-build.lock"), "w")
-
     try:
         fcntl.flock(lock_f, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        build = pending_travis_build()
+        build = dict(commit_id='8e5b88042c2e28a89b014dc6f10f581937603ecc', branch='master') #pending_travis_build()
         if build:
-            clean()
-            link_build_cache(build["branch"])
-            subprocess.check_call("git fetch", shell=True)
-            subprocess.check_call("git checkout %s" % build["branch"], shell=True)
-            subprocess.check_call(
-                "git checkout -qf %s" % build["commit_id"], shell=True
-            )
+            #clean()
+            #link_build_cache(build["branch"])
+            #subprocess.check_call("git fetch", shell=True)
+            #subprocess.check_call("git checkout %s" % build["branch"], shell=True)
+            #subprocess.check_call(
+            #    "git checkout -qf %s" % build["commit_id"], shell=True
+            #)
 
             procs = []
             for arch in ["OSXIntel64", "Linux64"]:
-                p = ci_build_arch(arch, build["branch"])
-                procs.append(p)
+                build_root = os.path.join(os.environ["HOME"], "build-root", build["branch"], arch)
+                rsync_build_root(build_root)
 
-            if build["branch"] == "master":
-                webgl_build_deploy_demo(
-                    context, verbose=True, content_addressable=True, force=True
-                )
+                proc = Process(target=ci_build_arch, args=(arch, build_root, build['commit_id']))
+                proc.start()
+                import time
+                time.sleep(1)
+                procs.append(proc)
+
+            #if build["branch"] == "master":
+            #    build_root = os.path.join(os.environ["HOME"], "build-root", build["branch"], "WebGL")
+            #    rsync_build_root(build_root)
+            #    os.chdir(build_root)
+            #    webgl_build_deploy_demo(
+            #        context, verbose=True, content_addressable=True, force=True
+            #    )
 
             for p in procs:
-                if p:
-                    p.join()
+                p.join()
 
         fcntl.flock(lock_f, fcntl.LOCK_UN)
 
@@ -670,30 +683,23 @@ def ci_build(context):
     lock_f.close()
 
 
-def ci_build_arch(arch, branch):
-    from multiprocessing import Process
-    import subprocess
-    import boto3
+def ci_build_arch(arch, build_root, commit_id):
     import ai2thor.downloader
-
-    github_url = "https://github.com/allenai/ai2thor"
-
-    commit_id = (
-        subprocess.check_output("git log -n 1 --format=%H", shell=True)
-        .decode("ascii")
-        .strip()
-    )
 
     if ai2thor.downloader.commit_build_exists(arch, commit_id):
         print("found build for commit %s %s" % (commit_id, arch))
         return
 
     build_url_base = "http://s3-us-west-2.amazonaws.com/%s/" % S3_BUCKET
-    unity_path = "unity"
     build_name = "thor-%s-%s" % (arch, commit_id)
     build_dir = os.path.join("builds", build_name)
     build_path = build_dir + ".zip"
     build_info = {}
+    unity_path = 'unity'
+    os.environ['HOME'] = build_root
+
+    # we should be in a separate process at this point
+    os.chdir(build_root)
 
     build_info["url"] = build_url_base + build_path
     build_info["build_exception"] = ""
@@ -704,17 +710,12 @@ def ci_build_arch(arch, branch):
         _build(unity_path, arch, build_dir, build_name)
 
         print("pushing archive")
-        proc = Process(
-            target=archive_push, args=(unity_path, build_path, build_dir, build_info)
-        )
-        proc.start()
+        archive_push(unity_path, build_path, build_dir, build_info)
 
     except Exception as e:
         print("Caught exception %s" % e)
         build_info["build_exception"] = "Exception building: %s" % e
         build_log_push(build_info)
-
-    return proc
 
 
 @task
