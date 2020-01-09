@@ -636,13 +636,13 @@ def rsync_build_root(build_root):
 
 
 @task
-def ci_build(context):
+def ci_build(context, target_arch):
     import fcntl
     from multiprocessing import Process
 
     lock_f = open(os.path.join(os.environ["HOME"], ".ci-build.lock"), "w")
     try:
-        fcntl.flock(lock_f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        # fcntl.flock(lock_f, fcntl.LOCK_EX | fcntl.LOCK_NB)
         build = dict(commit_id='8e5b88042c2e28a89b014dc6f10f581937603ecc', branch='master') #pending_travis_build()
         if build:
             #clean()
@@ -654,14 +654,15 @@ def ci_build(context):
             #)
 
             procs = []
-            for arch in ["OSXIntel64", "Linux64"]:
+            for arch in [target_arch]:
+            #for arch in ["OSXIntel64", "Linux64"]:
                 build_root = os.path.join(os.environ["HOME"], "build-root", build["branch"], arch)
                 rsync_build_root(build_root)
 
                 proc = Process(target=ci_build_arch, args=(arch, build_root, build['commit_id']))
                 proc.start()
                 import time
-                time.sleep(1)
+                #time.sleep(45)
                 procs.append(proc)
 
             #if build["branch"] == "master":
@@ -675,12 +676,12 @@ def ci_build(context):
             for p in procs:
                 p.join()
 
-        fcntl.flock(lock_f, fcntl.LOCK_UN)
+        #fcntl.flock(lock_f, fcntl.LOCK_UN)
 
     except BlockingIOError as e:
         pass
 
-    lock_f.close()
+    #lock_f.close()
 
 
 def ci_build_arch(arch, build_root, commit_id):
@@ -688,7 +689,7 @@ def ci_build_arch(arch, build_root, commit_id):
 
     if ai2thor.downloader.commit_build_exists(arch, commit_id):
         print("found build for commit %s %s" % (commit_id, arch))
-        return
+        #return
 
     build_url_base = "http://s3-us-west-2.amazonaws.com/%s/" % S3_BUCKET
     build_name = "thor-%s-%s" % (arch, commit_id)
@@ -696,7 +697,7 @@ def ci_build_arch(arch, build_root, commit_id):
     build_path = build_dir + ".zip"
     build_info = {}
     unity_path = 'unity'
-    os.environ['HOME'] = build_root
+    #os.environ['HOME'] = build_root
 
     # we should be in a separate process at this point
     os.chdir(build_root)
@@ -707,9 +708,13 @@ def ci_build_arch(arch, build_root, commit_id):
     proc = None
     try:
         build_info["log"] = "%s.log" % (build_name,)
+        # current_home = os.environ['HOME']
+        # os.environ['HOME'] = build_root
+        # allow unity to have a separate home for each arch
         _build(unity_path, arch, build_dir, build_name)
 
         print("pushing archive")
+        # os.environ['HOME'] = current_home
         archive_push(unity_path, build_path, build_dir, build_info)
 
     except Exception as e:
