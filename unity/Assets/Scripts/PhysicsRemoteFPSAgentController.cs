@@ -543,6 +543,16 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             actionFinished(true);
         }
 
+        public void InstantiateObject(ServerAction action) {
+            PhysicsSceneManager script = GameObject.Find("PhysicsSceneManager").GetComponent<PhysicsSceneManager>();
+            GameObject obj = (GameObject) Resources.Load("InstantiatableObjects/" + action.objectName);
+            Instantiate(obj,
+                new Vector3(action.px, action.py, action.pz),
+                Quaternion.Euler(new Vector3(action.rx, action.ry, action.rz)));
+            script.SetupScene();
+            actionFinished(true);
+        }
+
         //return ID of closest CanPickup object by distance
         public string UniqueIDOfClosestVisibleObject() {
             string objectID = null;
@@ -8158,7 +8168,7 @@ namespace UnityStandardAssets.Characters.FirstPerson {
         public void RemoveFromScene(ServerAction action) {
             //pass name of object in from action.objectId
             if (action.objectId == null) {
-                errorMessage = "objectId required for OpenObject";
+                errorMessage = "objectId required for RemoveFromScene";
                 actionFinished(false);
                 return;
             }
@@ -8166,6 +8176,27 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             //see if the object exists in this scene
             if (physicsSceneManager.UniqueIdToSimObjPhysics.ContainsKey(action.objectId)) {
                 physicsSceneManager.UniqueIdToSimObjPhysics[action.objectId].transform.gameObject.SetActive(false);
+                physicsSceneManager.SetupScene();
+                actionFinished(true);
+                return;
+            }
+
+            errorMessage = action.objectId + " could not be found in this scene, so it can't be removed";
+            actionFinished(false);
+        }
+
+        //remove a given sim object from the scene. Pass in the object's uniqueID string to remove it.
+        public void ChangeObjectColor(ServerAction action) {
+            //pass name of object in from action.objectId
+            if (action.objectId == null) {
+                errorMessage = "objectId required for OpenObject";
+                actionFinished(false);
+                return;
+            }
+
+            //see if the object exists in this scene
+            if (physicsSceneManager.UniqueIdToSimObjPhysics.ContainsKey(action.objectId)) {
+                physicsSceneManager.UniqueIdToSimObjPhysics[action.objectId].transform.gameObject.GetComponent<Renderer>().material.SetColor("_Color", new Color(action.r, action.g, action.b));
                 physicsSceneManager.SetupScene();
                 actionFinished(true);
                 return;

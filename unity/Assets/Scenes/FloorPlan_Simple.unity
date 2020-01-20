@@ -2042,13 +2042,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587a504035593475e8b341393f7585fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apple: {fileID: 1483958169270224, guid: 7336879edc19241f99b517e147a6e64b, type: 3}
+  apple: {fileID: 8591378880670162269, guid: ad7be9cc5bb564516a1c11f8ab631bf9, type: 3}
   trap: {fileID: 1990714079004184033, guid: 5a31d614f51d648e3b06602a3464594d, type: 3}
   interiorWall: {fileID: 3987683640639274588, guid: 6a084133e1048471186f2e8a651581a1,
     type: 3}
   robot: {fileID: 1916272631}
   objectsParent: {fileID: 278666292}
   floor: {fileID: 76100947}
+  psm: {fileID: 2010130634}
 --- !u!4 &183043093
 Transform:
   m_ObjectHideFlags: 0
@@ -20632,6 +20633,13 @@ MonoBehaviour:
     rotateGaussianMu: 0
     rotateGaussianSigma: 0
     rotateDegrees: 0
+    objectName: apple_1
+    px: 0
+    py: 0
+    pz: 0
+    rx: 0
+    ry: 0
+    rz: 0
     forceKinematic: 0
     maxAgentsDistance: -1
     alwaysReturnVisibleRange: 0
@@ -20676,6 +20684,7 @@ MonoBehaviour:
     useAgentTransform: 0
   gridLine: {fileID: 3863561357079444455, guid: c1dd6f753b0284d38a8e54bfff4e54e9,
     type: 3}
+  yugi: 0
 --- !u!114 &1916272636 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114749714472260818, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -21401,6 +21410,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+--- !u!114 &2010130634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114080650210219948, guid: 3a963756b61df410c91df72a73d4efde,
+    type: 3}
+  m_PrefabInstance: {fileID: 43005959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdadd703a175436c99f8c512bf98ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017287162
 GameObject:
   m_ObjectHideFlags: 0

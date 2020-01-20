@@ -16,9 +16,14 @@ public class SimpleSceneRandomObjectPositions : MonoBehaviour
 
     private GameObject appleInstance;
 
+    public PhysicsSceneManager psm;
+
+    public GameObject gridCorner;
+
     // Start is called before the first frame update
     void Start()
     {
+        gridCorner.GetComponent<Renderer>().material.SetColor("_Color", new Color(0.5f, 0.5f, 0.5f));
         UnityEngine.Random.InitState(42);
         int minX = 1;
         int minZ = -10;
@@ -84,7 +89,27 @@ public class SimpleSceneRandomObjectPositions : MonoBehaviour
 
 			// moves to the next random pair
             pairs.RemoveAt(0);
+
+            psm.SetupScene();
 		}
+
+        /*
+        System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo("Assets/Prefabs/SimpleScenePrefabs");
+        System.IO.FileInfo[] info = dir.GetFiles("*.*");
+        foreach (System.IO.FileInfo file in info) {
+            GameObject obj = (GameObject) Resources.Load("/Assets/Prefabs/SimpleScenePrefabs/trap");
+            string filename = file.ToString();
+            if (filename.EndsWith(".prefab")) {
+                // Instantiate(obj, new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+                /*
+                Instantiate(Resources.Load(filename),
+                    new Vector3(0, 0, 0),
+                    Quaternion.Euler(new Vector3(0, 0, 0))
+                    );
+                Debug.Log(filename);
+            }
+            // Debug.Log(file.ToString().EndsWith(".prefab"));
+        }*/
     }
 
     int frame = 1;

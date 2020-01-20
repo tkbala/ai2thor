@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueID: Microwave|+05.48|-00.50|-07.52
-  Type: 16
+  Type: 149
   PrimaryProperty: 1
   SecondaryProperties: 
   BoundingBox: {fileID: 1990714077953498924}

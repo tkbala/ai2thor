@@ -974,6 +974,20 @@ public class ServerAction
     public float rotateGaussianSigma;
     public float rotateDegrees;
 
+    // used for instantiating objects in the Resources folder
+    public string objectName = "apple_sim";
+    public float px = 0;
+    public float py = 0;
+    public float pz = 0;
+    public float rx = 0;
+    public float ry = 0;
+    public float rz = 0;
+
+    // used to set RGB color of an object
+    public float r;
+    public float g;
+    public float b;
+
 	public bool forceKinematic;
 
 	public float maxAgentsDistance = -1.0f;

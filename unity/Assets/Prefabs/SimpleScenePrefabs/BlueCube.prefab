@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueID: 
-  Type: 25
+  Type: 150
   PrimaryProperty: 3
   SecondaryProperties: 
   BoundingBox: {fileID: 5030521663360623803}
