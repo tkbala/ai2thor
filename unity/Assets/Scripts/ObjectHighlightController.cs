@@ -102,6 +102,34 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
         public void MouseControls()
 		{
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                ServerAction action = new ServerAction();
+                action.action = "PutObject";
+                action.receptacleObjectId = "Microwave|-02.80|+00.81|+00.38";
+
+                this.PhysicsController.ProcessControlCommand(action);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+            {
+                ServerAction action = new ServerAction();
+                if (GameObject.Find("Microwave_0314037b").GetComponent("CanToggleOnOff").GetComponent("isOn") == false)
+       
+                {
+                    action.action = "ToggleObjectOn";
+                    action.receptacleObjectId = "Microwave|-02.80|+00.81|+00.38";
+                }
+
+               // else
+               //{
+                   // action.action = "ToggleObjectOff";
+                   // action.receptacleObjectId = "Microwave|-02.80|+00.81|+00.38";
+               // }
+
+                this.PhysicsController.ProcessControlCommand(action);
+            }
+
             // Interact action for mouse left-click when nothing is picked up
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -260,23 +288,23 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                     if (mRenderer != null && useHighlightShader)
                     {
                         if (this.highlightedObject != newHighlightedObject) {
-                            newPreviousShader = mRenderer.material.shader;
-                            this.previousRenderQueueValue = mRenderer.material.renderQueue;
-                            mRenderer.material.renderQueue = -1;
-                            mRenderer.material.shader = this.highlightShader;
+                            //newPreviousShader = mRenderer.material.shader;
+                            //this.previousRenderQueueValue = mRenderer.material.renderQueue;
+                            //mRenderer.material.renderQueue = -1;
+                            //mRenderer.material.shader = this.highlightShader;
                         }  
 
                         if (withinReach)
                         {
                             softHighlight = true;
-                            mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.WithinReachOutlineThickness);
-                            mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.WithinReachOutlineColor);
+                            //mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.WithinReachOutlineThickness);
+                            //mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.WithinReachOutlineColor);
                         }
                         else if (softHighlight)
                         {
                             softHighlight = false;
-                            mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.SoftOutlineThickness);
-                            mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.SoftOutlineColor);
+                            //mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.SoftOutlineThickness);
+                            //mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.SoftOutlineColor);
                         }
                     }
                 }
@@ -294,9 +322,9 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
                     if (mRenderer != null && useHighlightShader)
                     {
-                        mRenderer.material.shader = this.previousShader;
+                        //mRenderer.material.shader = this.previousShader;
                         // TODO unity has a bug for transparent objects they disappear when shader swapping, so we reset the previous shader's render queue value to render it appropiately.
-                        mRenderer.material.renderQueue = this.previousRenderQueueValue;
+                        //mRenderer.material.renderQueue = this.previousRenderQueueValue;
                     }
             }
             
