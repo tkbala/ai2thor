@@ -36,6 +36,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] protected GameObject DebugPointPrefab;
         [SerializeField] private GameObject GridRenderer;
         [SerializeField] protected GameObject DebugTargetPointPrefab;
+        [SerializeField] protected bool inTopLevelView = false;
+        [SerializeField] protected Vector3 lastLocalCameraPosition;
+        [SerializeField] protected Quaternion lastLocalCameraRotation;
         public float autoResetTimeScale = 1.0f;
 
         public Vector3[] reachablePositions = new Vector3[0];
@@ -68,6 +71,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public GameObject DroneVisCap;//meshes used for Drone mode
         public GameObject DroneBasket;//reference to the drone's basket object
         private bool isVisible = true;
+        public bool inHighFrictionArea = false;
+
         public bool IsVisible
         {
 			get 
@@ -156,6 +161,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return _physicsSceneManager;
             }
         }
+
+        //reference to prefab for activiting the cracked camera effect via CameraCrack()
+        [SerializeField] GameObject CrackedCameraCanvas;
 
 		// Initialize parameters from environment variables
 		protected virtual void Awake()
@@ -1102,7 +1110,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             //if the sim object is moveable or pickupable
-            if(simObj.IsPickupable || simObj.IsMoveable)
+            if(simObj.IsPickupable || simObj.IsMoveable || simObj.salientMaterials.Length > 0)
             {
                 //this object should report back mass and salient materials
 
@@ -1362,6 +1370,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 agentMeta.cameraHorizon -= 360;
             }
 	        agentMeta.isStanding = (m_Camera.transform.localPosition - standingLocalCameraPosition).magnitude < 0.1f;
+            agentMeta.inHighFrictionArea = inHighFrictionArea;
 
             // OTHER METADATA
             MetadataWrapper metaMessage = new MetadataWrapper();
@@ -2255,6 +2264,88 @@ namespace UnityStandardAssets.Characters.FirstPerson
             return currentlyVisibleItems;
         }
 
+        //not sure what this does, maybe delete?
+        public void SetTopLevelView(ServerAction action) {
+            inTopLevelView = action.topView;
+            actionFinished(true);
+        }
+
+        public void ToggleMapView(ServerAction action) {
+
+            SyncTransform[] syncInChildren;
+
+            List<StructureObject> structureObjsList = new List<StructureObject>();
+            StructureObject[] structureObjs = FindObjectsOfType(typeof(StructureObject)) as StructureObject[];
+
+            foreach(StructureObject so in structureObjs)
+            {
+                if(so.WhatIsMyStructureObjectTag == StructureObjectTag.Ceiling)
+                {
+                    structureObjsList.Add(so);
+                }
+            }
+
+            if (inTopLevelView) {
+                inTopLevelView = false;
+                m_Camera.orthographic = false;
+                m_Camera.transform.localPosition = lastLocalCameraPosition;
+                m_Camera.transform.localRotation = lastLocalCameraRotation;
+
+                //restore agent body culling
+                m_Camera.transform.GetComponent<FirstPersonCharacterCull>().StopCullingThingsForASecond = false;
+                syncInChildren = gameObject.GetComponentsInChildren<SyncTransform>();
+                foreach (SyncTransform sync in syncInChildren)
+                {
+                    sync.StopSyncingForASecond = false;
+                }
+
+                foreach(StructureObject so in structureObjsList)
+                {
+                    UpdateDisplayGameObject(so.gameObject, true);
+                }
+            } 
+            
+            else {
+
+                //stop culling the agent's body so it's visible from the top?
+                m_Camera.transform.GetComponent<FirstPersonCharacterCull>().StopCullingThingsForASecond = true;
+                syncInChildren = gameObject.GetComponentsInChildren<SyncTransform>();
+                foreach (SyncTransform sync in syncInChildren)
+                {
+                    sync.StopSyncingForASecond = true;
+                }
+
+                inTopLevelView = true;
+                lastLocalCameraPosition = m_Camera.transform.localPosition;
+                lastLocalCameraRotation = m_Camera.transform.localRotation;
+
+                Bounds b = sceneBounds;
+                float midX = (b.max.x + b.min.x) / 2.0f;
+                float midZ = (b.max.z + b.min.z) / 2.0f;
+                m_Camera.transform.rotation = Quaternion.Euler(90.0f, 0.0f, 0.0f);
+                m_Camera.transform.position = new Vector3(midX, b.max.y + 5, midZ);
+                m_Camera.orthographic = true;
+
+                m_Camera.orthographicSize = Math.Max((b.max.x - b.min.x) / 2f, (b.max.z - b.min.z) / 2f);
+
+                cameraOrthSize = m_Camera.orthographicSize;
+                foreach(StructureObject so in structureObjsList)
+                {
+                    UpdateDisplayGameObject(so.gameObject, false);
+                }            }
+            actionFinished(true);
+        }
+
+
+        public void UpdateDisplayGameObject(GameObject go, bool display) {
+            if (go != null) {
+                foreach (MeshRenderer mr in go.GetComponentsInChildren<MeshRenderer>() as MeshRenderer[]) {
+                    if (!initiallyDisabledRenderers.Contains(mr.GetInstanceID())) {
+                        mr.enabled = display;
+                    }
+                }
+            }
+        }
          public void VisualizePath(ServerAction action) {
             var path = action.positions;
             if (path == null || path.Count == 0) {
@@ -2716,6 +2807,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             actionFinished(true, results.ToArray());
         }
 
+        public void CameraCrack(ServerAction action)
+        {
+            GameObject canvas = Instantiate(CrackedCameraCanvas);
+            CrackedCameraManager camMan = canvas.GetComponent<CrackedCameraManager>();
+
+            camMan.SpawnCrack(action.randomSeed);
+            actionFinished(true);
+        }
+
+        public void OnTriggerStay(Collider other)
+        {
+            if(other.CompareTag("HighFriction"))
+            {
+                inHighFrictionArea = true;
+            }
+            
+            else
+            {
+                inHighFrictionArea = false;
+            }
+        }
 
         #if UNITY_EDITOR
         void OnDrawGizmos()

@@ -5997,7 +5997,6 @@ Transform:
   - {fileID: 251941519}
   - {fileID: 251941513}
   - {fileID: 251941507}
-  - {fileID: 1654074335}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10455,6 +10454,36 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 374728371121298902, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880273619956007, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880273856465673, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880274048310186, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880274079169737, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880274260942506, guid: 317c8d55130b75345bb801e11c15354f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 375880274380788411, guid: 317c8d55130b75345bb801e11c15354f,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
@@ -18208,7 +18237,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 369063735}
+    m_TransformParent: {fileID: 1506574209}
     m_Modifications:
     - target: {fileID: 1346712558394084, guid: fe91cb3602a754920b10df0f196b17c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18244,7 +18273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248124881432168, guid: fe91cb3602a754920b10df0f196b17c2, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4248124881432168, guid: fe91cb3602a754920b10df0f196b17c2, type: 3}
       propertyPath: m_LocalScale.z
@@ -19523,6 +19552,7 @@ Transform:
   - {fileID: 1639977170}
   - {fileID: 474716453}
   - {fileID: 1112392607}
+  - {fileID: 1654074335}
   m_Father: {fileID: 694849266}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19834,7 +19864,7 @@ MonoBehaviour:
   HFbounciness: 0
   HFrbdrag: 0
   HFrbangulardrag: 0
-  salientMaterials: 
+  salientMaterials: 0100000006000000
   MySpawnPoints: []
   CurrentTemperature: 0
   HowManySecondsUntilRoomTemp: 10
@@ -23284,9 +23314,25 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 1719950712073222, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 64
+    - target: {fileID: 4250434473923304, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1857874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250434473923304, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.81212485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250434473923304, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5469306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250434473923304, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250434473923304, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92387867
       objectReference: {fileID: 0}
     - target: {fileID: 1794768057090620, guid: 516a3a667ad6a4348997a8a61e638d1a, type: 3}
       propertyPath: m_StaticEditorFlags
