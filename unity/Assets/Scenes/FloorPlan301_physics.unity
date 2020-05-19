@@ -2722,7 +2722,7 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 1375896830636394, guid: 60004d8aab25421428aae7c8eb14dd25, type: 3}
+    - target: {fileID: 1617061045105952, guid: 60004d8aab25421428aae7c8eb14dd25, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
@@ -4859,32 +4859,32 @@ PrefabInstance:
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2117682
+      value: 2.211615
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00961107
+      value: 0.009543002
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2589623
+      value: -1.2590002
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00016496347
+      value: -0.00009535486
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000031206288
+      value: -0.00003431551
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000007900248
+      value: -0.00007531589
       objectReference: {fileID: 0}
     - target: {fileID: 5299781086787557521, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
@@ -4954,7 +4954,7 @@ PrefabInstance:
     - target: {fileID: 6210525261799372980, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: 0.60616016
+      value: 0.6061604
       objectReference: {fileID: 0}
     - target: {fileID: 6210525261799372980, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
@@ -5001,12 +5001,12 @@ PrefabInstance:
       propertyPath: m_TranslationOffsets.Array.data[0].x
       value: -0.58775306
       objectReference: {fileID: 0}
-    - target: {fileID: 8298876614243615750, guid: 8ea3ad8a105c9514da58ca7c526f1855,
+    - target: {fileID: 8277511309544879327, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].y
-      value: 0.6228488
+      value: 0.1797285
       objectReference: {fileID: 0}
-    - target: {fileID: 8298876614243615750, guid: 8ea3ad8a105c9514da58ca7c526f1855,
+    - target: {fileID: 8277511309544879327, guid: 8ea3ad8a105c9514da58ca7c526f1855,
         type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
       value: 0.08274937
@@ -6398,7 +6398,7 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 1257410271994862, guid: ab4c3d5ba2b1240a2b2fd6bcf3fdbba1, type: 3}
+    - target: {fileID: 1816244106137096, guid: ab4c3d5ba2b1240a2b2fd6bcf3fdbba1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
@@ -9961,9 +9961,9 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 1235878650029030, guid: 924fe743576f82447a9a300be24989c2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 64
+    - target: {fileID: 4059309536990946, guid: 924fe743576f82447a9a300be24989c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.066247314
       objectReference: {fileID: 0}
     - target: {fileID: 1363414493317940, guid: 924fe743576f82447a9a300be24989c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11237,7 +11237,7 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 1592009696697164, guid: 9a7d85ca1d0959640855fc6d148bfb6c, type: 3}
+    - target: {fileID: 1502846251417890, guid: 9a7d85ca1d0959640855fc6d148bfb6c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
