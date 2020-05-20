@@ -465,7 +465,6 @@ public class CanOpen_Object : MonoBehaviour
 		{
 			//Interact();
 
-            print("we are calling Reset() now");
             //we are still open, trying to close, but hit something - reset to open
 			if(isOpen)
 			{
@@ -562,10 +561,10 @@ public class CanOpen_Object : MonoBehaviour
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if(other.CompareTag("Receptacle"))
-        {
-            return;
-        }
+		// if(other.CompareTag("Receptacle"))
+        // {
+        //     return;
+        // }
 		//note: Normally rigidbodies set to Kinematic will never call the OnTriggerX events
 		//when colliding with another rigidbody that is kinematic. For some reason, if the other object
 		//has a trigger collider even though THIS object only has a kinematic rigidbody, this
@@ -577,20 +576,20 @@ public class CanOpen_Object : MonoBehaviour
 
 		//if hitting the Agent AND not being currently held by the Agent(so things like Laptops don't constantly reset if the agent is holding them)
         //..., reset position and report failed action
-		if (other.name == "FPSController" && canReset == true && !gameObject.GetComponentInParent<PhysicsRemoteFPSAgentController>())
-		{
-            #if UNITY_EDITOR
-			Debug.Log(gameObject.name + " hit " + other.name + " Resetting position");
-            #endif
-			canReset = false;
-			Reset();
-		}
+		// if (other.name == "FPSController" && canReset == true && !gameObject.GetComponentInParent<PhysicsRemoteFPSAgentController>())
+		// {
+        //     #if UNITY_EDITOR
+		// 	Debug.Log(gameObject.name + " hit " + other.name + " Resetting position");
+        //     #endif
+		// 	canReset = false;
+		// 	Reset();
+		// }
 
-		//// If the thing your colliding with is one of your (grand)-children then don't worry about it
-		if (hasAncestor(other.transform.gameObject, gameObject))
-		{
-			return;
-		}
+		// //// If the thing your colliding with is one of your (grand)-children then don't worry about it
+		// if (hasAncestor(other.transform.gameObject, gameObject))
+		// {
+		// 	return;
+		// }
 
 		//if hitting another object that has double doors, do some checks 
 		if (other.GetComponentInParent<CanOpen_Object>() && canReset == true)

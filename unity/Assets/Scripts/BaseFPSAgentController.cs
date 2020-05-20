@@ -835,7 +835,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void RemoveFromScene(ServerAction action) {
             //pass name of object in from action.objectId
             if (action.objectId == null) {
-                errorMessage = "objectId required for OpenObject";
+                errorMessage = "objectId required for RemoveFromScene action. Please pass in a valid objectId";
                 actionFinished(false);
                 return;
             }
