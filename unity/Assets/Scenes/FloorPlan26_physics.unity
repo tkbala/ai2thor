@@ -2562,7 +2562,6 @@ GameObject:
   - component: {fileID: 130567692}
   - component: {fileID: 130567694}
   - component: {fileID: 130567693}
-  - component: {fileID: 130567609}
   - component: {fileID: 130567639}
   m_Layer: 8
   m_Name: mesh
@@ -2634,19 +2633,6 @@ GameObject:
   m_NavMeshLayer: 3
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!65 &130567609
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130567605}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 2.5794954, y: 5.012726, z: 0.12196266}
-  m_Center: {x: -1.2433755, y: -2.4470067, z: -0.0603902}
 --- !u!64 &130567610
 MeshCollider:
   m_ObjectHideFlags: 0

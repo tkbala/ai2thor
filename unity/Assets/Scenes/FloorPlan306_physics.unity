@@ -12171,7 +12171,6 @@ GameObject:
   - component: {fileID: 2120211444}
   - component: {fileID: 2120211446}
   - component: {fileID: 2120211445}
-  - component: {fileID: 2120211447}
   - component: {fileID: 2120211448}
   m_Layer: 8
   m_Name: mesh
@@ -12242,19 +12241,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120211443}
   m_Mesh: {fileID: 4300098, guid: ebf34e806fdde894885a5df544fd3beb, type: 3}
---- !u!65 &2120211447
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120211443}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 5.4896345, y: 0.47880486, z: 4.022917}
-  m_Center: {x: 1.0239334, y: -0.23940204, z: -0.3885417}
 --- !u!114 &2120211448
 MonoBehaviour:
   m_ObjectHideFlags: 0

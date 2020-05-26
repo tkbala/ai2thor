@@ -23597,7 +23597,6 @@ GameObject:
   - component: {fileID: 1233044836}
   - component: {fileID: 1233044839}
   - component: {fileID: 1233044838}
-  - component: {fileID: 1233044837}
   - component: {fileID: 1233044840}
   m_Layer: 8
   m_Name: mesh
@@ -23622,19 +23621,6 @@ Transform:
   m_Father: {fileID: 622836614}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1233044837
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233044835}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 3.153458, y: 4.4116445, z: 0.16588399}
-  m_Center: {x: -1.4250894, y: -1.9656962, z: -0.082941994}
 --- !u!23 &1233044838
 MeshRenderer:
   m_ObjectHideFlags: 0

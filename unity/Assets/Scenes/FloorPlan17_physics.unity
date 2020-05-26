@@ -3270,7 +3270,6 @@ GameObject:
   - component: {fileID: 156351223}
   - component: {fileID: 156351225}
   - component: {fileID: 156351224}
-  - component: {fileID: 156351219}
   - component: {fileID: 156351193}
   m_Layer: 8
   m_Name: mesh
@@ -3728,19 +3727,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300006, guid: 49dca700f32474955a0ebc2edb9ca571, type: 3}
---- !u!65 &156351219
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156351189}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 3.6, y: 0.107999995, z: 5.2}
-  m_Center: {x: 0, y: -0.045999996, z: 1.4}
 --- !u!64 &156351220
 MeshCollider:
   m_ObjectHideFlags: 0
