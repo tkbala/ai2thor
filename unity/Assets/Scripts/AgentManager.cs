@@ -162,7 +162,7 @@ public class AgentManager : MonoBehaviour
 		if (action.alwaysReturnVisibleRange) {
 			((PhysicsRemoteFPSAgentController) primaryAgent).alwaysReturnVisibleRange = action.alwaysReturnVisibleRange;
 		}
-        print("start addAgents");
+
 		StartCoroutine (addAgents (action));
 
 	}
