@@ -7,10 +7,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: BoundingBox
+      value: 
+      objectReference: {fileID: 4131815495787849594}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 4131815494614363846}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 4131815494750740087}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 4131815496303421920}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 4131815494830152755}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 4131815494796379204}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 4131815494742658767}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 4131815495046365444}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: VisibilityPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 4131815494382068734}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: ReceptacleTriggerBoxes.Array.data[0]
+      value: 
+      objectReference: {fileID: 4130645441028869110}
+    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: ReceptacleTriggerBoxes.Array.data[1]
+      value: 
+      objectReference: {fileID: 4130645440193001138}
     - target: {fileID: 6225497739349648250, guid: 2da3bb356be07fe459047b39de6dd6ab,
         type: 3}
       propertyPath: m_Name
-      value: Side_Table_215_Master
+      value: Side_Table_215_1
       objectReference: {fileID: 0}
     - target: {fileID: 6225497739349648251, guid: 2da3bb356be07fe459047b39de6dd6ab,
         type: 3}
@@ -67,72 +122,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: BoundingBox
-      value: 
-      objectReference: {fileID: 4131815495787849594}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 4131815494614363846}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 4131815494750740087}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 4131815496303421920}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 4131815494830152755}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 4131815494796379204}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[5]
-      value: 
-      objectReference: {fileID: 4131815494742658767}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[6]
-      value: 
-      objectReference: {fileID: 4131815495046365444}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: VisibilityPoints.Array.data[7]
-      value: 
-      objectReference: {fileID: 4131815494382068734}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: ReceptacleTriggerBoxes.Array.data[0]
-      value: 
-      objectReference: {fileID: 4130645441028869110}
-    - target: {fileID: 6225497739349648249, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: ReceptacleTriggerBoxes.Array.data[1]
-      value: 
-      objectReference: {fileID: 4130645440193001138}
-    - target: {fileID: 6337677103026808816, guid: 2da3bb356be07fe459047b39de6dd6ab,
-        type: 3}
-      propertyPath: myParent
-      value: 
-      objectReference: {fileID: 4131815495382929174}
     - target: {fileID: 6337677102797331124, guid: 2da3bb356be07fe459047b39de6dd6ab,
         type: 3}
       propertyPath: myParent
       value: 
       objectReference: {fileID: 4131815495382929174}
-    m_RemovedComponents: []
+    - target: {fileID: 6337677103026808816, guid: 2da3bb356be07fe459047b39de6dd6ab,
+        type: 3}
+      propertyPath: myParent
+      value: 
+      objectReference: {fileID: 4131815495382929174}
+    m_RemovedComponents:
+    - {fileID: 6337677104117450539, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677104377450683, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677104233416526, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103525231923, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103579526703, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103550259233, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103637197350, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103634960341, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103621940160, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103395806102, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103433265937, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103503295682, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103489700486, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103789202148, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103786867709, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103868510276, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102992362860, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103105911397, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677103130837090, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102551129911, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102345714356, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102773087783, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102770766367, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
+    - {fileID: 6337677102706460654, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2da3bb356be07fe459047b39de6dd6ab, type: 3}
 --- !u!1 &4131815495382929174 stripped
 GameObject:

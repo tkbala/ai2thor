@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4473449030600708702, guid: f7dee5f24ba37a248bf6b9ba2e9126af,
-        type: 3}
-      propertyPath: m_Name
-      value: Coffee_Table_227_2_Master
-      objectReference: {fileID: 0}
     - target: {fileID: 4473449030600708697, guid: f7dee5f24ba37a248bf6b9ba2e9126af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -137,12 +132,27 @@ PrefabInstance:
       propertyPath: ReceptacleTriggerBoxes.Array.data[0]
       value: 
       objectReference: {fileID: 1227330498728449090}
+    - target: {fileID: 4473449030600708702, guid: f7dee5f24ba37a248bf6b9ba2e9126af,
+        type: 3}
+      propertyPath: m_Name
+      value: Coffee_Table_227_2_1
+      objectReference: {fileID: 0}
     - target: {fileID: 4576352919359455424, guid: f7dee5f24ba37a248bf6b9ba2e9126af,
         type: 3}
       propertyPath: myParent
       value: 
       objectReference: {fileID: 1228483225172838070}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4576352919263755336, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352919670489924, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352920074254407, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352920006565309, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352920002084778, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352918221017403, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352918242130009, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352918163601136, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352919045576417, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
+    - {fileID: 4576352918935059988, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7dee5f24ba37a248bf6b9ba2e9126af, type: 3}
 --- !u!1 &1228483225172838070 stripped
 GameObject:
