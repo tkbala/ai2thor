@@ -14997,6 +14997,11 @@ PrefabInstance:
       propertyPath: m_TranslationOffsets.Array.data[0].z
       value: 0.06681371
       objectReference: {fileID: 0}
+    - target: {fileID: 4019579573860053940, guid: b4c1fe12d651c5c41b03a824808f63fe,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: 0.06681371
+      objectReference: {fileID: 0}
     - target: {fileID: 7286674057124888647, guid: b4c1fe12d651c5c41b03a824808f63fe,
         type: 3}
       propertyPath: m_Name
