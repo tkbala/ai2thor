@@ -237,6 +237,8 @@ public class AgentManager : MonoBehaviour
 		gameObject.AddComponent(typeof(Camera));
 		Camera camera = gameObject.GetComponentInChildren<Camera>();
 
+		camera.cullingMask = ~(1 << 11);
+
 		if (this.renderDepthImage || this.renderClassImage || this.renderObjectImage || this.renderNormalsImage || this.renderFlowImage) 
 		{
 			gameObject.AddComponent(typeof(ImageSynthesis));
@@ -661,13 +663,15 @@ public class AgentManager : MonoBehaviour
 
                );
 
+        var serializedMetadata = JsonUtility.ToJson(multiMeta);
+
 		#if UNITY_WEBGL
                 if (jsInterface != null) {
 					jsInterface.SendActionMetadata(serializedMetadata);
 				}
         #endif
 
-        form.AddField("metadata", JsonUtility.ToJson(multiMeta));
+        form.AddField("metadata", serializedMetadata);
         form.AddField("actionReturns", serializedActionReturns);
         form.AddField("token", robosimsClientToken);
 
