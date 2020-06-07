@@ -34,9 +34,10 @@ public class Contains : MonoBehaviour
     //this is an object reference to the sim object that is linked to this receptacle box
 	public GameObject myParent = null;
 
+    //DEPRECATED - Floor and Ceiling Primarty Properties have been removed
 	//if the sim object is one of these properties, do not add it to the Currently Contains list.
-	private List<SimObjPrimaryProperty> PropertiesToIgnore = new List<SimObjPrimaryProperty>(new SimObjPrimaryProperty[] {SimObjPrimaryProperty.Wall,
-		SimObjPrimaryProperty.Floor, SimObjPrimaryProperty.Ceiling, SimObjPrimaryProperty.Static}); //should we ignore SimObjPrimaryProperty.Static?
+	//private List<SimObjPrimaryProperty> PropertiesToIgnore = new List<SimObjPrimaryProperty>(new SimObjPrimaryProperty[] {SimObjPrimaryProperty.Wall,
+	//	SimObjPrimaryProperty.Floor, SimObjPrimaryProperty.Ceiling, SimObjPrimaryProperty.Static}); //should we ignore SimObjPrimaryProperty.Static?
 
 	public bool occupied = false;
 
@@ -121,11 +122,12 @@ public class Contains : MonoBehaviour
 				return;
 			}
 
+            //DEPRECATED - There are no more properties to ignore, now that Floor and Ceiling are deleted
 			//ignore any sim objects that shouldn't be added to the CurrentlyContains list
-			if (PropertiesToIgnore.Contains(sop.PrimaryProperty))
-			{
-				return;
-			}
+			//if (PropertiesToIgnore.Contains(sop.PrimaryProperty))
+			//{
+			//	return;
+			//}
 
 			//don't add any parent objects in case this is a child sim object
 			if(sop.transform == myParent.transform)

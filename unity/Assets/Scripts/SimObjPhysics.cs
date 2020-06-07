@@ -1900,7 +1900,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 	}
 
 	[ContextMenu("Setup")]
-	void ContextSetUpSimObjPhysics()
+	public void ContextSetUpSimObjPhysics()
 	{
 		if (this.Type == SimObjType.Undefined || this.PrimaryProperty == SimObjPrimaryProperty.Undefined)
 		{
