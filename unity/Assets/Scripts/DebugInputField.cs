@@ -126,13 +126,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         #if UNITY_EDITOR
         public void Execute(string command)
         {
-            if ((PhysicsController.enabled && !PhysicsController.actionComplete) ||
+            if ((PhysicsController != null && PhysicsController.enabled && !PhysicsController.actionComplete) ||
                 (StochasticController != null && StochasticController.enabled && !StochasticController.actionComplete)
             ) {
-                Debug.Log("Cannot execute command while last action has not completed.");
-            }
-
-            if (StochasticController.enabled && !StochasticController.actionComplete) {
                 Debug.Log("Cannot execute command while last action has not completed.");
             }
 

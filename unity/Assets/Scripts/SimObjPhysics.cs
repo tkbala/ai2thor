@@ -1086,35 +1086,8 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 
 	//CONTEXT MENU STUFF FOR SETTING UP SIM OBJECTS
 	//RIGHT CLICK this script in the inspector to reveal these options
-    [ContextMenu("BoundingBox")]
-    void ContextCreateBoundingBox()
-    {
-        GameObject bb = new GameObject("BoundingBox");
-        bb.transform.position = gameObject.transform.position;
-        bb.transform.SetParent(gameObject.transform);
-        //bb.transform.localRotation = Quaternion.identity;//zero out rotation?
-        bb.AddComponent<BoxCollider>();
-        bb.GetComponent<BoxCollider>().enabled = false;
-        bb.tag = "Untagged";
-        bb.layer = 9;
 
-        //add box collider to the First mesh renderer found on the object i guess
-        MeshRenderer mr = this.GetComponentInChildren<MeshRenderer>();
-        BoxCollider tempBox = mr.transform.gameObject.AddComponent<BoxCollider>();
-
-        bb.transform.localPosition = mr.transform.localPosition;//move it so it's in line with the mesh?
-        bb.transform.localRotation = mr.transform.localRotation;
-
-        BoxCollider thisbox = bb.GetComponent<BoxCollider>();
-        thisbox.size = tempBox.size * 1.05f;//+ new Vector3(0.1f, 0.1f, 0.1f);
-        thisbox.center = tempBox.center;
-        DestroyImmediate(tempBox);
-
-
-        BoundingBox = bb;
-    }
-
-	[ContextMenu("Cabinet")]
+	//[ContextMenu("Cabinet")]
 	void SetUpCabinet()
 	{
 		Type = SimObjType.Cabinet;
@@ -1299,7 +1272,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 
 		//this.GetComponent<CanOpen>().SetMovementToRotate();
 	}
-	[ContextMenu("Table")]
+	//[ContextMenu("Table")]
 	void SetUpTable()
 	{
 		this.Type = SimObjType.DiningTable;
@@ -1366,7 +1339,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 
 	}
 
-	[ContextMenu("Drawer")]
+	//[ContextMenu("Drawer")]
 	void SetUpDrawer()
 	{
 		this.Type = SimObjType.Drawer;
@@ -1564,7 +1537,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 		}
 	}
 
-	[ContextMenu("Static Mesh Collider with Receptacle")]
+	//[ContextMenu("Static Mesh Collider with Receptacle")]
 	void SetUpSimObjWithStaticMeshCollider()
 	{
 		if (this.Type == SimObjType.Undefined || this.PrimaryProperty == SimObjPrimaryProperty.Undefined)
