@@ -1071,10 +1071,12 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 		Gizmos.color = Color.yellow;
 		if (VisibilityPoints != null && VisibilityPoints.Length > 0)
 		{
-			foreach (Transform t in VisibilityPoints)
-			{
-				Gizmos.DrawSphere(t.position, 0.01f);
-
+            foreach (Transform t in VisibilityPoints)
+            {
+                //if (t != null)
+                //{
+                    Gizmos.DrawSphere(t.position, 0.01f);
+                //}
 			}
 		}
 
@@ -1261,14 +1263,12 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 		//MyTriggerColliders = tcols.ToArray();
 		ReceptacleTriggerBoxes = recepboxes.ToArray();
 
-
 		gameObject.GetComponent<CanOpen_Object>().MovingParts = movparts.ToArray();
 		gameObject.GetComponent<CanOpen_Object>().openPositions = new Vector3[movparts.Count];
 		gameObject.GetComponent<CanOpen_Object>().closedPositions = new Vector3[movparts.Count];
 
 		if (openPositions.Count != 0)
 			gameObject.GetComponent<CanOpen_Object>().openPositions = openPositions.ToArray();
-
 
 		//this.GetComponent<CanOpen>().SetMovementToRotate();
 	}
@@ -1764,7 +1764,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 
 
 	[ContextMenu("Setup Colliders And VisPoints")]
-	void SetupCollidersVisPoints()
+	public void SetupCollidersVisPoints()
 	{
 		ContextSetUpColliders();
 		ContextSetUpVisibilityPoints();
@@ -1894,12 +1894,14 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 			GameObject c = new GameObject("Colliders");
 			c.transform.position = gameObject.transform.position;
 			c.transform.SetParent(gameObject.transform);
+            c.transform.localEulerAngles = Vector3.zero;
             
 			GameObject cc = new GameObject("Col");
 			cc.transform.position = c.transform.position;
 			cc.transform.SetParent(c.transform);
-			//cc.AddComponent<CapsuleCollider>();
-			cc.AddComponent<BoxCollider>();
+            cc.transform.localEulerAngles = Vector3.zero;
+            //cc.AddComponent<CapsuleCollider>();
+            cc.AddComponent<BoxCollider>();
 			cc.tag = "SimObjPhysics";
 			cc.layer = 8;
 		}
@@ -1910,19 +1912,22 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 			GameObject vp = new GameObject("VisibilityPoints");
 			vp.transform.position = gameObject.transform.position;
 			vp.transform.SetParent(gameObject.transform);
+            vp.transform.localEulerAngles = Vector3.zero;
 
-			//create first Visibility Point to work with
-			GameObject vpc = new GameObject("vPoint");
+            //create first Visibility Point to work with
+            GameObject vpc = new GameObject("vPoint");
 			vpc.transform.position = vp.transform.position;
 			vpc.transform.SetParent(vp.transform);
-		}
+            vpc.transform.localEulerAngles = Vector3.zero;
+        }
 
 		if (!gameObject.transform.Find("BoundingBox"))
 		{
 			GameObject rac = new GameObject("BoundingBox");
 			rac.transform.position = gameObject.transform.position;
 			rac.transform.SetParent(gameObject.transform);
-			rac.AddComponent<BoxCollider>();
+            rac.transform.localEulerAngles = Vector3.zero;
+            rac.AddComponent<BoxCollider>();
 			rac.GetComponent<BoxCollider>().enabled = false;
 		}
 
@@ -2080,7 +2085,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 	}
 
 	// [ContextMenu("Set Up VisibilityPoints")]
-	void ContextSetUpVisibilityPoints()
+	public void ContextSetUpVisibilityPoints()
 	{
 		List<Transform> vplist = new List<Transform>();
 
