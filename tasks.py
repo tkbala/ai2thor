@@ -620,10 +620,16 @@ def pre_test(context):
 
 
 def clean():
+    import scripts.update_private
+    # a deploy key is used on the build server and an .ssh/config entry has been added
+    # to point to the deploy key caclled ai2thor-private-github
+    scripts.update_private.private_repo_url = 'git@ai2thor-private-github:allenai/ai2thor-private.git'
     subprocess.check_call("git reset --hard", shell=True)
     subprocess.check_call("git clean -f -d", shell=True)
     subprocess.check_call("git clean -f -x", shell=True)
     shutil.rmtree("unity/builds", ignore_errors=True)
+    shutil.rmtree(scripts.update_private.private_dir, ignore_errors=True)
+    scripts.update_private.checkout_branch()
 
 
 def link_build_cache(branch):
@@ -641,7 +647,7 @@ def pending_travis_build():
     import requests
 
     res = requests.get(
-        "https://api.travis-ci.org/repo/16690831/builds?repository_id=16690831&include=build.commit%2Cbuild.branch%2Cbuild.request%2Cbuild.created_by%2Cbuild.repository&build.state=started%2Ccreated&sort_by=started_at:desc",
+        "https://api.travis-ci.org/repo/16690831/builds?repository_id=16690831&include=build.commit%2Cbuild.branch%2Cbuild.request%2Cbuild.created_by%2Cbuild.repository&build.state=started&sort_by=started_at:desc",
         headers={
             "Accept": "application/json",
             "Content-Type": "application/json",
@@ -675,8 +681,9 @@ def ci_build(context):
 
             procs = []
             for arch in ["OSXIntel64", "Linux64"]:
-                p = ci_build_arch(arch, build["branch"])
-                procs.append(p)
+                for include_private_scenes in [True, False]:
+                    p = ci_build_arch(arch, include_private_scenes)
+                    procs.append(p)
 
             if build["branch"] == "master":
                 webgl_build_deploy_demo(
@@ -695,7 +702,7 @@ def ci_build(context):
     lock_f.close()
 
 
-def ci_build_arch(arch, branch):
+def ci_build_arch(arch, include_private_scenes):
     from multiprocessing import Process
     import subprocess
     import boto3
@@ -714,8 +721,6 @@ def ci_build_arch(arch, branch):
         print("found build for commit %s %s" % (commit_id, arch))
         return
 
-    include_private_scenes = False
-    # XXX FIX bucket name
     unity_path = "unity"
     build_name = ai2thor.build.build_name(arch, commit_id, include_private_scenes)
     build_dir = os.path.join("builds", build_name)
@@ -1476,7 +1481,7 @@ def s3_etag_data(data):
 
 cache_seconds = 31536000
 @task
-def webgl_deploy(ctx, bucket='ai2-thor-webgl', prefix='local', source_dir='builds', target_dir='', verbose=False, force=False, extensions_no_cache=''):
+def webgl_deploy(ctx, bucket='ai2-thor-webgl-public', prefix='local', source_dir='builds', target_dir='', verbose=False, force=False, extensions_no_cache=''):
     from pathlib import Path
     from os.path import isfile, join, isdir
 
