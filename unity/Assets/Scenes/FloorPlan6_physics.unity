@@ -24595,7 +24595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1006022582
 Transform:
   m_ObjectHideFlags: 0
@@ -32626,7 +32626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1389282123
 Transform:
   m_ObjectHideFlags: 0

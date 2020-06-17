@@ -283,6 +283,7 @@ ModelImporter:
     100554: PS_13_Cabinet_24
     100556: PS_13_Cabinet_25
     100558: PS_13_Cabinet_26
+    100560: doorframe1
     400000: Bowls1.002
     400002: Bowls2.002
     400004: Cube.650
@@ -563,6 +564,7 @@ ModelImporter:
     400554: PS_13_Cabinet_24
     400556: PS_13_Cabinet_25
     400558: PS_13_Cabinet_26
+    400560: doorframe1
     2300000: Bowls1.002
     2300002: Bowls2.002
     2300004: Cube.650
@@ -842,6 +844,7 @@ ModelImporter:
     2300552: PS_13_Cabinet_24
     2300554: PS_13_Cabinet_25
     2300556: PS_13_Cabinet_26
+    2300558: doorframe1
     3300000: Bowls1.002
     3300002: Bowls2.002
     3300004: Cube.650
@@ -1121,6 +1124,7 @@ ModelImporter:
     3300552: PS_13_Cabinet_24
     3300554: PS_13_Cabinet_25
     3300556: PS_13_Cabinet_26
+    3300558: doorframe1
     4300000: Cube.720
     4300002: Decals.030
     4300004: SugarJar.013
@@ -1400,6 +1404,7 @@ ModelImporter:
     4300552: PS_13_Cabinet_24
     4300554: PS_13_Cabinet_25
     4300556: PS_13_Cabinet_26
+    4300558: doorframe1
     6400000: Bowls1.002
     6400002: Bowls2.002
     6400004: Cube.650
@@ -1679,6 +1684,8 @@ ModelImporter:
     6400552: PS_13_Cabinet_24
     6400554: PS_13_Cabinet_25
     6400556: PS_13_Cabinet_26
+    6400558: doorframe1
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material

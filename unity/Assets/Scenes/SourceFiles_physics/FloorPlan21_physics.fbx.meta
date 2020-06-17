@@ -129,6 +129,7 @@ ModelImporter:
     100246: PS_21_Cabinet_4
     100248: PS_21_Countertop_1
     100250: PS_21_SinkBasin_1
+    100252: Decals.021
     400000: Cube.372
     400002: Cube.373
     400004: Cube.374
@@ -255,6 +256,7 @@ ModelImporter:
     400246: PS_21_Cabinet_4
     400248: PS_21_Countertop_1
     400250: PS_21_SinkBasin_1
+    400252: Decals.021
     2300000: Cube.372
     2300002: Cube.373
     2300004: Cube.374
@@ -376,6 +378,7 @@ ModelImporter:
     2300236: PS_21_Cabinet_4
     2300238: PS_21_Countertop_1
     2300240: PS_21_SinkBasin_1
+    2300242: Decals.021
     3300000: Cube.372
     3300002: Cube.373
     3300004: Cube.374
@@ -497,6 +500,7 @@ ModelImporter:
     3300236: PS_21_Cabinet_4
     3300238: PS_21_Countertop_1
     3300240: PS_21_SinkBasin_1
+    3300242: Decals.021
     4300000: Cube.377
     4300002: Cube.376
     4300004: Cube.375
@@ -618,6 +622,7 @@ ModelImporter:
     4300236: PS_21_Cabinet_2
     4300238: PS_21_Cabinet_3
     4300240: PS_21_Cabinet_4
+    4300242: Decals.021
     6400000: Baseboard.024
     6400002: Ceiling.004
     6400004: Cube.372
@@ -734,6 +739,7 @@ ModelImporter:
     6400226: PS_21_Cabinet_4
     6400228: PS_21_Countertop_1
     6400230: PS_21_SinkBasin_1
+    6400232: Decals.021
   externalObjects:
   - first:
       type: UnityEngine:Material

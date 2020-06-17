@@ -108,6 +108,7 @@ ModelImporter:
     100204: PS_26_Countertop_1
     100206: PS_26_Countertop_2
     100208: PS_26_SinkBasin_1
+    100210: Room_
     400000: Baseboard.021
     400002: Ceiling.001
     400004: Cube.003
@@ -213,6 +214,7 @@ ModelImporter:
     400204: PS_26_Countertop_1
     400206: PS_26_Countertop_2
     400208: PS_26_SinkBasin_1
+    400210: Room_
     2300000: Baseboard.021
     2300002: Ceiling.001
     2300004: Cube.003
@@ -315,6 +317,7 @@ ModelImporter:
     2300198: PS_26_Countertop_1
     2300200: PS_26_Countertop_2
     2300202: PS_26_SinkBasin_1
+    2300204: Room_
     3300000: Baseboard.021
     3300002: Ceiling.001
     3300004: Cube.003
@@ -417,6 +420,7 @@ ModelImporter:
     3300198: PS_26_Countertop_1
     3300200: PS_26_Countertop_2
     3300202: PS_26_SinkBasin_1
+    3300204: Room_
     4300000: Cube.174
     4300002: Decals.004
     4300004: Cube.173
@@ -519,6 +523,7 @@ ModelImporter:
     4300198: PS_26_Cabinet_3
     4300200: PS_26_Cabinet_4
     4300202: PS_26_Cabinet_5
+    4300204: Room_
   externalObjects:
   - first:
       type: UnityEngine:Material

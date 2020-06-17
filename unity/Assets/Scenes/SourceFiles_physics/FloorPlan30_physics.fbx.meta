@@ -260,6 +260,7 @@ ModelImporter:
     100508: PS_30_SinkBasin_1
     100510: PS_30_Cabinet_13
     100512: PS_30_Countertop_4
+    100514: Room.067
     400000: Cube.015
     400002: Cube.017
     400004: Cube.028
@@ -517,6 +518,7 @@ ModelImporter:
     400508: PS_30_SinkBasin_1
     400510: PS_30_Cabinet_13
     400512: PS_30_Countertop_4
+    400514: Room.067
     2300000: Cube.015
     2300002: Cube.017
     2300004: Cube.028
@@ -771,6 +773,7 @@ ModelImporter:
     2300502: PS_30_SinkBasin_1
     2300504: PS_30_Cabinet_13
     2300506: PS_30_Countertop_4
+    2300508: Room.067
     3300000: Cube.015
     3300002: Cube.017
     3300004: Cube.028
@@ -1025,6 +1028,7 @@ ModelImporter:
     3300502: PS_30_SinkBasin_1
     3300504: PS_30_Cabinet_13
     3300506: PS_30_Countertop_4
+    3300508: Room.067
     4300000: Cube.074
     4300002: Cube.073
     4300004: Cube.072
@@ -1279,6 +1283,7 @@ ModelImporter:
     4300502: PS_30_Countertop_3
     4300504: PS_30_Cabinet_13
     4300506: PS_30_Countertop_4
+    4300508: Room.067
   externalObjects:
   - first:
       type: UnityEngine:Material
