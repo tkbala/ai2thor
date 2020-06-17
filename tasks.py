@@ -518,17 +518,6 @@ def generate_quality_settings(ctx):
         f.write("QUALITY_SETTINGS = " + pprint.pformat(quality_settings))
 
 
-@task
-def increment_version(context):
-    import ai2thor._version
-
-    major, minor, subv = ai2thor._version.__version__.split(".")
-    subv = int(subv) + 1
-    with open("ai2thor/_version.py", "w") as fi:
-        fi.write("# Copyright Allen Institute for Artificial Intelligence 2017\n")
-        fi.write("# GENERATED FILE - DO NOT EDIT\n")
-        fi.write("__version__ = '%s.%s.%s'\n" % (major, minor, subv))
-
 
 def build_sha256(path):
 
@@ -553,18 +542,87 @@ def build_docker(version):
         "docker push ai2thor/ai2thor-base:{version}".format(version=version), shell=True
     )
 
+def git_commit_id():
+    commit_id = (
+        subprocess.check_output("git log -n 1 --format=%H", shell=True)
+        .decode("ascii")
+        .strip()
+    )
+
+    return commit_id
 
 @task
-def build_pip(context):
-    import shutil
+def deploy_pip(context):
+    if 'TWINE_PASSWORD' not in os.environ:
+        raise Exception("Twine token not specified in environment")
+    subprocess.check_call("twine upload --repository testpypi -u __token__ dist/*", shell=True)
 
-    subprocess.check_call("python setup.py clean --all", shell=True)
+@task
+def build_pip(context, version):
+    from ai2thor.build import platform_map
+    import re
+    import xml.etree.ElementTree as ET 
+    import requests
 
-    if os.path.isdir("dist"):
-        shutil.rmtree("dist")
+    res = requests.get('https://test.pypi.org/rss/project/ai2thor/releases.xml')
 
-    subprocess.check_call("python setup.py sdist bdist_wheel --universal", shell=True)
+    res.raise_for_status()
 
+    commit_tags = (
+        subprocess.check_output("git tag --points-at", shell=True)
+        .decode("ascii")
+        .strip().split("\n")
+    )
+
+    if version not in commit_tags:
+        raise Exception("tag %s is not on current commit" % version)
+
+    if not re.match(r'^[0-9]{1,3}\.+[0-9]{1,3}\.[0-9]{1,3}$', version):
+        raise Exception("invalid version: %s" % version)
+
+    commit_id = git_commit_id()
+
+    for arch in platform_map.keys():
+        commit_build = ai2thor.build.Build(arch, commit_id, False)
+        if not commit_build.exists():
+            raise Exception("Build does not exist for %s/%s" % (commit_id, arch))
+
+
+    root = ET.fromstring(res.content)
+    latest_version = None
+
+    for title in root.findall('./channel/item/title'): 
+        latest_version = title.text
+        break
+    
+    current_maj, current_min, current_sub = list(map(int, latest_version.split('.')))
+    next_maj, next_min, next_sub = list(map(int, version.split('.')))
+
+    if (next_maj > current_maj) or \
+        (next_maj >= current_maj and next_min > current_min) or \
+        (next_maj >= current_maj and next_min >= current_min and next_sub > current_sub):
+
+        if os.path.isdir("dist"):
+            shutil.rmtree("dist")
+
+
+        generate_quality_settings(context)
+
+        with open("ai2thor/_builds.py", "w") as fi:
+            fi.write("# GENERATED FILE - DO NOT EDIT\n")
+            fi.write("COMMIT_ID = '%s'\n" % commit_id)
+
+        with open("ai2thor/_version.py", "w") as fi:
+            fi.write("# Copyright Allen Institute for Artificial Intelligence 2017\n")
+            fi.write("# GENERATED FILE - DO NOT EDIT\n")
+            fi.write("__version__ = '%s'\n" % (version))
+
+        subprocess.check_call("python setup.py clean --all", shell=True)
+        subprocess.check_call("python setup.py sdist bdist_wheel --universal", shell=True)
+
+    else:
+        raise Exception("Invalid version: %s is not greater than latest version %s" % (version, latest_version))
+            
 
 @task
 def fetch_source_textures(context):
@@ -710,11 +768,7 @@ def ci_build_arch(arch, include_private_scenes):
 
     github_url = "https://github.com/allenai/ai2thor"
 
-    commit_id = (
-        subprocess.check_output("git log -n 1 --format=%H", shell=True)
-        .decode("ascii")
-        .strip()
-    )
+    commit_id = git_commit_id()
 
     commit_build = ai2thor.build.Build(arch, commit_id, False)
     if commit_build.exists():
@@ -754,11 +808,8 @@ def poll_ci_build(context):
     import ai2thor.downloader
     import time
 
-    commit_id = (
-        subprocess.check_output("git log -n 1 --format=%H", shell=True)
-        .decode("ascii")
-        .strip()
-    )
+    commit_id = git_commit_id()
+
     for i in range(360):
         missing = False
         for arch in platform_map.keys():
@@ -771,6 +822,7 @@ def poll_ci_build(context):
                 missing = True
         if not missing:
             break
+        sys.stdout.flush()
         time.sleep(10)
 
     for arch in platform_map.keys():
@@ -828,15 +880,7 @@ def build(context, local=False):
             raise Exception("Error with thread")
 
     generate_quality_settings(context)
-
-    with open("ai2thor/_builds.py", "w") as fi:
-        fi.write("# GENERATED FILE - DO NOT EDIT\n")
-        fi.write("VERSION = '%s'\n" % version)
-        fi.write("BUILDS = " + pprint.pformat(builds))
-
-    increment_version(context)
-    build_pip(context)
-
+    # 
 
 @task
 def interact(
@@ -2713,5 +2757,4 @@ def reachable_pos(ctx, scene, editor_mode=False, local_build=False):
     )
 
     print("After teleport: {}".format(evt.metadata['agent']['position']))
-
 
