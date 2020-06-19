@@ -27,6 +27,23 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
         public GameObject[] TargetCircles = null;
 
+        public GameObject TargetObjects;
+        public GameObject GhostObjects;
+        public GameObject MovedTargetObjects;
+
+        public void MoveTargetObjects(ServerAction action)
+        {
+            TargetObjects.SetActive(false);
+            MovedTargetObjects.SetActive(true);
+            physicsSceneManager.SetupScene();
+            actionFinished(true);
+        }
+
+        public void ActivateGhosts(ServerAction action)
+        {
+            GhostObjects.SetActive(true);
+            actionFinished(true);
+        }
         //change visibility check to use this distance when looking down
         //protected float DownwardViewDistance = 2.0f;
 

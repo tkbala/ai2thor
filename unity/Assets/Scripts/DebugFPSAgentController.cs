@@ -192,32 +192,177 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
 
             }
-            
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 var action = new ServerAction
                 {
-                    action = "InitialRandomSpawn",
-                    randomSeed = 0,
-                    forceVisible = false,
-                    numPlacementAttempts = 5,
-                    placeStationary = true
+                    action = "RotateHand",
+                    x = Random.Range(-90, 90),
+                    y = Random.Range(-90, 90),
+                    z = Random.Range(-90, 90),
                 };
                 PhysicsController.ProcessControlCommand(action);
             }
 
-            if(Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.T))
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                var action = new ServerAction
+                {
+                    action = "MoveTargetObjects"
+                };
+                PhysicsController.ProcessControlCommand(action);
             }
 
-            if(Input.GetKeyUp(KeyCode.Space))
+            if( Input.GetKeyDown(KeyCode.G))
             {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                var action = new ServerAction
+                {
+                    action = "ActivateGhosts"
+                };
+                PhysicsController.ProcessControlCommand(action);
             }
+
+            //push
+            if (Input.GetKeyDown(KeyCode.I)&& !Input.GetKey(KeyCode.LeftShift))
+            {
+                ServerAction dothis = new ServerAction();
+
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(0, 0.1f, 1);
+                dothis.moveMagnitude = 60f;
+
+                // dothis.action = "SliceObject";
+                // dothis.objectId = PhysicsController.GetComponent<PhysicsRemoteFPSAgentController>().ObjectIdOfClosestVisibleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+            //left push
+            if (Input.GetKeyDown(KeyCode.K) && !Input.GetKey(KeyCode.LeftShift))
+            {
+                ServerAction dothis = new ServerAction();
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(0, 0.1f, -1);
+                dothis.moveMagnitude = 60f;
+                
+                // dothis.action = "PutObject";
+                // dothis.receptacleObjectId = PhysicsController.ObjectIdOfClosestReceptacleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+                if (Input.GetKeyDown(KeyCode.J)&& !Input.GetKey(KeyCode.LeftShift))
+            {
+                ServerAction dothis = new ServerAction();
+
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(-1, 0.1f, 0);
+                dothis.moveMagnitude = 60f;
+
+                // dothis.action = "SliceObject";
+                // dothis.objectId = PhysicsController.GetComponent<PhysicsRemoteFPSAgentController>().ObjectIdOfClosestVisibleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+            //right push
+            if (Input.GetKeyDown(KeyCode.L) && !Input.GetKey(KeyCode.Space))
+            {
+                ServerAction dothis = new ServerAction();
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(1, 0.1f, 0);
+                dothis.moveMagnitude = 60f;
+                
+                // dothis.action = "PutObject";
+                // dothis.receptacleObjectId = PhysicsController.ObjectIdOfClosestReceptacleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+///////////////////////////////////////////////////////
+
+            //push
+            if (Input.GetKeyDown(KeyCode.I)&& Input.GetKey(KeyCode.Space))
+            {
+                ServerAction dothis = new ServerAction();
+
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(0, 0.1f, 1);
+                dothis.moveMagnitude = 500f;
+
+                // dothis.action = "SliceObject";
+                // dothis.objectId = PhysicsController.GetComponent<PhysicsRemoteFPSAgentController>().ObjectIdOfClosestVisibleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+            //left push
+            if (Input.GetKeyDown(KeyCode.K) && Input.GetKey(KeyCode.Space))
+            {
+                ServerAction dothis = new ServerAction();
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(0, 0.1f, -1);
+                dothis.moveMagnitude = 500f;
+                
+                // dothis.action = "PutObject";
+                // dothis.receptacleObjectId = PhysicsController.ObjectIdOfClosestReceptacleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+                if (Input.GetKeyDown(KeyCode.J)&& Input.GetKey(KeyCode.Space))
+            {
+                ServerAction dothis = new ServerAction();
+
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(-1, 0.1f, 0);
+                dothis.moveMagnitude = 500f;
+
+                // dothis.action = "SliceObject";
+                // dothis.objectId = PhysicsController.GetComponent<PhysicsRemoteFPSAgentController>().ObjectIdOfClosestVisibleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
+            //right push
+            if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.Space))
+            {
+                ServerAction dothis = new ServerAction();
+                dothis.action = "TouchThenApplyForce";
+                dothis.x = 0.5f;
+                dothis.y = 0.5f;
+                dothis.handDistance = 5.0f;
+                dothis.direction = new Vector3(1, 0.1f, 0);
+                dothis.moveMagnitude = 500f;
+                
+                // dothis.action = "PutObject";
+                // dothis.receptacleObjectId = PhysicsController.ObjectIdOfClosestReceptacleObject();
+
+                PhysicsController.ProcessControlCommand(dothis);
+            }
+
 		}
 
 		private void Update()	
