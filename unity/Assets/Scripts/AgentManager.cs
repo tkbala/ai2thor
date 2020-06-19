@@ -204,7 +204,7 @@ public class AgentManager : MonoBehaviour
 		primaryAgent = fpsController.GetComponent<PhysicsRemoteFPSAgentController>();
 		primaryAgent.enabled = true;
 		primaryAgent.agentManager = this;
-		primaryAgent.actionComplete = true;
+		//primaryAgent.actionComplete = true;
         this.agents.Add(primaryAgent);
     }
 

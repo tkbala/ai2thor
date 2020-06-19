@@ -26,15 +26,15 @@ public int objectVariation;
         public bool disableCollistionWithPickupObject = false;
         void Start() 
         {
-            var Debug_Canvas = GameObject.Find("DebugCanvasPhysics");
-            PhysicsController = gameObject.GetComponent<PhysicsRemoteFPSAgentController>();
+            // var Debug_Canvas = GameObject.Find("DebugCanvasPhysics");
+            // PhysicsController = gameObject.GetComponent<PhysicsRemoteFPSAgentController>();
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Debug_Canvas.GetComponent<Canvas>().enabled = true; 
+            // Cursor.visible = true;
+            // Cursor.lockState = CursorLockMode.None;
+            // Debug_Canvas.GetComponent<Canvas>().enabled = true; 
 
-            highlightController = new ObjectHighlightController(PhysicsController, PhysicsController.maxVisibleDistance, true, false, 0, 0, true);
-            highlightController.SetDisplayTargetText(false);
+            // highlightController = new ObjectHighlightController(PhysicsController, PhysicsController.maxVisibleDistance, true, false, 0, 0, true);
+            // highlightController.SetDisplayTargetText(false);
 
             // SpawnObjectToHide("{\"objectType\": \"Plunger\", \"objectVariation\": 1}");
         }

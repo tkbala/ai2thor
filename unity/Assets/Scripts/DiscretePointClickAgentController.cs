@@ -20,7 +20,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            Debug_Canvas.GetComponent<Canvas>().enabled = true; 
+            //Debug_Canvas.GetComponent<Canvas>().enabled = true; 
 
             highlightController = new ObjectHighlightController(PhysicsController, PhysicsController.maxVisibleDistance, true, false);
         }

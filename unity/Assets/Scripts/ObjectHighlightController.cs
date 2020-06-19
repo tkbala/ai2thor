@@ -55,15 +55,15 @@ namespace UnityStandardAssets.Characters.FirstPerson {
         //this was assigned but never used so uhhhhhh comment out for now Alvaro heeeelp
         //private float throwSliderValue = 0.0f;
         // Optimization
-        private bool softHighlight = true;
+        private bool softHighlight = false;
 
         private bool highlightWhileHolding = false;
 
         private string onlyPickableObjectId = null;
 
-        private bool disableHighlightShaderForObject = false;
+        private bool disableHighlightShaderForObject = true;
 
-        private bool withHighlightShader = true;
+        private bool withHighlightShader = false;
 
 
         public ObjectHighlightController(
@@ -293,12 +293,12 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                 };
                 if (simObj != null && validObjectLazy())
                 {
-                    var withinReach = PhysicsController.FindObjectInVisibleSimObjPhysics(simObj.objectID) != null;
-                    setTargetText(simObj.name, withinReach);
+                    // var withinReach = PhysicsController.FindObjectInVisibleSimObjPhysics(simObj.objectID) != null;
+                    // setTargetText(simObj.name, withinReach);
                     newHighlightedObject = simObj;
                     var mRenderer = newHighlightedObject.GetComponentInChildren<MeshRenderer>();
 
-                    var useHighlightShader = !(disableHighlightShaderForObject && simObj.objectID == this.onlyPickableObjectId) && this.withHighlightShader;
+                    var useHighlightShader = false;//!(disableHighlightShaderForObject && simObj.objectID == this.onlyPickableObjectId) && this.withHighlightShader;
                     
                     if (mRenderer != null && useHighlightShader)
                     {
@@ -309,12 +309,12 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                             mRenderer.material.shader = this.highlightShader;
                         }  
 
-                        if (withinReach)
-                        {
-                            softHighlight = true;
-                            mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.WithinReachOutlineThickness);
-                            mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.WithinReachOutlineColor);
-                        }
+                        // if (withinReach)
+                        // {
+                        //     softHighlight = true;
+                        //     mRenderer.sharedMaterial.SetFloat("_Outline", this.HighlightParams.WithinReachOutlineThickness);
+                        //     mRenderer.sharedMaterial.SetColor("_OutlineColor", this.HighlightParams.WithinReachOutlineColor);
+                        // }
                         else if (softHighlight)
                         {
                             softHighlight = false;
@@ -333,7 +333,7 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                     var mRenderer = this.highlightedObject.GetComponentInChildren<MeshRenderer>();
 
                     setTargetText("");
-                    var useHighlightShader = !(disableHighlightShaderForObject && highlightedObject.objectID == this.onlyPickableObjectId) && this.withHighlightShader;
+                    var useHighlightShader = false; //!(disableHighlightShaderForObject && highlightedObject.objectID == this.onlyPickableObjectId) && this.withHighlightShader;
 
                     if (mRenderer != null && useHighlightShader)
                     {

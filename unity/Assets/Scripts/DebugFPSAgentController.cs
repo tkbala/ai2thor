@@ -61,13 +61,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             highlightController = new ObjectHighlightController(PhysicsController, MaxViewDistance, enableHighlightShader, true, MaxThrowForce, MaxChargeThrowSeconds);
 
-            //if this component is enabled, turn on the targeting reticle and target text
-            if (this.isActiveAndEnabled)
-            {
-				Debug_Canvas.GetComponent<Canvas>().enabled = true;            
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            // //if this component is enabled, turn on the targeting reticle and target text
+            // if (this.isActiveAndEnabled)
+            // {
+			// 	Debug_Canvas.GetComponent<Canvas>().enabled = true;            
+            //     Cursor.visible = false;
+            //     Cursor.lockState = CursorLockMode.Locked;
+            // }
           
             // FlightMode = PhysicsController.FlightMode;
 
@@ -75,7 +75,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 FPSEnabled = false;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                HideHUD();
+
             #endif
         }
 		public Vector3 ScreenPointMoveHand(float yOffset)
@@ -109,16 +109,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 
-                InputMode_Text = GameObject.Find("DebugCanvasPhysics/InputModeText");
-                InputFieldObj = GameObject.Find("DebugCanvasPhysics/InputField");
-                if (InputMode_Text) {
-                    InputMode_Text.GetComponent<Text>().text = "FPS Mode";
-                }
+                // InputMode_Text = GameObject.Find("DebugCanvasPhysics/InputModeText");
+                // InputFieldObj = GameObject.Find("DebugCanvasPhysics/InputField");
+                // if (InputMode_Text) {
+                //     InputMode_Text.GetComponent<Text>().text = "FPS Mode";
+                // }
 
 
-                Debug_Canvas = GameObject.Find("DebugCanvasPhysics");
+                // Debug_Canvas = GameObject.Find("DebugCanvasPhysics");
   
-                Debug_Canvas.GetComponent<Canvas>().enabled = true;
+                //Debug_Canvas.GetComponent<Canvas>().enabled = true;
               
         }
 
@@ -132,6 +132,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void EnableMouseControl()
         {
+            print("enabled mouse?");
             FPSEnabled = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -150,6 +151,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			//swap between text input and not
 			if (Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Escape))
             {
+                print("tilde?");
 				//Switch to Text Mode
                 if (FPSEnabled)
                 {

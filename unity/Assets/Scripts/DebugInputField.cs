@@ -52,13 +52,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             #if UNITY_EDITOR || UNITY_WEBGL
                 Debug.Log("In Unity editor, init DebugInputField");
                 this.InitializeUserControl();
+
+                //PhysicsController.actionComplete = false;
+                ServerAction action = new ServerAction();
+                action.fieldOfView = 90f;
+                action.snapToGrid = true;
+                action.action = "Initialize";
+                AManager.Initialize(action);
             #endif
         }
 
         void SelectPlayerControl() {
             #if UNITY_EDITOR
                 Debug.Log("Player Control Set To: Editor control");
-                setControlMode(ControlMode.DEBUG_TEXT_INPUT);
+                setControlMode(ControlMode.FPS);
             #endif
             #if UNITY_WEBGL
                 Debug.Log("Player Control Set To:Webgl");
@@ -2343,54 +2350,54 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         //used to show what's currently visible on the top left of the screen
-        void OnGUI() {
-            if (PhysicsController.VisibleSimObjPhysics != null && this.controlMode != ControlMode.MINIMAL_FPS) {
-                if (PhysicsController.VisibleSimObjPhysics.Length > 10) {
-                    int horzIndex = -1;
-                    GUILayout.BeginHorizontal();
-                    foreach (SimObjPhysics o in PhysicsController.VisibleSimObjPhysics) {
-                        horzIndex++;
-                        if (horzIndex >= 3) {
-                            GUILayout.EndHorizontal();
-                            GUILayout.BeginHorizontal();
-                            horzIndex = 0;
-                        }
-                        GUILayout.Button(o.ObjectID, UnityEditor.EditorStyles.miniButton, GUILayout.MaxWidth(200f));
-                    }
+        // void OnGUI() {
+        //     if (PhysicsController.VisibleSimObjPhysics != null && this.controlMode != ControlMode.MINIMAL_FPS) {
+        //         if (PhysicsController.VisibleSimObjPhysics.Length > 10) {
+        //             int horzIndex = -1;
+        //             GUILayout.BeginHorizontal();
+        //             foreach (SimObjPhysics o in PhysicsController.VisibleSimObjPhysics) {
+        //                 horzIndex++;
+        //                 if (horzIndex >= 3) {
+        //                     GUILayout.EndHorizontal();
+        //                     GUILayout.BeginHorizontal();
+        //                     horzIndex = 0;
+        //                 }
+        //                 GUILayout.Button(o.ObjectID, UnityEditor.EditorStyles.miniButton, GUILayout.MaxWidth(200f));
+        //             }
 
-                    GUILayout.EndHorizontal();
-                } else {
-                    //Plane[] planes = GeometryUtility.CalculateFrustumPlanes(m_Camera);
+        //             GUILayout.EndHorizontal();
+        //         } else {
+        //             //Plane[] planes = GeometryUtility.CalculateFrustumPlanes(m_Camera);
 
-                    //int position_number = 0;
-                    foreach (SimObjPhysics o in PhysicsController.VisibleSimObjPhysics) {
-                        string suffix = "";
-                        // Bounds bounds = new Bounds(o.gameObject.transform.position, new Vector3(0.05f, 0.05f, 0.05f));
-                        // if (GeometryUtility.TestPlanesAABB(planes, bounds)) {
-                        //     //position_number += 1;
+        //             //int position_number = 0;
+        //             foreach (SimObjPhysics o in PhysicsController.VisibleSimObjPhysics) {
+        //                 string suffix = "";
+        //                 // Bounds bounds = new Bounds(o.gameObject.transform.position, new Vector3(0.05f, 0.05f, 0.05f));
+        //                 // if (GeometryUtility.TestPlanesAABB(planes, bounds)) {
+        //                 //     //position_number += 1;
 
-                        //     //if (o.GetComponent<SimObj>().Manipulation == SimObjManipProperty.Inventory)
-                        //     //    suffix += " VISIBLE: " + "Press '" + position_number + "' to pick up";
+        //                 //     //if (o.GetComponent<SimObj>().Manipulation == SimObjManipProperty.Inventory)
+        //                 //     //    suffix += " VISIBLE: " + "Press '" + position_number + "' to pick up";
 
-                        //     //else
-                        //     //suffix += " VISIBLE";
-                        //     //if(!IgnoreInteractableFlag)
-                        //     //{
-                        //     // if (o.isInteractable == true)
-                        //     // {
-                        //     //     suffix += " INTERACTABLE";
-                        //     // }
-                        //     //}
+        //                 //     //else
+        //                 //     //suffix += " VISIBLE";
+        //                 //     //if(!IgnoreInteractableFlag)
+        //                 //     //{
+        //                 //     // if (o.isInteractable == true)
+        //                 //     // {
+        //                 //     //     suffix += " INTERACTABLE";
+        //                 //     // }
+        //                 //     //}
 
-                        // }
+        //                 // }
 
-                        if (GUILayout.Button(o.ObjectID + suffix, UnityEditor.EditorStyles.miniButton, GUILayout.MinWidth(100f))) {
-                            CopyToClipboard(o.ObjectID);
-                        }
-                    }
-                }
-            }
-        }
+        //                 if (GUILayout.Button(o.ObjectID + suffix, UnityEditor.EditorStyles.miniButton, GUILayout.MinWidth(100f))) {
+        //                     CopyToClipboard(o.ObjectID);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 #endif
 
     }

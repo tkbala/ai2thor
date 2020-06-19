@@ -97,7 +97,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 Debug_Canvas = GameObject.Find("DebugCanvasPhysics");
   
-                Debug_Canvas.GetComponent<Canvas>().enabled = true;
+               // Debug_Canvas.GetComponent<Canvas>().enabled = true;
                 HideHUD();
               
         }
