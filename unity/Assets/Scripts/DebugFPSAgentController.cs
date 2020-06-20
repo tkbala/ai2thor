@@ -363,6 +363,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 PhysicsController.ProcessControlCommand(dothis);
             }
 
+            //crouch
+            if(Input.GetKeyDown(KeyCode.Z))
+            {
+                ServerAction action = new ServerAction();
+                action.action = "Crouch";
+                PhysicsController.ProcessControlCommand(action);
+            }
+
+            //crouch
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                ServerAction action = new ServerAction();
+                action.action = "Stand";
+                PhysicsController.ProcessControlCommand(action);
+            }
+
 		}
 
 		private void Update()	
