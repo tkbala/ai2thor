@@ -41,7 +41,11 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
         public void ActivateGhosts(ServerAction action)
         {
+            if(!GhostObjects.activeSelf)
             GhostObjects.SetActive(true);
+
+            else
+            GhostObjects.SetActive(false);
             actionFinished(true);
         }
         //change visibility check to use this distance when looking down
