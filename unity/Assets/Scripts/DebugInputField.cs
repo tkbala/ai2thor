@@ -55,7 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 //PhysicsController.actionComplete = false;
                 ServerAction action = new ServerAction();
-                action.fieldOfView = 90f;
+                action.fieldOfView = 60f;
                 action.snapToGrid = true;
                 action.action = "Initialize";
                 AManager.Initialize(action);
