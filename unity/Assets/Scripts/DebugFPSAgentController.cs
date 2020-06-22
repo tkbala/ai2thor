@@ -211,6 +211,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     action = "MoveTargetObjects"
                 };
+
+                GameObject cam = GameObject.Find("FPSController/FirstPersonCharacter");
+                print("Video Capture Ready to Start!");
+                print("Agent Camera Position: " + "(" + cam.transform.position.x.ToString()+ ", " + cam.transform.position.y.ToString()+ ", " + cam.transform.position.z.ToString()+ ")");
+                print("Agent Camera Rotation: " + cam.transform.eulerAngles.ToString());
                 PhysicsController.ProcessControlCommand(action);
             }
 
