@@ -1,6 +1,7 @@
 import os
 import sys
 import datetime
+import json
 import zipfile
 import threading
 import hashlib
@@ -115,7 +116,6 @@ def class_dataset_images_for_scene(scene_name):
     import numpy as np
     import cv2
     import hashlib
-    import json
 
     env = ai2thor.controller.Controller(quality="Low")
     player_size = 300
@@ -368,7 +368,6 @@ def webgl_build(
                                 have their content hashes as part of their names.
     :return:
     """
-    import json
     from functools import reduce
 
     def file_to_content_addressable(file_path, json_metadata_file_path, json_key):
@@ -555,7 +554,7 @@ def git_commit_id():
 def deploy_pip(context):
     if 'TWINE_PASSWORD' not in os.environ:
         raise Exception("Twine token not specified in environment")
-    subprocess.check_call("twine upload --repository testpypi -u __token__ dist/*", shell=True)
+    subprocess.check_call("twine upload -u __token__ dist/*", shell=True)
 
 @task
 def build_pip(context, version):
@@ -564,10 +563,18 @@ def build_pip(context, version):
     import xml.etree.ElementTree as ET 
     import requests
 
-    res = requests.get('https://test.pypi.org/rss/project/ai2thor/releases.xml')
+    res = requests.get('https://pypi.org/rss/project/ai2thor/releases.xml')
 
     res.raise_for_status()
 
+    root = ET.fromstring(res.content)
+    latest_version = None
+
+    for title in root.findall('./channel/item/title'): 
+        latest_version = title.text
+        break
+
+    # make sure that the tag is on this commit
     commit_tags = (
         subprocess.check_output("git tag --points-at", shell=True)
         .decode("ascii")
@@ -577,23 +584,22 @@ def build_pip(context, version):
     if version not in commit_tags:
         raise Exception("tag %s is not on current commit" % version)
 
+    commit_id = git_commit_id()
+
+    res = requests.get('https://api.github.com/repos/allenai/ai2thor/commits?sha=master')
+    res.raise_for_status()
+
+    if commit_id not in map(lambda c: c['sha'], res.json()):
+        raise Exception("tag %s is not off the master branch" % version)
+
     if not re.match(r'^[0-9]{1,3}\.+[0-9]{1,3}\.[0-9]{1,3}$', version):
         raise Exception("invalid version: %s" % version)
-
-    commit_id = git_commit_id()
 
     for arch in platform_map.keys():
         commit_build = ai2thor.build.Build(arch, commit_id, False)
         if not commit_build.exists():
             raise Exception("Build does not exist for %s/%s" % (commit_id, arch))
 
-
-    root = ET.fromstring(res.content)
-    latest_version = None
-
-    for title in root.findall('./channel/item/title'): 
-        latest_version = title.text
-        break
     
     current_maj, current_min, current_sub = list(map(int, latest_version.split('.')))
     next_maj, next_min, next_sub = list(map(int, version.split('.')))
@@ -717,6 +723,31 @@ def pending_travis_build():
         return dict(branch=b["branch"]["name"], commit_id=b["commit"]["sha"])
 
 
+def pytest_s3_object(commit_id):
+    s3 = boto3.resource("s3")
+    pytest_key = 'builds/pytest-%s.json' % commit_id
+
+    return s3.Object(PUBLIC_S3_BUCKET, pytest_key)
+
+@task
+def ci_pytest(context):
+
+    proc = subprocess.run("pytest", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    commit_id = git_commit_id()
+
+    result = dict(
+        success=proc.returncode == 0,
+        stdout=proc.stdout.decode('ascii'),
+        stderr=proc.stderr.decode('ascii')
+    )
+
+    s3_obj = pytest_s3_object(commit_id)
+    s3_obj.put(
+        Body=json.dumps(result), ACL="public-read", ContentType='application/json'
+    )
+
+
 @task
 def ci_build(context):
     import fcntl
@@ -727,7 +758,7 @@ def ci_build(context):
     try:
         fcntl.flock(lock_f, fcntl.LOCK_EX | fcntl.LOCK_NB)
         build = pending_travis_build()
-        blacklist_branches = ["vids"]
+        blacklist_branches = ["vids", "video"]
         if build and build["branch"] not in blacklist_branches:
             clean()
             link_build_cache(build["branch"])
@@ -743,7 +774,9 @@ def ci_build(context):
                     p = ci_build_arch(arch, include_private_scenes)
                     procs.append(p)
 
+
             if build["branch"] == "master":
+                ci_pytest(context)
                 webgl_build_deploy_demo(
                     context, verbose=True, content_addressable=True, force=True
                 )
@@ -751,7 +784,9 @@ def ci_build(context):
             for p in procs:
                 if p:
                     p.join()
+            
 
+            
         fcntl.flock(lock_f, fcntl.LOCK_UN)
 
     except io.BlockingIOError as e:
@@ -760,17 +795,15 @@ def ci_build(context):
     lock_f.close()
 
 
-def ci_build_arch(arch, include_private_scenes):
+def ci_build_arch(arch, include_private_scenes=False):
     from multiprocessing import Process
     import subprocess
     import boto3
-    import ai2thor.downloader
 
     github_url = "https://github.com/allenai/ai2thor"
 
     commit_id = git_commit_id()
-
-    commit_build = ai2thor.build.Build(arch, commit_id, False)
+    commit_build = ai2thor.build.Build(arch, commit_id, include_private_scenes)
     if commit_build.exists():
         print("found build for commit %s %s" % (commit_id, arch))
         return
@@ -805,8 +838,9 @@ def ci_build_arch(arch, include_private_scenes):
 @task
 def poll_ci_build(context):
     from ai2thor.build import platform_map
-    import ai2thor.downloader
     import time
+    import requests.exceptions
+    import requests
 
     commit_id = git_commit_id()
 
@@ -816,10 +850,16 @@ def poll_ci_build(context):
             if (i % 5) == 0:
                 print("checking %s for commit id %s" % (arch, commit_id))
             commit_build = ai2thor.build.Build(arch, commit_id, False)
-            if commit_build.log_exists():
-                print("log exists %s" % commit_id)
-            else:
-                missing = True
+            try:
+                if commit_build.log_exists():
+                    print("log exists %s" % commit_id)
+                else:
+                    missing = True
+            # we observe errors when polling AWS periodically - we don't want these to stop
+            # the build
+            except requests.exceptions.ConnectionError as e:
+                print("Caught exception %s" % e)
+
         if not missing:
             break
         sys.stdout.flush()
@@ -833,6 +873,25 @@ def poll_ci_build(context):
                 % commit_build.log_url()
             )
             raise Exception("Failed to build %s for commit: %s " % (arch, commit_id))
+
+    pytest_missing = True
+    for i in range(30):
+        s3_obj = pytest_s3_object(commit_id)
+        s3_pytest_url = 'http://s3-us-west-2.amazonaws.com/%s/%s' % (s3_obj.bucket_name, s3_obj.key)
+        print("pytest url %s" % s3_pytest_url)
+        res = requests.get(s3_pytest_url)
+        if res.status_code == 200:
+            pytest_missing = False
+            pytest_result = res.json()
+            print(pytest_result['stdout']) # print so that it appears in travis log
+            print(pytest_result['stderr'])
+            if not pytest_result['success']:
+                raise Exception("pytest failure")
+            break
+        time.sleep(10)
+    
+    if pytest_missing:
+        raise Exception("Missing pytest output")
 
 
 @task
@@ -2757,4 +2816,5 @@ def reachable_pos(ctx, scene, editor_mode=False, local_build=False):
     )
 
     print("After teleport: {}".format(evt.metadata['agent']['position']))
+
 
