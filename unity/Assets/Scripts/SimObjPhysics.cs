@@ -1763,11 +1763,12 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 	}
 
 
-	[ContextMenu("Setup Colliders And VisPoints")]
+	[ContextMenu("Setup Colliders, VisPoints, and Bounding Box")]
 	public void SetupCollidersVisPoints()
 	{
 		ContextSetUpColliders();
 		ContextSetUpVisibilityPoints();
+        ContextSetUpBoundingBox();
 	}
 
 	//[UnityEditor.MenuItem("SimObjectPhysics/Toaster")]
@@ -2124,20 +2125,85 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 	//[ContextMenu("Set Up Rotate Agent Collider")]
 	void ContextSetUpBoundingBox()
 	{
-		if (transform.Find("BoundingBox"))
-		{
-			BoundingBox = transform.Find("BoundingBox").gameObject;
+        Vector3[] transformSaver = new Vector3[] { transform.localPosition, transform.localEulerAngles };
 
-			//This collider is used as a size reference for the Agent's Rotation checking boxes, so it does not need
-			//to be enabled. To ensure this doesn't interact with anything else, set the Tag to Untagged, the layer to 
-			//SimObjInvisible, and disable this component. Component values can still be accessed if the component itself
-			//is not enabled.
-			BoundingBox.tag = "Untagged";
-			BoundingBox.layer = 9;//layer 9 - SimObjInvisible
+        transform.localPosition = Vector3.zero;
+        transform.localEulerAngles = Vector3.zero;
 
-			if (BoundingBox.GetComponent<BoxCollider>())
-				BoundingBox.GetComponent<BoxCollider>().enabled = false;
-		}
-	}
+        if (!transform.Find("BoundingBox"))
+        {
+            GameObject BoundingBox = new GameObject();
+            BoundingBox.transform.parent = gameObject.transform;
+            BoundingBox.transform.position = Vector3.zero;
+            BoundingBox.transform.localEulerAngles = Vector3.zero;
+            BoundingBox.transform.localScale = Vector3.zero;
+        }
+
+        BoundingBox = transform.Find("BoundingBox").gameObject;
+
+        //This collider is used as a size reference for the Agent's Rotation checking boxes, so it does not need
+        //to be enabled. To ensure this doesn't interact with anything else, set the Tag to Untagged, the layer to 
+        //SimObjInvisible, and disable this component. Component values can still be accessed if the component itself
+        //is not enabled.
+        BoundingBox.tag = "Untagged";
+        BoundingBox.layer = 9;//layer 9 - SimObjInvisible
+
+        Collider[] colliders = transform.GetComponentsInChildren<Collider>();
+        MeshFilter[] meshes = transform.GetComponentsInChildren<MeshFilter>();
+
+        if (BoundingBox.GetComponent<BoxCollider>())
+        {
+            BoundingBox.GetComponent<BoxCollider>().enabled = true;
+            BoundingBox.GetComponent<BoxCollider>().center = colliders[0].bounds.center;
+            BoundingBox.GetComponent<BoxCollider>().size = Vector3.zero;
+        }
+
+        Bounds newBoundingBox = new Bounds();
+        Vector3 minMeshXZ = colliders[0].bounds.center;
+        Vector3 maxMeshXYZ = colliders[0].bounds.center;
+        //Vector3 maxMeshXZ = colliders[0].bounds.center;
+
+        foreach (Collider collider in colliders)
+        {
+            newBoundingBox.Encapsulate(collider.gameObject.GetComponent<Collider>().bounds.min);
+            newBoundingBox.Encapsulate(collider.gameObject.GetComponent<Collider>().bounds.max);
+        }
+
+        //Excluded this because my material ID triangles are all located way below their respective main-meshes
+        //newBoundingBox.Encapsulate(meshGroup.GetComponent<meshFilter>().mesh.bounds.min);
+        foreach (MeshFilter meshFilter in meshes)
+        {
+            foreach (Vector3 vertex in meshFilter.sharedMesh.vertices)
+            {
+                if (minMeshXZ.x > meshFilter.gameObject.transform.TransformPoint(vertex).x)
+                    minMeshXZ.x = meshFilter.gameObject.transform.TransformPoint(vertex).x;
+                if (minMeshXZ.z > meshFilter.gameObject.transform.TransformPoint(vertex).z)
+                    minMeshXZ.z = meshFilter.gameObject.transform.TransformPoint(vertex).z;
+                if (maxMeshXYZ.x < meshFilter.gameObject.transform.TransformPoint(vertex).x)
+                    maxMeshXYZ.x = meshFilter.gameObject.transform.TransformPoint(vertex).x;
+                if (maxMeshXYZ.y < meshFilter.gameObject.transform.TransformPoint(vertex).y)
+                    maxMeshXYZ.y = meshFilter.gameObject.transform.TransformPoint(vertex).y;
+                if (maxMeshXYZ.z < meshFilter.gameObject.transform.TransformPoint(vertex).z)
+                    maxMeshXYZ.z = meshFilter.gameObject.transform.TransformPoint(vertex).z;
+
+                newBoundingBox.Encapsulate(minMeshXZ);
+                newBoundingBox.Encapsulate(maxMeshXYZ);
+            }
+        }
+
+        //Debug.Log("Min/max of BoundingBox: " + newBoundingBox.min + ", " + newBoundingBox.max);
+        BoundingBox.GetComponent<BoxCollider>().center = newBoundingBox.center;
+        //Set Bounding Box Buffer Here!!!
+        BoundingBox.GetComponent<BoxCollider>().size = newBoundingBox.size + new Vector3(0.01f, 0.01f, 0.01f);
+        BoundingBox.GetComponent<BoxCollider>().enabled = false;
+        
+        //var currentBoundingBox = currentGameObject.transform.Find("BoundingBox").GetComponent<BoxCollider>();
+        //currentBoundingBox.size = currentGameObject.GetComponent<MeshFilter>().sharedMesh.bounds.size + new Vector3(0.2f, 0.2f, 0.2f);
+        //currentBoundingBox.center = currentGameObject.GetComponent<MeshFilter>().sharedMesh.bounds.center
+
+        transform.localPosition = transformSaver[0];
+        transform.localEulerAngles = transformSaver[1];
+
+    }
 	#endif
 }
