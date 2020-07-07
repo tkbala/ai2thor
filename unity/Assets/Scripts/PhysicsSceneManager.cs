@@ -50,8 +50,9 @@ public class PhysicsSceneManager : MonoBehaviour
 		//clear this on start so that the CheckForDuplicates function doesn't check pre-existing lists
 		SetupScene();
 
-		if(GameObject.Find("HideAndSeek"))
-		HideAndSeek = GameObject.Find("HideAndSeek");
+		if(GameObject.Find("HideAndSeek")) {
+			HideAndSeek = GameObject.Find("HideAndSeek");
+		}
 
 		if(!GameObject.Find("Objects"))
 		{
@@ -448,7 +449,6 @@ public class PhysicsSceneManager : MonoBehaviour
         //initialize Unity's random with seed
 		UnityEngine.Random.InitState(seed);
 
-
 		List<SimObjType> TypesOfObjectsPrefabIsAllowedToSpawnIn = new List<SimObjType>();
 		Dictionary<SimObjType, List<SimObjPhysics>> AllowedToSpawnInAndExistsInScene = new Dictionary<SimObjType, List<SimObjPhysics>>();
 
@@ -569,7 +569,6 @@ public class PhysicsSceneManager : MonoBehaviour
 									allowed = true;
 								}
 							}
-
 							else if(TypesOfObjectsPrefabIsAllowedToSpawnIn.Contains(sop.ObjType))
 							{
 								allowed = true;
