@@ -1455,7 +1455,7 @@ public class ServerAction
         {
             result = (VisibilityScheme)Enum.Parse(typeof(VisibilityScheme), visibilityScheme, true);
         } 
-        catch (ArgumentException ex) { 
+        catch (ArgumentException) { 
             Debug.LogError("Error parsing visibilityScheme: '" + visibilityScheme + "' defaulting to Collider");
         }
 
