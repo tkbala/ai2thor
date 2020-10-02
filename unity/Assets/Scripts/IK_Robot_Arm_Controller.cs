@@ -150,35 +150,39 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
     {
         //Debug.Log("OnTriggerEnter is firing: " + col.transform.name);
         
-        staticCollided.collided = false;
-        staticCollided.simObjPhysics = null;
-        staticCollided.gameObject = null;
-
+        // staticCollided.collided = false;
+        // staticCollided.simObjPhysics = null;
+        // staticCollided.gameObject = null;
         if(col.GetComponentInParent<SimObjPhysics>())
         {
-            Debug.Log("Sim Object hit: " + col.transform.name);
+            //Debug.Log("Sim Object hit: " + col.transform.name);
             //how does this handle nested sim objects? maybe it's fine?
             SimObjPhysics sop = col.GetComponentInParent<SimObjPhysics>();
             if(sop.PrimaryProperty == SimObjPrimaryProperty.Static)
             {
-                Debug.Log("Sim Object was PrimaryProperty.Static: " + col.transform.name);
-                Debug.Log("For Sim Object, col.isTrigger evaluated to: " + col.isTrigger);
+                //Debug.Log("Sim Object was PrimaryProperty.Static: " + col.transform.name);
+                //Debug.Log("For Sim Object, col.isTrigger evaluated to: " + col.isTrigger);
                 if(!col.isTrigger)
                 {
                     //#if UNITY_EDITOR
-                    Debug.Log("Not a trigger, Collided with static sim obj " + sop.name);
+                    //Debug.Log("Not a trigger, Collided with static sim obj " + sop.name);
                     //#endif
 
                     staticCollided.collided = true;
                     staticCollided.simObjPhysics = sop;
-
+                    Debug.Log("sim obj hit: " + sop.objectID);
                     Debug.Log("collided flag being set to: " + staticCollided.collided);
                 }
             }
         }
 
+        // if (col.transform.name == "StandardIslandHeight") {
+        //     Debug.Log("Static GameObject hit: " + col.transform.name);
+        //     Debug.Log("static " + col.gameObject.isStatic);
+        // }
+
         //also check if the collider hit was a structure?
-        if(col.gameObject.isStatic)
+        else if(col.gameObject.tag == "Structure")
         {                
             Debug.Log("Static GameObject hit: " + col.transform.name);
             Debug.Log("For static game obj, col.isTrigger evaluated to: " + col.isTrigger);
@@ -256,10 +260,15 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
     public IEnumerator moveArmHeight(PhysicsRemoteFPSAgentController controller, float height, float unitsPerSecond, GameObject arm, bool returnToStartPositionIfFailed = false)
     {
         float startTime = Time.realtimeSinceStartup;
+        float fixedStartTime = Time.fixedTime;
         Debug.Log("moveArmHeight Called ///////////////////////////////////////////////////");
+        Debug.Log("fixed delta time at start of MoveArmHeight: " + Time.fixedDeltaTime);
         //first check if the target position is within bounds of the agent's capsule center/height extents
         //if not, actionFinished false with error message listing valid range defined by extents
+        //staticCollided.collided = false;
         staticCollided.collided = false;
+        staticCollided.simObjPhysics = null;
+        staticCollided.gameObject = null;
 
         CapsuleCollider cc = controller.GetComponent<CapsuleCollider>();
         Vector3 cc_center = cc.center;
@@ -299,6 +308,7 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
                 staticCollided.collided = false;
 
                 Debug.Log(string.Format("MoveHand Stopped due to Collision- took {0} ms to complete", Time.realtimeSinceStartup - startTime));
+                Debug.Log(string.Format("MoveHand Stopped due to Collision- took FIXEDTIME {0} ms to complete", Time.fixedTime - fixedStartTime));
                 controller.actionFinished(false, debugMessage);
                 yield break;
             }
@@ -321,14 +331,24 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
 
         }
         Debug.Log(string.Format("NO COLLISION: MoveHand took {0} ms to complete", Time.realtimeSinceStartup - startTime));
+        Debug.Log(string.Format("NO COLLISION: MoveHand took FIXEDTIME {0} ms to complete", Time.fixedTime - fixedStartTime));
+
         controller.actionFinished(true);
     }
 
     public IEnumerator moveArmTarget(PhysicsRemoteFPSAgentController controller, Vector3 target, float unitsPerSecond,  GameObject arm, bool returnToStartPositionIfFailed = false, string whichSpace = "arm") {
 
-        staticCollided.collided = false;
+        float startTime = Time.realtimeSinceStartup;
+        float fixedStartTime = Time.fixedTime;
+        Debug.Log("moveArmTarget Called ///////////////////////////////////////////////////");
+        Debug.Log("fixed delta time at start of MoveArmTarget: " + Time.fixedDeltaTime);
+        //staticCollided.collided = false;
         // Move arm based on hand space or arm origin space
         //Vector3 targetWorldPos = handCameraSpace ? handCameraTransform.TransformPoint(target) : arm.transform.TransformPoint(target);
+
+        staticCollided.collided = false;
+        staticCollided.simObjPhysics = null;
+        staticCollided.gameObject = null;
 
         Vector3 targetWorldPos = Vector3.zero;
 
@@ -356,9 +376,9 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
         var eps = 1e-3;
         yield return new WaitForFixedUpdate();
         var previousArmPosition = armTarget.position;
-
+        Debug.Log("what is staticCollided: " + staticCollided.collided);
         while (Vector3.SqrMagnitude(targetWorldPos - armTarget.position) > eps) {
-
+            yield return new WaitForFixedUpdate();
             if (staticCollided.collided != false) {
                 
                 //decide if we want to return to original position or last known position before collision
@@ -376,8 +396,15 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
                                 
                 staticCollided.collided = false;
 
+                Debug.Log(string.Format("MoveArmTarget Stopped due to Collision- took {0} ms to complete", Time.realtimeSinceStartup - startTime));
+                Debug.Log(string.Format("MoveArmTarget Stopped due to Collision- took FIXEDTIME {0} ms to complete", Time.fixedTime - fixedStartTime));
                 controller.actionFinished(false, debugMessage);
                 yield break;
+            }
+
+            if(staticCollided.collided == false)
+            {
+                Debug.Log("WTF");
             }
 
             //if the option to stop moving when the sphere touches any sim object is wanted
@@ -395,8 +422,10 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
             armTarget.position = Vector3.SqrMagnitude(targetWorldPos - armTarget.position) > eps ?  armTarget.position : targetWorldPos;
            
             yield return new WaitForFixedUpdate();
-
         }
+
+        Debug.Log(string.Format("NO COLLISION: MoveArmTarget took {0} ms to complete", Time.realtimeSinceStartup - startTime));
+        Debug.Log(string.Format("NO COLLISION: MoveArmTarget took FIXEDTIME {0} ms to complete", Time.fixedTime - fixedStartTime));
         controller.actionFinished(true);
     }
 

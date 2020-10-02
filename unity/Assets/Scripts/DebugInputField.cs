@@ -50,17 +50,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         void Start()
         {
-            #if UNITY_EDITOR || UNITY_WEBGL
-                Debug.Log("In Unity editor, init DebugInputField");
+            //#if UNITY_EDITOR || UNITY_WEBGL
+                //Debug.Log("In Unity editor, init DebugInputField");
                 this.InitializeUserControl();
-            #endif
+            //#endif
         }
 
         void SelectPlayerControl() {
-            #if UNITY_EDITOR
+            //#if UNITY_EDITOR
                 Debug.Log("Player Control Set To: Editor control");
                 setControlMode(ControlMode.DEBUG_TEXT_INPUT);
-            #endif
+            //#endif
             #if UNITY_WEBGL
                 Debug.Log("Player Control Set To:Webgl");
                 setControlMode(ControlMode.FPS);
@@ -90,7 +90,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
            SelectPlayerControl();
 
            #if !UNITY_EDITOR
-               HideHUD();
+               //HideHUD();
            #endif
         }
 
@@ -124,7 +124,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             background.SetActive(false);
         }
 
-        #if UNITY_EDITOR
+        //#if UNITY_EDITOR
         public void Execute(string command)
         {
             if ((PhysicsController.enabled && !PhysicsController.actionComplete) ||
@@ -3013,7 +3013,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			//StartCoroutine(CheckIfactionCompleteWasSetToTrueAfterWaitingALittleBit(splitcommand[0]));
 
         }
-        #endif
+        //#endif
 
 #if UNITY_EDITOR
 

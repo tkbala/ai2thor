@@ -99,8 +99,6 @@ GameObject:
   - component: {fileID: 3152085102729691452}
   - component: {fileID: 6392853752390124590}
   - component: {fileID: 5605199163761958378}
-  - component: {fileID: 547241185420619469}
-  - component: {fileID: 3986696412571117147}
   m_Layer: 0
   m_Name: robot_arm_1
   m_TagString: Untagged
@@ -172,34 +170,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &547241185420619469
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547241185420619468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.04226592
-  m_Height: 0.34566003
-  m_Direction: 2
-  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.1384531}
---- !u!136 &3986696412571117147
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547241185420619468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.04226592
-  m_Height: 0.34566003
-  m_Direction: 2
-  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.1384531}
 --- !u!1 &1051321022329751734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,9 +1762,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.04226592
-  m_Height: 0.34566003
+  m_Height: 0.10541343
   m_Direction: 2
-  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.1384531}
+  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.25857645}
 --- !u!1 &6112303387667732374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,7 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnetSphere: {fileID: 4072709080383018930}
   ArmCapsuleColliders:
-  - {fileID: 547241185420619469}
+  - {fileID: 0}
   - {fileID: 6112303387667732375}
   - {fileID: 4034741057361177866}
   - {fileID: 227925924668802121}
@@ -2440,9 +2410,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.04226592
-  m_Height: 0.34566003
+  m_Height: 0.10541343
   m_Direction: 2
-  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.1384531}
+  m_Center: {x: -0.00000012665987, y: 0.0009284355, z: 0.25857645}
 --- !u!1 &8076491155381347171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512765105755823309, guid: ebceff23aaca6114a9d1b6a0b5b9671a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebceff23aaca6114a9d1b6a0b5b9671a, type: 3}

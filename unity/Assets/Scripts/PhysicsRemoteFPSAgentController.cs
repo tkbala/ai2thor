@@ -190,7 +190,7 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
         //EDITOR DEBUG SCRIPTS:
         //////////////////////////////////////////////////////////////////////
-        #if UNITY_EDITOR
+        //#if UNITY_EDITOR
 
         //return ID of closest CanPickup object by distance
         public string ObjectIdOfClosestVisibleObject() {
@@ -260,7 +260,7 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             }
             return objectID;
         }
-        #endif
+        //#endif
         /////////////////////////////////////////////////////////
         //return a reference to a SimObj that is Visible (in the VisibleSimObjPhysics array) and
         //matches the passed in objectID

@@ -257,7 +257,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		public void actionFinished(bool success, System.Object actionReturn=null) 
 		{
-			
+			Debug.Log("ActionFinished started");
 			if (actionComplete) 
 			{
 				Debug.LogError ("ActionFinished called with actionComplete already set to true");
@@ -276,6 +276,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			this.actionReturn = actionReturn;
 			actionCounter = 0;
 			targetTeleport = Vector3.zero;
+
+            Debug.Log("ActionFinished ended");
 		}
 
         public Vector3[] getReachablePositions(float gridMultiplier = 1.0f, int maxStepCount = 10000, bool visualize = false, Color? gridColor = null) { //max step count represents a 100m * 100m room. Adjust this value later if we end up making bigger rooms?
