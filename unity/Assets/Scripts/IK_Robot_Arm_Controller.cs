@@ -25,7 +25,7 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
     //dict to track which picked up object has which set of trigger colliders
     //which we have to parent and reparent in order for arm collision to detect
     [SerializeField]
-    public Dictionary<SimObjPhysics, List<Collider>> HeldObjects = new Dictionary<SimObjPhysics, List<Collider>>();
+    public Dictionary<SimObjPhysics, Transform> HeldObjects = new Dictionary<SimObjPhysics, Transform>();
 
     //private bool StopMotionOnContact = false;
     // Start is called before the first frame update
@@ -416,19 +416,11 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
             sop.transform.SetParent(magnetSphere.transform);
             rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
 
-            //ok new plan, clone the "myColliders" of the sop and
-            //then set them all to isTrigger = True
-            //and parent them to the correct joint
-            List<Collider> cols = new List<Collider>();
-
-            foreach (Collider c in sop.MyColliders)
-            {
-                Collider clone = Instantiate(c, c.transform.position, c.transform.rotation, FourthJoint);
-                clone.isTrigger = true;
-                cols.Add(clone);
-            }
-
+            //move colliders to be children of arm? stop arm from moving?
+            Transform cols = sop.transform.Find("TriggerColliders"); 
+            cols.SetParent(FourthJoint);
             pickedUp = true;
+
             HeldObjects.Add(sop, cols);
         }
 
@@ -440,17 +432,15 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
     public void DropObject()
     {
         //grab all sim objects that are currently colliding with magnet sphere
-        foreach(KeyValuePair<SimObjPhysics, List<Collider>> sop in HeldObjects) 
+        foreach(KeyValuePair<SimObjPhysics, Transform> sop in HeldObjects) 
         {
             Rigidbody rb = sop.Key.GetComponent<Rigidbody>();
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
             rb.isKinematic = false;
 
-            //delete cloned colliders
-            foreach (Collider c in sop.Value)
-            {
-                Destroy(c.gameObject);
-            }
+            //move colliders back to the sop
+            //magnetSphere.transform.Find("TriggerColliders").transform.SetParent(sop.Key.transform);
+            sop.Value.transform.SetParent(sop.Key.transform);
 
             GameObject topObject = GameObject.Find("Objects");
 
@@ -485,69 +475,31 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
         //meta.handTarget = armTarget.position;
         var joint = FirstJoint;
         var joints = new List<JointMetadata>();
-
-        //Declare variables used for processing metadata
-        float angleRot;
-        Vector3 vectorRot;
-        var jointMetaRoot = new JointMetadata();
-
-        //Assign metadata to FirstJoint joint separately from others, since its angler joint uniquely refers to the tip's orientation rather than the base's, which is not what we want in this case
-        jointMetaRoot.position = joint.position;
-        jointMetaRoot.name = joint.name;
-        jointMetaRoot.rootRelativePosition = Vector3.zero;
-
-        jointMetaRoot.localRotation = new Vector4 (1, 0, 0, 0);
-
-        joint.rotation.ToAngleAxis(out angleRot, out vectorRot);
-        jointMetaRoot.rotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
-
-        jointMetaRoot.rootRelativeRotation = new Vector4 (1, 0, 0, 0);
-
-        joints.Add(jointMetaRoot);
-
-        //Assign joint metadata to remaining joints, which all have identical hierarchies
-        for (var i = 2; i <= 4; i++) {
-            joint = joint.Find("robot_arm_" + i + "_jnt");
-
+        for (var i = 2; i <= 5; i++) {
             var jointMeta = new JointMetadata();
-
             jointMeta.name = joint.name;
             jointMeta.position = joint.position;
             //local position of joint is meaningless because it never changes relative to its parent joint, we use rootRelative instead
             jointMeta.rootRelativePosition = FirstJoint.InverseTransformPoint(joint.position);
 
-            //local rotation currently relative to immediate parent joint
-            if (joint.rotation != joint.GetChild(0).rotation)
-            {
-                joint.GetChild(0).localRotation.ToAngleAxis(out angleRot, out vectorRot);//getchild to grab the angler since that is what actually changes the geometry angle
-                jointMeta.localRotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
-            }
+            float angleRot;
+            Vector3 vectorRot;
 
-            //edge case for where angler and parent rotations are aligned, which Quaternions have trouble resolving, so we hard-code it here
-            else
-            {
-                jointMeta.localRotation = new Vector4(1, 0, 0, 0);
-            }
-            
+            //local rotation currently relative to immediate parent joint
+            joint.GetChild(0).localRotation.ToAngleAxis(out angleRot, out vectorRot);//getchild to grab the angler since that is what actually changes the geometry angle
+            jointMeta.localRotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
+
             //world relative rotation
             joint.GetChild(0).rotation.ToAngleAxis(out angleRot, out vectorRot);//getchild to grab the angler since that is what actually changes the geometry angle
             jointMeta.rotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
 
             //rotation relative to root joint/agent
             //root forward and agent forward are always the same
-            if (FirstJoint.rotation != joint.GetChild(0).rotation)
-            {
-                Quaternion.Euler(FirstJoint.InverseTransformDirection(joint.GetChild(0).eulerAngles)).ToAngleAxis(out angleRot, out vectorRot);//getchild to grab the angler since that is what actually changes the geometry angle
-                jointMeta.rootRelativeRotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
-            }
-
-            //edge case for when angler and root rotations are aligned, which Quaternions have trouble resolving, so we hard-code it here
-            else
-            {
-                jointMeta.rootRelativeRotation = new Vector4(1, 0, 0, 0);
-            }
+            Quaternion.Euler(FirstJoint.InverseTransformDirection(joint.GetChild(0).eulerAngles)).ToAngleAxis(out angleRot, out vectorRot);//getchild to grab the angler since that is what actually changes the geometry angle
+            jointMeta.rootRelativeRotation = new Vector4(vectorRot.x, vectorRot.y, vectorRot.z, angleRot);
 
             joints.Add(jointMeta);
+            joint = joint.Find("robot_arm_" + i + "_jnt");
         }
 
         meta.joints = joints.ToArray();
@@ -559,7 +511,7 @@ public class IK_Robot_Arm_Controller : MonoBehaviour
 
         if(HeldObjects != null)
         {
-            foreach(KeyValuePair<SimObjPhysics, List<Collider>> sop in HeldObjects) 
+            foreach(KeyValuePair<SimObjPhysics, Transform> sop in HeldObjects) 
             {
                 HeldObjectIDs.Add(sop.Key.objectID);
             }
