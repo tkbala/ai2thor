@@ -69,6 +69,14 @@ public class Break : MonoBehaviour
 
     public void BreakObject(Collision collision)
     {
+        //if this object is a receptacle, unparent any child "contained" objects first before breaking
+        SimObjPhysics sop = this.GetComponent<SimObjPhysics>();
+        if(sop)
+        {
+            print("should be dropping contained");
+            sop.DropContainedObjects(reparentContainedObjects: true, forceKinematic: false);
+        }
+
         //prefab swap will switch the entire object out with a new prefab object entirely
         if(breakType == BreakType.PrefabSwap)
         {

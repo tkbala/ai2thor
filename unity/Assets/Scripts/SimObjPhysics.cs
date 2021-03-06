@@ -137,11 +137,6 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 	//actively contained by the sim object at the moment of pickup.
 	public List<SimObjPhysics> ContainedObjectReferences;
 
-	#if UNITY_EDITOR
-	//all objects currently contained by this receptacle
-	public List<GameObject> CurrentlyContains;
-	#endif
-
 	public class PhysicsMaterialValues
 	{
 		public float DynamicFriction;
@@ -1068,11 +1063,85 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 			}
 		}
 
-		#if UNITY_EDITOR
-		CurrentlyContains = objs;
-		#endif
-
 		return objs;
+	}
+
+	//make sure not to pick up any sliced objects because those should remain uninteractable i they have been sliced
+	public void PickupContainedObjects() 
+	{
+		if (IsReceptacle) 
+		{
+			foreach (SimObjPhysics sop in SimObjectsContainedByReceptacle) 
+			{
+				//for every object that is contained by this object...first make sure it's pickupable so we don't like, grab a Chair if it happened to be in the receptacle box or something
+				//turn off the colliders (so contained object doesn't block movement), leaving Trigger Colliders active (this is important to maintain visibility!)
+				if (sop.PrimaryProperty == SimObjPrimaryProperty.CanPickup) 
+				{
+					//wait! check if this object is sliceable and is sliced, if so SKIP!
+					if(sop.DoesThisObjectHaveThisSecondaryProperty(SimObjSecondaryProperty.CanBeSliced))
+					{
+						//if this object is sliced, don't pick it up because it is effectively disabled
+						if(sop.GetComponent<SliceObject>().IsSliced())
+						{
+							RemoveFromContainedObjectReferences(sop);
+							break;
+						}
+					}
+
+					sop.transform.Find("Colliders").gameObject.SetActive(false);
+					Rigidbody soprb = sop.GetComponent<Rigidbody>();
+					soprb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+					soprb.isKinematic = true;
+					sop.transform.SetParent(transform);
+
+					//used to reference objects in the receptacle that is being picked up without having to search through all children
+					AddToContainedObjectReferences(sop);
+
+					isInAgentHand = true;//agent hand flag
+				}
+			}
+		}
+	}
+
+	public void DropContainedObjects( 
+		bool reparentContainedObjects,
+		bool forceKinematic
+	) {
+		if (IsReceptacle) {
+			GameObject topObject = null;
+
+			//first make sure to update target.ContainedObjectReferences
+
+			foreach (SimObjPhysics sop in ContainedObjectReferences) {
+				// for every object that is contained by this object turn off
+				// the colliders, leaving Trigger Colliders active (this is important to maintain visibility!)
+				sop.transform.Find("Colliders").gameObject.SetActive(true);
+				sop.isInAgentHand = false; // Agent hand flag
+
+				if (reparentContainedObjects) {
+					if (topObject == null) {
+						topObject = GameObject.Find("Objects");
+					}
+					sop.transform.SetParent(topObject.transform);
+				}
+
+				Rigidbody rb = sop.GetComponent<Rigidbody>();
+				rb.isKinematic = forceKinematic;
+				if (!forceKinematic) {
+					rb.useGravity = true;
+					rb.constraints = RigidbodyConstraints.None;
+					rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+				}
+
+			}
+			ClearContainedObjectReferences();
+		}
+	}
+
+	//same as DropContainedObjects but with dropped objects set to kinematic true
+	public void DropContainedObjectsStationary() {
+		DropContainedObjects(reparentContainedObjects: false, forceKinematic: true);
+		return;
 	}
 
 	public void OnTriggerEnter(Collider other) {

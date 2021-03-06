@@ -499,8 +499,7 @@ public class InstantiatePrefabTest : MonoBehaviour
                     //if this object is a receptacle and it has other objects inside it, drop them all together
                     if(sop.DoesThisObjectHaveThisSecondaryProperty(SimObjSecondaryProperty.Receptacle))
                     {
-                        PhysicsRemoteFPSAgentController agent = GameObject.Find("FPSController").GetComponent<PhysicsRemoteFPSAgentController>();
-                        agent.DropContainedObjectsStationary(sop); //use stationary version so that colliders are turned back on, but kinematics remain true
+                        sop.DropContainedObjectsStationary(); //use stationary version so that colliders are turned back on, but kinematics remain true
                     }
 
                     //if the target receptacle is a pickupable receptacle, set it to kinematic true as will sence we are placing stationary
@@ -525,8 +524,7 @@ public class InstantiatePrefabTest : MonoBehaviour
                     //if this object is a receptacle and it has other objects inside it, drop them all together
                     if(sop.DoesThisObjectHaveThisSecondaryProperty(SimObjSecondaryProperty.Receptacle))
                     {
-                        PhysicsRemoteFPSAgentController agent = GameObject.Find("FPSController").GetComponent<PhysicsRemoteFPSAgentController>();
-                        agent.DropContainedObjects(target: sop, reparentContainedObjects: true, forceKinematic: false);
+                        sop.DropContainedObjects(reparentContainedObjects: true, forceKinematic: false);
                     }
                 }
                 sop.isInAgentHand = false;//set agent hand flag
