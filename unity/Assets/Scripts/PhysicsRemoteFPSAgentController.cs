@@ -4718,7 +4718,6 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             if(tryPickupTarget(target, action, action.manualInteract))
             {
                 //we have succesfully picked up something! 
-                target.GetComponent<SimObjPhysics>().isInAgentHand = true;
                 actionFinished(true, target.ObjectID);
                 return;
             }
@@ -4787,6 +4786,8 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
             else
             {
+                //we are good and this object and any contained objects have been picked up
+                target.GetComponent<SimObjPhysics>().isInAgentHand = true;
                 return true;
             }
         }

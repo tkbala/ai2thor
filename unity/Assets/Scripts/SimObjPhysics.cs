@@ -1097,7 +1097,8 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj
 					//used to reference objects in the receptacle that is being picked up without having to search through all children
 					AddToContainedObjectReferences(sop);
 
-					isInAgentHand = true;//agent hand flag
+					//make sure this contained object is also flagged as in the agent's hand
+					sop.isInAgentHand = true;//agent hand flag
 				}
 			}
 		}
