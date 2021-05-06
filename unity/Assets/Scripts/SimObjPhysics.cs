@@ -1925,7 +1925,7 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj {
             }
         }
 
-        // loop through all child objects. For each object, check if the child itself has a child called Colliders....
+        // loop through all child objects, and their children as well. For each object, check if the child itself has a child called Colliders....
         foreach (Transform child in transform) {
             if (child.Find("Colliders") && !child.GetComponent<SimObjPhysics>()) {
                 Transform Colliders = child.Find("Colliders");
@@ -1945,6 +1945,28 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj {
                     }
                 }
             }
+
+            foreach (Transform grandchild in child) {
+                if (grandchild.Find("Colliders") && !grandchild.GetComponent<SimObjPhysics>()) {
+                    Transform Colliders = grandchild.Find("Colliders");
+
+                    foreach (Transform grandchildschild in Colliders) {
+                        // list.toarray
+                        listColliders.Add(grandchildschild.GetComponent<Collider>());
+
+                        // set correct tag and layer for each object
+                        // also ensure all colliders are NOT trigger
+                        grandchildschild.gameObject.tag = "SimObjPhysics";
+                        grandchildschild.gameObject.layer = 8;
+
+                        if (grandchildschild.GetComponent<Collider>()) {
+                            grandchildschild.GetComponent<Collider>().enabled = true;
+                            grandchildschild.GetComponent<Collider>().isTrigger = false;
+                        }
+                    }
+                }
+            }
+
         }
 
         MyColliders = listColliders.ToArray();
@@ -2002,6 +2024,18 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj {
                     vplist.Add(childschild);
                     childschild.gameObject.tag = "Untagged";
                     childschild.gameObject.layer = 8;
+                }
+            }
+
+            foreach (Transform grandchild in child) {
+                if (grandchild.Find("VisibilityPoints") && !grandchild.GetComponent<SimObjPhysics>()) {
+                    Transform vp = grandchild.Find("VisibilityPoints");
+
+                    foreach (Transform grandchildschild in vp) {
+                        vplist.Add(grandchildschild);
+                        grandchildschild.gameObject.tag = "Untagged";
+                        grandchildschild.gameObject.layer = 8;
+                    }
                 }
             }
         }
