@@ -954,10 +954,7 @@ namespace Thor.Procedural {
 
             ProceduralTools.setRoomSimObjectPhysics(floorGameObject, simObjId, visibilityPoints, receptacleTriggerBox, collider.GetComponentInChildren<Collider>());
 
-            // ProceduralTools.createWalls(room, "Structure");
-            Debug.Log($"Structure creation count: {rooms.Count()}");
             var index = 0;
-            //Debug.Log($" Room {rooms} roomlen {}");
             foreach (RectangleRoom room in rooms) {
                 var wallGO = ProceduralTools.createWalls(room, materialDb, $"Structure_{index}");
                 floorGameObject.transform.parent = wallGO.transform;
@@ -1007,7 +1004,6 @@ namespace Thor.Procedural {
 
             var floorGameObject = createSimObjPhysicsGameObject(name, position == null ? new Vector3(0, wallsMinY, 0) : position);
 
-            Debug.Log("Floor");
             for (int i = 0; i < house.rooms.Count(); i++) {
                 var room = house.rooms.ElementAt(i);
                 var subFloorGO = createSimObjPhysicsGameObject($"Floor_{i}");
@@ -1015,7 +1011,6 @@ namespace Thor.Procedural {
                 // mesh.subMeshCount
                 subFloorGO.GetComponent<MeshFilter>().mesh = mesh;
                 var meshRenderer = subFloorGO.GetComponent<MeshRenderer>();
-                Debug.Log("room " + room.id + " mat " + room.floor_material);
 
                 meshRenderer.material = materialDb.getAsset(room.floor_material);
 
@@ -1045,7 +1040,6 @@ namespace Thor.Procedural {
                 // marginWidth = dimension.x * 0.05f,
                 // marginDepth = dimension.z * 0.05f
             };
-            Debug.Log("floor " + floor.center + " wid " + floor.width + " dep " + floor.depth);
             var roomCluster = new RectangleRoom() {
                 rectangleFloor = floor
             };
@@ -1061,7 +1055,6 @@ namespace Thor.Procedural {
 
             // generate ceiling
             if (ceilingMaterialId != "") {
-                Debug.Log("Ceiling");
                 var ceilingGameObject = createSimObjPhysicsGameObject("Ceiling", new Vector3(0, wallsMaxY + wallsMaxHeight, 0), "Structure", 0);
                 var ceilingMesh = ProceduralTools.GetRectangleFloorMesh(new List<RectangleRoom> { roomCluster }, 0.0f, true);
                 ceilingGameObject.GetComponent<MeshFilter>().mesh = ceilingMesh;
@@ -1070,24 +1063,13 @@ namespace Thor.Procedural {
 
             ProceduralTools.setRoomSimObjectPhysics(floorGameObject, simObjId, visibilityPoints, receptacleTriggerBox, collider.GetComponentInChildren<Collider>());
 
-            // ProceduralTools.createWalls(room, "Structure");
-            Debug.Log($"Structure creation count: {house.rooms.Count()}");
             var index = 0;
-            //Debug.Log($" Room {rooms} roomlen {}");
-            // house.walls.
-            // foreach (Room room in house.rooms.Select() ) {
-            //     var wallGO = ProceduralTools.createWalls(room, materialDb, $"Structure_{index}");
-            //     floorGameObject.transform.parent = wallGO.transform;
-            //     index++;
-            // }
 
-            Debug.Log("Walls");
             var wallGO = ProceduralTools.createWalls(walls, materialDb, $"Structure_{index}");
 
             foreach (var obj in house.objects) {
                 var k = ProceduralTools.spawnObject(
                     ProceduralTools.getAssetMap(), obj);
-                Debug.Log("obj " + obj.asset_id + " id " + obj.id + " null " + (k == null));
             }
 
             //generate objectId for newly created wall/floor objects
@@ -1229,7 +1211,6 @@ namespace Thor.Procedural {
                 UnityEngine.Object.Destroy(toSpawn.transform.gameObject);
                 return null;
             }
-
             return toSpawn.transform.gameObject;
         }
 

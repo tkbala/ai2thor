@@ -3413,7 +3413,7 @@ class {encoded_class_name}:
         
 
 @task
-def create_room(ctx, file_path="unity/Assets/Resources/rooms/0.json", editor_mode=False, local_build=False):
+def create_room(ctx, file_path="unity/Assets/Resources/rooms/1.json", editor_mode=False, local_build=False):
     import ai2thor.controller
     import random
     import json
@@ -3429,6 +3429,7 @@ def create_room(ctx, file_path="unity/Assets/Resources/rooms/0.json", editor_mod
         local_build=local_build,
         start_unity=False if editor_mode else True,
         scene="procedural", gridSize=0.25,
+        procedural = True,
         width=width,
         height=height,
         fieldOfView=fov,
@@ -3455,8 +3456,8 @@ def create_room(ctx, file_path="unity/Assets/Resources/rooms/0.json", editor_mod
     # print(evt.metadata["actionReturn"])
     print(os.getcwd())
     with open(file_path, "r") as f:
-        json = json.load(f)
-        walls = json["walls"]
+        obj = json.load(f)
+        walls = obj["walls"]
 
         evt = controller.step(
             dict(
@@ -3470,3 +3471,190 @@ def create_room(ctx, file_path="unity/Assets/Resources/rooms/0.json", editor_mod
 
         for i in range(n):
             controller.step("MoveAhead")
+
+
+# def walls_to_polygon(walls):
+
+
+@task
+def create_json(ctx, file_path, output=None):
+    import json
+    import functools
+    import itertools
+    from pprint import pprint
+
+    add = lambda x, y: x + y
+    sub = lambda x, y: x - y
+
+    def vec3(x, y, z):
+        return {"x": x, "y": y, "z": z}
+
+    def point_wise_2(v1, v2, func):
+        return {k: func(v1[k], v2[k]) for k in ['x', 'y', 'z']}
+
+    def point_wise(v1, func):
+        return {k: func(v1[k]) for k in ['x', 'y', 'z']}
+
+    def sum(vec):
+        return functools.reduce(lambda a, b: a + b, vec.values())
+
+    def sqr_dist(v1, v2):
+        return sum(point_wise(point_wise_2(v1, v2, sub), lambda x: x ** 2))
+
+    def wall_to_poly(wall):
+        return [ wall['p0'], wall['p1'], point_wise_2(wall['p1'], vec3(0, wall['height'], 0), add), point_wise_2(wall['p0'], vec3(0, wall['height'], 0), add)]
+
+
+    def walls_to_floor_poly(walls):
+        result = []
+        wall_list = list(walls)
+        eps = 1e-4
+        eps_sqr = eps ** 2
+
+        result.append(walls[0]['p0'])
+
+        while len(wall_list) != 0:
+            wall = wall_list.pop(0)
+            p1 = wall['p1']
+            wall_list = sorted(wall_list, key=lambda w: sqr_dist(p1, w['p0']))
+            if len(wall_list) != 0:
+                closest = wall_list[0]
+                dist = sqr_dist(p1, closest['p0'])
+                if dist < eps_sqr:
+                    result.append(closest['p0'])
+                else:
+                    return None
+        return result
+
+
+    with open(file_path, "r") as f:
+        obj = json.load(f)
+        walls = \
+        [
+            [
+                {
+                    "id": "wall_{}_{}".format(room_i, wall_indx),
+                    "room_id": "room_{}".format(room_i),
+                    "material": wall['materialId'],
+                    "empty": wall['empty'] if 'empty' in wall else False,
+                    'polygon': wall_to_poly(wall)
+                } for (wall, wall_indx) in zip(room["walls"], range(0, len(room["walls"])))
+            ] for (room, room_i) in zip(obj["rooms"], range(len(obj["rooms"])))
+        ]
+
+
+        rooms = \
+        [
+            {
+                "id": "room_{}".format(room_i),
+                "type": "",
+                "floor_material": room['rectangleFloor']['materialId'],
+                "children": [],
+                "ceilings": [],
+                "floor_polygon": walls_to_floor_poly(room["walls"])}
+            for (room, room_i) in zip(obj["rooms"], range(len(obj["rooms"])))
+
+        ]
+
+        walls = list(itertools.chain(*walls))
+
+        house = {
+            'rooms': rooms,
+            'walls': walls,
+            'procedural_parameters': {
+                'ceiling_material': obj['ceilingMaterialId'],
+                "floor_collider_thickness": 1.0,
+                "receptacle_height": 0.7,
+                "skybox_id": "Sky1",
+                "lights": []
+            }
+        }
+
+        pprint(house)
+
+        if output is not None:
+            with open(output, "w") as fw:
+                json.dump(house, fw, indent=4, sort_keys=True)
+
+
+@task
+def spawn_obj_test(ctx, file_path, room_id, editor_mode=False, local_build=False):
+    import ai2thor.controller
+    import random
+    import json
+    import os
+    import time
+
+    print(os.getcwd())
+    width = 300
+    height = 300
+    fov = 100
+    n = 20
+    import os
+    from pprint import pprint
+    controller = ai2thor.controller.Controller(
+        local_executable_path=None,
+        local_build=local_build,
+        start_unity=False if editor_mode else True,
+        scene="procedural", gridSize=0.25,
+        procedural=True,
+        width=width,
+        height=height,
+        fieldOfView=fov,
+        agentControllerType='mid-level',
+        server_class=ai2thor.fifo_server.FifoServer,
+        visibilityScheme='Distance'
+    )
+
+    # print(
+    #     "constoller.last_action Agent Pos: {}".format(
+    #         controller.last_event.metadata["agent"]["position"]
+    #     )
+    # )
+
+    # evt = controller.step(action="GetReachablePositions", gridSize=gridSize)
+
+    # print("After GetReachable AgentPos: {}".format(evt.metadata["agent"]["position"]))
+    #
+    # print(evt.metadata["lastActionSuccess"])
+    # print(evt.metadata["errorMessage"])
+    #
+    # reachable_pos = evt.metadata["actionReturn"]
+    #
+    # print(evt.metadata["actionReturn"])
+    print(os.getcwd())
+    with open(file_path, "r") as f:
+        obj = json.load(f)
+
+        # obj['walls'] = [wall for wall in obj['walls'] if wall['room_id'] == room_id]
+        # obj['rooms'] = [room for room in obj['rooms'] if room['id'] == room_id]
+        obj['objects'] = []
+
+        pprint(obj)
+        evt = controller.step(
+            dict(
+                action="CreateHouseFromJson",
+                house=obj
+            )
+        )
+
+        evt = controller.step(dict(
+            action="TeleportFull", x=4.0, y=0.9010001, z=4.0, rotation=dict(x=0, y=0, z=0),
+            horizon = 30, standing = True, forceAction = True
+        ))
+        # dict("axis" = dict(x=0, y=1.0, z=0), "degrees": 90)
+
+        # SpawnObjectInReceptacleRandomly(string objectId, string prefabName, string targetReceptacle, AxisAngleRotation rotation)
+        evt = controller.step(dict(
+            action="SpawnObjectInReceptacleRandomly",
+            objectId="table_1",
+            prefabName="Coffee_Table_211_1",
+            targetReceptacle="Floor|+00.00|+00.00|+00.00",
+
+            rotation=dict(axis=dict(x=0, y=1.0, z=0), degrees=90)
+        ))
+        print(evt.metadata['lastActionSuccess'])
+        print(evt.metadata['errorMessage'])
+        for i in range(n):
+            controller.step("MoveAhead")
+            time.sleep(0.2)
