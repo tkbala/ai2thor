@@ -22,7 +22,7 @@ public class Receptacle : MonoBehaviour {
         }
     }
 
-    private SimObj[] startupItems;
+    //private SimObj[] startupItems;
     private Vector3 lastPosition;
 
     protected virtual void OnEnable() {
@@ -38,17 +38,17 @@ public class Receptacle : MonoBehaviour {
         if (Application.isPlaying) {
             // un-parent all parented sim objs temporarily
             // this way any sim objs we're holding can grab their colliders
-            startupItems = new SimObj[Pivots.Length];
-            for (int i = 0; i < Pivots.Length; i++) {
-                if (Pivots[i].childCount > 0) {
-                    startupItems[i] = Pivots[i].GetChild(0).GetComponent<SimObj>();
-                    if (startupItems[i] == null) {
-                        Debug.LogError("Found a non-SimObj child in a receptacle " + name + " pivot - this should not happen");
-                    } else {
-                        startupItems[i].transform.parent = null;
-                    }
-                }
-            }
+            //startupItems = new SimObj[Pivots.Length];
+            //for (int i = 0; i < Pivots.Length; i++) {
+            //    if (Pivots[i].childCount > 0) {
+            //        startupItems[i] = Pivots[i].GetChild(0).GetComponent<SimObj>();
+            //        if (startupItems[i] == null) {
+            //            Debug.LogError("Found a non-SimObj child in a receptacle " + name + " pivot - this should not happen");
+            //        } else {
+            //            startupItems[i].transform.parent = null;
+            //        }
+            //    }
+            //}
 
             // see if we have more than 1 collider - if we do, make the visibility collider a trigger
             Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
@@ -63,19 +63,19 @@ public class Receptacle : MonoBehaviour {
             // now that all sim objs have updated themselves
             // re-parent all children of pivots
             // and set any sim objs to invisible
-            for (int i = 0; i < Pivots.Length; i++) {
-                if (startupItems[i] != null) {
-                    startupItems[i].transform.parent = Pivots[i];
-                    startupItems[i].transform.localPosition = Vector3.zero;
-                    startupItems[i].transform.localRotation = Quaternion.identity;
-                    startupItems[i].VisibleToRaycasts = false;
-                    // if the item starts in a receptacle, it has no 'startup position'
-                    // so destroy its startup transform
-                    if (startupItems[i].StartupTransform != null) {
-                        GameObject.Destroy(startupItems[i].StartupTransform.gameObject);
-                    }
-                }
-            }
+            //for (int i = 0; i < Pivots.Length; i++) {
+            //    if (startupItems[i] != null) {
+            //        startupItems[i].transform.parent = Pivots[i];
+            //        startupItems[i].transform.localPosition = Vector3.zero;
+            //        startupItems[i].transform.localRotation = Quaternion.identity;
+            //        startupItems[i].VisibleToRaycasts = false;
+            //        // if the item starts in a receptacle, it has no 'startup position'
+            //        // so destroy its startup transform
+            //        if (startupItems[i].StartupTransform != null) {
+            //            GameObject.Destroy(startupItems[i].StartupTransform.gameObject);
+            //        }
+            //    }
+            //}
         }
     }
 
