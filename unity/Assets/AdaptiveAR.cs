@@ -28,11 +28,14 @@ public static class AdaptiveAR {
             var tfm = obj.transform;
             EditorUtility.SetDirty(obj);
 
+            //Remove Components
+            RemoveComponents(obj);
+
             GameObject prefab = PrefabUtility.GetCorrespondingObjectFromOriginalSource(obj);
+            
             if (prefab == null) {
 
-                //Remove Components
-                RemoveComponents(obj);
+                
 
 
             } else {
