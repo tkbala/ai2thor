@@ -179,13 +179,47 @@ public static class AdaptiveAR {
         RemoveComponent<SimObjPhysics>(obj);
         RemoveComponent<SimObj>(obj);
         RemoveComponent<Rigidbody>(obj);
-        RemoveComponent<CanToggleOnOff>(obj);
-        RemoveComponent<SliceObject>(obj);
-        RemoveComponent<Fill>(obj);
-        RemoveComponent<Break>(obj);
-        RemoveComponent<Dirty>(obj);
-        RemoveComponent<CanOpen_Object>(obj);
         
+        RemoveComponent<SliceObject>(obj);
+        
+        
+        
+        
+        RemoveComponent<UsedUp>(obj);
+        RemoveComponent<PhysicsRemoteFPSAgentController>(obj);
+
+        RemoveComponent<Bathtub>(obj);
+        RemoveComponent<Bed>(obj);
+        RemoveComponent<Blinds>(obj);
+        RemoveComponent<Box>(obj);
+        RemoveComponent<Break>(obj);
+        RemoveComponent<Breakdown>(obj);
+        RemoveComponent<Cabinet>(obj);
+        RemoveComponent<CanOpen_Object>(obj);
+        RemoveComponent<CanToggleOnOff>(obj);
+        RemoveComponent<coffeemachine>(obj);
+        RemoveComponent<ColdZone>(obj);
+        RemoveComponent<CollisionListener>(obj);
+        RemoveComponent<childcollider>(obj);
+        RemoveComponent<Contains>(obj);
+        RemoveComponent<ContinuousMovement>(obj);
+        RemoveComponent<CookObject>(obj);
+        RemoveComponent<Contains>(obj);
+        RemoveComponent<DecalCollision>(obj);
+        RemoveComponent<DeferredDecal>(obj);
+        RemoveComponent<Dirty>(obj);
+        RemoveComponent<Door>(obj);
+        RemoveComponent<DroneBasket>(obj);
+        RemoveComponent<DroneObjectLauncher>(obj);
+        RemoveComponent<Flame>(obj);
+        RemoveComponent<Fill>(obj);
+        RemoveComponent<FrameCollider>(obj);
+        RemoveComponent<FreezeObject>(obj);
+        RemoveComponent<Fridge>(obj);
+        RemoveComponent<GenerateRoboTHOR>(obj);
+
+        //RemoveComponent<>(obj);
+
     }
     static void ClearChildren(Transform transform) {
         //Debug.Log(transform.childCount);
