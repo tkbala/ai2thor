@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(SimObj))]
+//[RequireComponent(typeof(SimObj))]
 [ExecuteInEditMode]
 public class Receptacle : MonoBehaviour {
     public Collider VisibilityCollider;
