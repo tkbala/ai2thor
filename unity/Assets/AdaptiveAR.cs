@@ -1,4 +1,5 @@
 ﻿using Boo.Lang;
+using MessagePack.Formatters;
 using MessagePack.Resolvers;
 using System;
 using UnityEditor;
@@ -181,9 +182,15 @@ public static class AdaptiveAR {
         RemoveComponent<SimObjPhysics>(obj);
         RemoveComponent<SimObj>(obj);
         RemoveComponent<Rigidbody>(obj);
-        
-        
-        
+
+
+        //RemoveComponent<ActionDispatcher>(obj);
+        RemoveComponent<ActionReturnFormatter>(obj);
+        RemoveComponent<agent_trackball_rotation>(obj);
+        RemoveComponent<AgentManager>(obj);
+        RemoveComponent<ArmAgentController>(obj);
+        RemoveComponent<BaseFPSAgentController>(obj);
+        RemoveComponent<BatchRename>(obj);
         RemoveComponent<Bathtub>(obj);
         RemoveComponent<Bed>(obj);
         RemoveComponent<Blinds>(obj);
@@ -191,48 +198,71 @@ public static class AdaptiveAR {
         RemoveComponent<Break>(obj);
         RemoveComponent<Breakdown>(obj);
         RemoveComponent<Cabinet>(obj);
+        RemoveComponent<CameraControls>(obj);
+        RemoveComponent<CameraDepthSetup>(obj);
         RemoveComponent<CanOpen_Object>(obj);
         RemoveComponent<CanToggleOnOff>(obj);
+        //RemoveComponent<ChangeLighting>(obj);
+        RemoveComponent<childcollider>(obj);
         RemoveComponent<coffeemachine>(obj);
         RemoveComponent<ColdZone>(obj);
         RemoveComponent<CollisionListener>(obj);
-        RemoveComponent<childcollider>(obj);
+        RemoveComponent<ColorChanger>(obj);
         RemoveComponent<Contains>(obj);
-        RemoveComponent<ContinuousMovement>(obj);
+        //RemoveComponent<ContinuousMovement>(obj);
         RemoveComponent<CookObject>(obj);
-        RemoveComponent<Contains>(obj);
+        RemoveComponent<Convertable>(obj);
+        //RemoveComponent<CopyLightingSettings>(obj);
+        RemoveComponent<CrackedCameraManager>(obj);
+        RemoveComponent<DebugDiscreteAgentController>(obj);
+        RemoveComponent<DebugFPSAgentController>(obj);
+        RemoveComponent<DebugInputField>(obj);
         RemoveComponent<DecalCollision>(obj);
         RemoveComponent<DeferredDecal>(obj);
         RemoveComponent<Dirty>(obj);
+        RemoveComponent<DiscreteHidenSeekgentController>(obj);
+        RemoveComponent<DiscretePointClickAgentController>(obj);
         RemoveComponent<Door>(obj);
         RemoveComponent<DroneBasket>(obj);
+        RemoveComponent<DroneFPSAgentController>(obj);
         RemoveComponent<DroneObjectLauncher>(obj);
-        RemoveComponent<Flame>(obj);
+        RemoveComponent<EditorSetupSimObjPhysics>(obj);
+        RemoveComponent<ExperimentRoomSceneManager>(obj);
+        //RemoveComponent<FifoServer>(obj);
         RemoveComponent<Fill>(obj);
+        RemoveComponent<FirstPersonCharacterCull>(obj);
+        RemoveComponent<Flame>(obj);
         RemoveComponent<FrameCollider>(obj);
         RemoveComponent<FreezeObject>(obj);
         RemoveComponent<Fridge>(obj);
         RemoveComponent<GenerateRoboTHOR>(obj);
         RemoveComponent<GetAllScenesInstanceCount>(obj);
         //RemoveComponent<GetObjectTypesInAllScenes>(obj);
+        //RemoveComponent<GroupCommand>(obj);
         RemoveComponent<HeatZone>(obj);
         RemoveComponent<IgnoreCollision>(obj);
         RemoveComponent<IK_Robot_Arm_Controller>(obj);
-        RemoveComponent<FK_IK_Solver>(obj);
+        RemoveComponent<InstantiatePrefabTest>(obj);
         RemoveComponent<JavaScriptInterface>(obj);
         RemoveComponent<Lamp>(obj);
         RemoveComponent<Laptop>(obj);
         RemoveComponent<LightSwitch>(obj);
+        //RemoveComponent<ListExtensions>(obj);
         RemoveComponent<Microwave>(obj);
         RemoveComponent<MinimalFPSController>(obj);
         RemoveComponent<Mirror>(obj);
+        //RemoveComponent<MyClass>(obj);
         RemoveComponent<NavMeshSetup>(obj);
-        RemoveComponent<ObjectHighlightController>(obj);
+        //RemoveComponent<ObjectHighlightController>(obj);
+        RemoveComponent<ObjectSpawner>(obj);
         RemoveComponent<ObjectSpecificReceptacle>(obj);
+        //RemoveComponent<PhysicsExtensions>(obj);
         RemoveComponent<PhysicsRemoteFPSAgentController>(obj);
         RemoveComponent<PhysicsSceneManager>(obj);
         RemoveComponent<PlacementManager>(obj);
+        //RemoveComponent<PlaneGizmo>(obj);
         //RemoveComponent<PlayerController>(obj);
+        //RemoveComponent<RandomExtensions>(obj);
         RemoveComponent<Randomizer>(obj);
         RemoveComponent<Rearrangeable>(obj);
         RemoveComponent<RotationTriggerCheck>(obj);
@@ -242,6 +272,7 @@ public static class AdaptiveAR {
         RemoveComponent<SimTesting>(obj);
         //RemoveComponent<SimUtil>(obj);
         RemoveComponent<SliceObject>(obj);
+        //RemoveComponent<StandardShaderUtils>(obj);
         RemoveComponent<StochasticRemoteFPSAgentController>(obj);
         RemoveComponent<StoveKnob>(obj);
         RemoveComponent<StoveTopElectric>(obj);
@@ -249,20 +280,32 @@ public static class AdaptiveAR {
         RemoveComponent<SyncTransform>(obj);
         RemoveComponent<Television>(obj);
         RemoveComponent<TestCabinetVisibility>(obj);
-        RemoveComponent<ThorContractlessStandardResolver>(obj);
+        //RemoveComponent<ThorContractlessStandardResolver>(obj);
         RemoveComponent<THORDocumentationExporter>(obj);
         RemoveComponent<Toaster>(obj);
         RemoveComponent<Toilet>(obj);
+        //RemoveComponent<TransformExtension>(obj);
         RemoveComponent<UsedUp>(obj);
+        //RemoveComponent<UtilityFunctions>(obj);
         RemoveComponent<VisualizationHeatmapCSV>(obj);
         RemoveComponent<WhatIsInsideMagnetSphere>(obj);
 
+        //Image Synthesis
+        //RemoveComponent<ColorEncoding>(obj);
+        RemoveComponent<ExampleUI>(obj);
+        RemoveComponent<ImageSynthesis>(obj);
 
-
-
-
+        //RobotArmTest
+        RemoveComponent<Adjust_Slider>(obj);
+        RemoveComponent<Align_to_Joint_Normal>(obj);
+        RemoveComponent<FK_IK_Solver>(obj);
+        RemoveComponent<Manipulator_Clamp>(obj);
         //RemoveComponent<>(obj);
 
+        //MagicMirror
+        RemoveComponent<MirrorCameraScript>(obj);
+        RemoveComponent<MirrorReflectionScript>(obj);
+        RemoveComponent<MirrorScript>(obj);
     }
     static void ClearChildren(Transform transform) {
         //Debug.Log(transform.childCount);
