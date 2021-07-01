@@ -34,7 +34,7 @@ public static class AdaptiveAR {
             //Remove Components
             RemoveComponents(obj);
 
-            GameObject prefab = PrefabUtility.GetCorrespondingObjectFromOriginalSource(obj);
+            GameObject prefab = PrefabUtility.GetCorrespondingObjectFromSource(obj);
             
             if (prefab == null) {
 
@@ -185,12 +185,12 @@ public static class AdaptiveAR {
 
 
         //RemoveComponent<ActionDispatcher>(obj);
-        RemoveComponent<ActionReturnFormatter>(obj);
+        //RemoveComponent<ActionReturnFormatter>(obj);
         RemoveComponent<agent_trackball_rotation>(obj);
         RemoveComponent<AgentManager>(obj);
         RemoveComponent<ArmAgentController>(obj);
         RemoveComponent<BaseFPSAgentController>(obj);
-        RemoveComponent<BatchRename>(obj);
+        //RemoveComponent<BatchRename>(obj);
         RemoveComponent<Bathtub>(obj);
         RemoveComponent<Bed>(obj);
         RemoveComponent<Blinds>(obj);
