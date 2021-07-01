@@ -1,8 +1,10 @@
 ﻿using Boo.Lang;
+using MessagePack.Resolvers;
 using System;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -75,7 +77,7 @@ public static class AdaptiveAR {
                     EditorUtility.SetDirty(obj);
                     if (obj.name == "FPSController") {
 
-                        arUserView = UnityEngine.Object.Instantiate(obj.transform.Find("FirstPersonCharacter").gameObject);
+                        arUserView = UnityEngine.Object.Instantiate(obj.transform.Find("FirstPersonCharacter").gameObject, obj.transform.Find("FirstPersonCharacter").gameObject.transform);
                         EditorUtility.SetDirty(arUserView);
                         arUserView.name = "AR User View";
                         CharacterController oldcl = obj.GetComponent<CharacterController>();
@@ -180,14 +182,8 @@ public static class AdaptiveAR {
         RemoveComponent<SimObj>(obj);
         RemoveComponent<Rigidbody>(obj);
         
-        RemoveComponent<SliceObject>(obj);
         
         
-        
-        
-        RemoveComponent<UsedUp>(obj);
-        RemoveComponent<PhysicsRemoteFPSAgentController>(obj);
-
         RemoveComponent<Bathtub>(obj);
         RemoveComponent<Bed>(obj);
         RemoveComponent<Blinds>(obj);
@@ -217,6 +213,53 @@ public static class AdaptiveAR {
         RemoveComponent<FreezeObject>(obj);
         RemoveComponent<Fridge>(obj);
         RemoveComponent<GenerateRoboTHOR>(obj);
+        RemoveComponent<GetAllScenesInstanceCount>(obj);
+        //RemoveComponent<GetObjectTypesInAllScenes>(obj);
+        RemoveComponent<HeatZone>(obj);
+        RemoveComponent<IgnoreCollision>(obj);
+        RemoveComponent<IK_Robot_Arm_Controller>(obj);
+        RemoveComponent<FK_IK_Solver>(obj);
+        RemoveComponent<JavaScriptInterface>(obj);
+        RemoveComponent<Lamp>(obj);
+        RemoveComponent<Laptop>(obj);
+        RemoveComponent<LightSwitch>(obj);
+        RemoveComponent<Microwave>(obj);
+        RemoveComponent<MinimalFPSController>(obj);
+        RemoveComponent<Mirror>(obj);
+        RemoveComponent<NavMeshSetup>(obj);
+        RemoveComponent<ObjectHighlightController>(obj);
+        RemoveComponent<ObjectSpecificReceptacle>(obj);
+        RemoveComponent<PhysicsRemoteFPSAgentController>(obj);
+        RemoveComponent<PhysicsSceneManager>(obj);
+        RemoveComponent<PlacementManager>(obj);
+        //RemoveComponent<PlayerController>(obj);
+        RemoveComponent<Randomizer>(obj);
+        RemoveComponent<Rearrangeable>(obj);
+        RemoveComponent<RotationTriggerCheck>(obj);
+        RemoveComponent<SceneManager>(obj);
+        RemoveComponent<Screenshot360>(obj);
+        RemoveComponent<ScreenShotFromCamera>(obj);
+        RemoveComponent<SimTesting>(obj);
+        //RemoveComponent<SimUtil>(obj);
+        RemoveComponent<SliceObject>(obj);
+        RemoveComponent<StochasticRemoteFPSAgentController>(obj);
+        RemoveComponent<StoveKnob>(obj);
+        RemoveComponent<StoveTopElectric>(obj);
+        //RemoveComponent<StructureObject>(obj);
+        RemoveComponent<SyncTransform>(obj);
+        RemoveComponent<Television>(obj);
+        RemoveComponent<TestCabinetVisibility>(obj);
+        RemoveComponent<ThorContractlessStandardResolver>(obj);
+        RemoveComponent<THORDocumentationExporter>(obj);
+        RemoveComponent<Toaster>(obj);
+        RemoveComponent<Toilet>(obj);
+        RemoveComponent<UsedUp>(obj);
+        RemoveComponent<VisualizationHeatmapCSV>(obj);
+        RemoveComponent<WhatIsInsideMagnetSphere>(obj);
+
+
+
+
 
         //RemoveComponent<>(obj);
 
