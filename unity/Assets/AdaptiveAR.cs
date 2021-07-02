@@ -45,7 +45,7 @@ public static class AdaptiveAR {
             }
 
 
-            if(obj.tag == "Receptacle") {
+            if(obj.tag == "Receptacle" && obj.GetComponent<ThorReceptacle>() ==null) {
                 obj.AddComponent<ThorReceptacle>();
             }
 
