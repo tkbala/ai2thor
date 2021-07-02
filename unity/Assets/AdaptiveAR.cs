@@ -44,6 +44,12 @@ public static class AdaptiveAR {
                 thorPhysicalObject.simObjectType = simObjPhysics.ObjType;
             }
 
+
+            if(obj.tag == "Receptacle") {
+                obj.AddComponent<ThorReceptacle>();
+            }
+
+
             //Remove Components
             RemoveComponents(obj);
 
