@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThorPhysicalObject : MonoBehaviour
 {
-    SimObjType simObjectType;
+    public SimObjType simObjectType;
     // Start is called before the first frame update
     void Start()
     {

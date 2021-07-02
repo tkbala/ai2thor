@@ -30,6 +30,19 @@ public static class AdaptiveAR {
         removeComponents = (obj) => {
             var tfm = obj.transform;
             EditorUtility.SetDirty(obj);
+            
+            SimObj simObj = obj.GetComponent<SimObj>();
+            SimObjPhysics simObjPhysics = obj.GetComponent<SimObjPhysics>();
+            if (simObj != null) {
+                obj.AddComponent<PhysicalObject>();
+                ThorPhysicalObject thorPhysicalObject = obj.AddComponent<ThorPhysicalObject>();
+                thorPhysicalObject.simObjectType = simObj.ObjType;
+            }
+            else if (simObjPhysics != null) {
+                obj.AddComponent<PhysicalObject>();
+                ThorPhysicalObject thorPhysicalObject = obj.AddComponent<ThorPhysicalObject>();
+                thorPhysicalObject.simObjectType = simObjPhysics.ObjType;
+            }
 
             //Remove Components
             RemoveComponents(obj);
