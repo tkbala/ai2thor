@@ -81,7 +81,7 @@ public static class AdaptiveAR {
 
         };
 
-        foreach (var sceneGUID in AssetDatabase.FindAssets("t:Scene", new string[] { "ThorAssets/Scenes" })) {
+        foreach (var sceneGUID in AssetDatabase.FindAssets("t:Scene", new string[] { "Assets/ThorScenes" })) {
             var scenePath = AssetDatabase.GUIDToAssetPath(sceneGUID);
 
             if (!scenePath.Contains("Miniworld") && scenePath.Contains("FloorPlan")) {
