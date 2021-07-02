@@ -34,12 +34,12 @@ public static class AdaptiveAR {
             SimObj simObj = obj.GetComponent<SimObj>();
             SimObjPhysics simObjPhysics = obj.GetComponent<SimObjPhysics>();
             if (simObj != null) {
-                obj.AddComponent<PhysicalObject>();
+                //obj.AddComponent<PhysicalObject>();
                 ThorPhysicalObject thorPhysicalObject = obj.AddComponent<ThorPhysicalObject>();
                 thorPhysicalObject.simObjectType = simObj.ObjType;
             }
             else if (simObjPhysics != null) {
-                obj.AddComponent<PhysicalObject>();
+                //obj.AddComponent<PhysicalObject>();
                 ThorPhysicalObject thorPhysicalObject = obj.AddComponent<ThorPhysicalObject>();
                 thorPhysicalObject.simObjectType = simObjPhysics.ObjType;
             }
@@ -75,7 +75,7 @@ public static class AdaptiveAR {
 
         };
 
-        foreach (var sceneGUID in AssetDatabase.FindAssets("t:Scene", new string[] { "Assets/Scenes" })) {
+        foreach (var sceneGUID in AssetDatabase.FindAssets("t:Scene", new string[] { "ThorAssets/Scenes" })) {
             var scenePath = AssetDatabase.GUIDToAssetPath(sceneGUID);
 
             if (!scenePath.Contains("Miniworld") && scenePath.Contains("FloorPlan")) {
