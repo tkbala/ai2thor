@@ -1288,7 +1288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 0}
-  occupied: 0
 --- !u!1 &1346703620326496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,9 +2385,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4457678917379388}
-  - component: {fileID: 54265105188522840}
-  - component: {fileID: 114312640742653952}
-  - component: {fileID: 114776529205092580}
   m_Layer: 8
   m_Name: Fridge_3
   m_TagString: SimObjPhysics
@@ -2415,142 +2411,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
---- !u!54 &54265105188522840
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745700320036764}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &114312640742653952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745700320036764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  Type: 18
-  PrimaryProperty: 1
-  SecondaryProperties: 07000000080000000d000000
-  BoundingBox: {fileID: 1920063701816904}
-  VisibilityPoints:
-  - {fileID: 4286331677564356}
-  - {fileID: 4489121674553656}
-  - {fileID: 4493849978735468}
-  - {fileID: 4037488991516258}
-  - {fileID: 4786297664776832}
-  - {fileID: 4854544299622550}
-  - {fileID: 4652025194528624}
-  - {fileID: 4239311120960342}
-  - {fileID: 4733901159363478}
-  - {fileID: 4227103967230182}
-  - {fileID: 4323443145356702}
-  - {fileID: 4266934327223752}
-  - {fileID: 4180435435559374}
-  - {fileID: 4657928023911604}
-  - {fileID: 4264568299235152}
-  - {fileID: 4200820851016668}
-  - {fileID: 4975413766135662}
-  - {fileID: 4645308430870608}
-  - {fileID: 4406882567780224}
-  - {fileID: 4927677015675018}
-  - {fileID: 4213305755371572}
-  - {fileID: 4758431035130646}
-  - {fileID: 4276548987938618}
-  - {fileID: 4994615357437686}
-  - {fileID: 4466036443323896}
-  - {fileID: 4477329421103060}
-  - {fileID: 4461320854234030}
-  - {fileID: 4812152020194004}
-  - {fileID: 4810098495637500}
-  - {fileID: 4800010025637740}
-  - {fileID: 4154022733306738}
-  - {fileID: 4335569999683004}
-  - {fileID: 4769662418744854}
-  - {fileID: 4869739814991938}
-  - {fileID: 4371059026934996}
-  - {fileID: 4277015279704938}
-  - {fileID: 4346270057118600}
-  - {fileID: 4371318893727796}
-  - {fileID: 4859869857097142}
-  - {fileID: 4997752766429270}
-  - {fileID: 4218478290108684}
-  - {fileID: 4296347952964312}
-  - {fileID: 4291945977777546}
-  - {fileID: 4312468157938244}
-  - {fileID: 4893758715946586}
-  - {fileID: 4453956567262428}
-  - {fileID: 4743122427386492}
-  - {fileID: 4136233493478080}
-  - {fileID: 4776999071644160}
-  - {fileID: 4086589048203892}
-  - {fileID: 4625995280079730}
-  - {fileID: 4555385919083800}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1330316750424536}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders: []
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  numSimObjHit: 0
-  numFloorHit: 0
-  numStructureHit: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!114 &114776529205092580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745700320036764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f742cdae0124730b5b59765384368a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovingParts:
-  - {fileID: 1414732749238790}
-  - {fileID: 1112242511985892}
-  openPositions:
-  - {x: 0, y: -90, z: 0}
-  - {x: 0, y: 90, z: 0}
-  closedPositions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  animationTime: 0.2
-  openPercentage: 1
-  IgnoreTheseObjects: []
-  isOpen: 0
-  canReset: 1
-  movementType: 1
-  OpenBoundingBox: {fileID: 6353398686963973157}
-  ClosedBoundingBox: {fileID: 1920063701816904}
 --- !u!1 &1787248503697180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,6 +3044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.056
       objectReference: {fileID: 0}
@@ -3199,6 +3064,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000001872535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -3211,16 +3081,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.0000001872535
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}

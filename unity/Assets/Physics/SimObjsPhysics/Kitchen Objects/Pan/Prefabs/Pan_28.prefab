@@ -313,7 +313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 0}
-  occupied: 0
 --- !u!1 &1163238351720106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1756,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1772,6 +1772,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1917,7 +1918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 0}
-  occupied: 0
 --- !u!1 &1691247630800530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,9 +2075,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4467652460486236}
-  - component: {fileID: 114935878341534332}
-  - component: {fileID: 54101446458033926}
-  - component: {fileID: 931524508}
   m_Layer: 8
   m_Name: Pan_28
   m_TagString: SimObjPhysics
@@ -2106,120 +2103,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114935878341534332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766329416915900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Pan|+00.00|+00.00|+00.00
-  Type: 9
-  PrimaryProperty: 3
-  SecondaryProperties: 0700000004000000
-  BoundingBox: {fileID: 1800910140060376}
-  VisibilityPoints:
-  - {fileID: 4590357704861842}
-  - {fileID: 4096399480626932}
-  - {fileID: 4983234420864552}
-  - {fileID: 4334471685182780}
-  - {fileID: 4216308675475956}
-  - {fileID: 4436361193381504}
-  - {fileID: 4896870556208278}
-  - {fileID: 4259286187841436}
-  - {fileID: 4821178097592690}
-  - {fileID: 4559555606211510}
-  - {fileID: 4387841835021912}
-  - {fileID: 4023087214017518}
-  - {fileID: 4203081094590132}
-  - {fileID: 4598349744048864}
-  - {fileID: 4615829809483130}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1162745508391884}
-  - {fileID: 1690418196887244}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65053075495668922}
-  - {fileID: 65650489812716244}
-  - {fileID: 65243244774377536}
-  - {fileID: 65431981237986100}
-  - {fileID: 65552134344475418}
-  - {fileID: 65166150906682612}
-  - {fileID: 65158509061611100}
-  - {fileID: 65729271238481194}
-  - {fileID: 65126795776862812}
-  - {fileID: 65070815525339382}
-  - {fileID: 65844072528416578}
-  - {fileID: 65885686636483218}
-  - {fileID: 65597884096237436}
-  - {fileID: 65090664155081510}
-  - {fileID: 65643504876451130}
-  - {fileID: 65115584728600178}
-  - {fileID: 65846237717466596}
-  - {fileID: 65992308114875874}
-  HFdynamicfriction: 0.8
-  HFstaticfriction: 0.8
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 00000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54101446458033926
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766329416915900}
-  serializedVersion: 2
-  m_Mass: 0.67
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &931524508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766329416915900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d106cf009583a40e4a85d860c9830f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaterialSwapObjects:
-  - MyObject: {fileID: 1633623801953184}
-    OnMaterials:
-    - {fileID: 2100000, guid: 13879575a5734154fade8f43adeb410b, type: 2}
-    - {fileID: 2100000, guid: 34a307739bd80284a923c71e5e7d35ae, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: 68a0ad4012bfdac48a026048278c99ac, type: 2}
-    OffMaterials:
-    - {fileID: 2100000, guid: 13879575a5734154fade8f43adeb410b, type: 2}
-    - {fileID: 2100000, guid: 34a307739bd80284a923c71e5e7d35ae, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: 7afd56a5a7d0e18448e7937b55261aee, type: 2}
-  ObjectsToEnableIfClean: []
-  ObjectsToEnableIfDirty: []
-  isDirty: 0
 --- !u!1 &1798102557831784
 GameObject:
   m_ObjectHideFlags: 0

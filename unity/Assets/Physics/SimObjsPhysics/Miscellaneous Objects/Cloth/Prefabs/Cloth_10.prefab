@@ -596,9 +596,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4943834530231064}
-  - component: {fileID: 114058831975931208}
-  - component: {fileID: 54142294113389290}
-  - component: {fileID: 1375367924482963543}
   m_Layer: 8
   m_Name: Cloth_10
   m_TagString: SimObjPhysics
@@ -625,93 +622,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114058831975931208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520377400937140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 60
-  PrimaryProperty: 3
-  SecondaryProperties: 04000000
-  BoundingBox: {fileID: 1233028761652394}
-  VisibilityPoints:
-  - {fileID: 4170851029766754}
-  - {fileID: 4951397196994058}
-  - {fileID: 4462998514166014}
-  - {fileID: 4133103369757114}
-  - {fileID: 4357341221740952}
-  - {fileID: 4492449390543026}
-  - {fileID: 4298841423303120}
-  - {fileID: 4188669402881230}
-  - {fileID: 4568374460318712}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65093536019158218}
-  - {fileID: 65225520851074222}
-  - {fileID: 65595008133483146}
-  - {fileID: 65841860576772422}
-  - {fileID: 136385878521696158}
-  - {fileID: 136345185280144112}
-  - {fileID: 136925214794368674}
-  HFdynamicfriction: 4
-  HFstaticfriction: 4
-  HFbounciness: 0
-  HFrbdrag: 3
-  HFrbangulardrag: 0.5
-  salientMaterials: 06000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54142294113389290
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520377400937140}
-  serializedVersion: 2
-  m_Mass: 0.045
-  m_Drag: 3
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1375367924482963543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520377400937140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d106cf009583a40e4a85d860c9830f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaterialSwapObjects:
-  - MyObject: {fileID: 1927548987648810}
-    OnMaterials:
-    - {fileID: 2100000, guid: a6cec1f3acc754e3297ac603032076a6, type: 2}
-    - {fileID: 2100000, guid: b03755ccf97c38748b0dd243d1d9bf58, type: 2}
-    OffMaterials:
-    - {fileID: 2100000, guid: a6cec1f3acc754e3297ac603032076a6, type: 2}
-    - {fileID: 2100000, guid: 937f5335a74cfc14086739fde6c8acf7, type: 2}
-  ObjectsToEnableIfClean: []
-  ObjectsToEnableIfDirty: []
-  isDirty: 0
 --- !u!1 &1562160771067758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1093,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1195,6 +1106,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

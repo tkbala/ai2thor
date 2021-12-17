@@ -349,8 +349,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3766437859846935814}
-  - component: {fileID: 3766437859846935815}
-  - component: {fileID: 3766437859846935812}
   m_Layer: 8
   m_Name: Wall_Decor_Painting_4
   m_TagString: SimObjPhysics
@@ -375,81 +373,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3766437859846935815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766437859846935813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Painting|+06.44|+01.63|-04.90
-  Type: 48
-  PrimaryProperty: 1
-  SecondaryProperties: 
-  BoundingBox: {fileID: 0}
-  VisibilityPoints:
-  - {fileID: 3766437860325886618}
-  - {fileID: 3766437861084004910}
-  - {fileID: 3766437860770526740}
-  - {fileID: 3766437860408150404}
-  - {fileID: 3766437861140266515}
-  - {fileID: 3766437860825367239}
-  - {fileID: 3766437859688550224}
-  - {fileID: 3766437860442397504}
-  - {fileID: 3766437861137524549}
-  - {fileID: 3766437861003802775}
-  - {fileID: 3766437859694277932}
-  - {fileID: 3766437859260129035}
-  - {fileID: 3766437859824347302}
-  - {fileID: 3766437861099536953}
-  - {fileID: 3766437860614873694}
-  - {fileID: 3766437861074481950}
-  - {fileID: 3766437860278471232}
-  - {fileID: 3766437859233406917}
-  - {fileID: 3766437861011983986}
-  - {fileID: 3766437859454331986}
-  - {fileID: 3766437860554605011}
-  - {fileID: 3766437860688851632}
-  - {fileID: 3766437860681011542}
-  - {fileID: 3766437859559338252}
-  - {fileID: 3766437859898339482}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders: []
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 0900000001000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &3766437859846935812
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766437859846935813}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3766437859898339483
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +457,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -546,6 +470,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

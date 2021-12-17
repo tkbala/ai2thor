@@ -539,6 +539,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -552,6 +553,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2308,9 +2310,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4459059019807292}
-  - component: {fileID: 114757196106739050}
-  - component: {fileID: 54479143605759100}
-  - component: {fileID: 781916706520277920}
   m_Layer: 8
   m_Name: Soap_Bottle_13
   m_TagString: SimObjPhysics
@@ -2337,100 +2336,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114757196106739050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911319982800642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 67
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1586345780379522}
-  VisibilityPoints:
-  - {fileID: 4517943987926892}
-  - {fileID: 4062480571848782}
-  - {fileID: 4185794674166172}
-  - {fileID: 4358144836812522}
-  - {fileID: 4216007203902026}
-  - {fileID: 4697255062457240}
-  - {fileID: 4994496865558172}
-  - {fileID: 4420174608862692}
-  - {fileID: 4132076214114424}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65382579570674592}
-  - {fileID: 65813947064239980}
-  - {fileID: 65271013303006482}
-  - {fileID: 65996597911363720}
-  - {fileID: 65654079230216060}
-  - {fileID: 65915747183805112}
-  - {fileID: 65342285943295704}
-  - {fileID: 65957244013330724}
-  - {fileID: 65394481393584104}
-  - {fileID: 65945760887649406}
-  - {fileID: 65672151042971304}
-  - {fileID: 65156062317906680}
-  - {fileID: 65417966118854836}
-  - {fileID: 65563303675168084}
-  - {fileID: 65311523985810218}
-  - {fileID: 65497633580214174}
-  - {fileID: 65150852859498330}
-  - {fileID: 65191753313268224}
-  - {fileID: 65229945785925902}
-  - {fileID: 65300594085172892}
-  - {fileID: 65868966639629226}
-  - {fileID: 65223744747595188}
-  - {fileID: 65664360148326246}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0
-  salientMaterials: 02000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54479143605759100
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911319982800642}
-  serializedVersion: 2
-  m_Mass: 0.4
-  m_Drag: 0.2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &781916706520277920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911319982800642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisableThis: {fileID: 1943295804811984}
-  isUsedUp: 0
 --- !u!1 &1912806274641082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,6 +2434,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2540,6 +2446,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

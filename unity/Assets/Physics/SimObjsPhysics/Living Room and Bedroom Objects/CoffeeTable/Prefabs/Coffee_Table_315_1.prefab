@@ -552,7 +552,9 @@ PrefabInstance:
       propertyPath: ReceptacleTriggerBoxes.Array.data[0]
       value: 
       objectReference: {fileID: 3191092583053318744}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 862419908575177984, guid: a80e81546e1bb8a4cb11091e318a91bd, type: 3}
+    - {fileID: 862419908575177999, guid: a80e81546e1bb8a4cb11091e318a91bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a80e81546e1bb8a4cb11091e318a91bd, type: 3}
 --- !u!1 &3191092583515702967 stripped
 GameObject:

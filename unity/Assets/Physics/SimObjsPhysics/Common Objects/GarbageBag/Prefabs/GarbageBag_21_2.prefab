@@ -14,6 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.423
       objectReference: {fileID: 0}
@@ -29,6 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.04278572
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.03812965
       objectReference: {fileID: 0}
@@ -41,16 +51,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7058595
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.04278572
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8262239477919341912, guid: 532a8a6ccb682465b95c159d25a3df45,
         type: 3}
@@ -72,6 +72,31 @@ PrefabInstance:
       propertyPath: BoundingBox
       value: 
       objectReference: {fileID: 7511034789056613750}
+    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
+      propertyPath: MyColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 7511034788701578069}
+    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
+      propertyPath: MyColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 7511034788261306247}
+    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
+      propertyPath: MyColliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 7511034788824055554}
+    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
+      propertyPath: MyColliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 7511034788828302216}
+    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
+        type: 3}
+      propertyPath: MyColliders.Array.data[4]
+      value: 
+      objectReference: {fileID: 7511034788103716210}
     - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
         type: 3}
       propertyPath: VisibilityPoints.Array.data[0]
@@ -132,37 +157,14 @@ PrefabInstance:
       propertyPath: VisibilityPoints.Array.data[11]
       value: 
       objectReference: {fileID: 7511034789049416700}
-    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: MyColliders.Array.data[0]
-      value: 
-      objectReference: {fileID: 7511034788701578069}
-    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: MyColliders.Array.data[1]
-      value: 
-      objectReference: {fileID: 7511034788261306247}
-    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: MyColliders.Array.data[2]
-      value: 
-      objectReference: {fileID: 7511034788824055554}
-    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: MyColliders.Array.data[3]
-      value: 
-      objectReference: {fileID: 7511034788828302216}
-    - target: {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45,
-        type: 3}
-      propertyPath: MyColliders.Array.data[4]
-      value: 
-      objectReference: {fileID: 7511034788103716210}
     - target: {fileID: 8262239478642936176, guid: 532a8a6ccb682465b95c159d25a3df45,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6b1d9896e6a44871abb3368a29c8177, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8262239477919341913, guid: 532a8a6ccb682465b95c159d25a3df45, type: 3}
+    - {fileID: 8262239477919341910, guid: 532a8a6ccb682465b95c159d25a3df45, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 532a8a6ccb682465b95c159d25a3df45, type: 3}
 --- !u!135 &7511034788701578069 stripped
 SphereCollider:

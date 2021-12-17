@@ -515,7 +515,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1566619121563874}
-  occupied: 0
 --- !u!1 &1116292223969736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1566619121563874}
-  occupied: 0
 --- !u!1 &1301069696568424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1916,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1933,6 +1932,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2350,9 +2350,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4613509073516970}
-  - component: {fileID: 114904480468113988}
-  - component: {fileID: 54236765518814880}
-  - component: {fileID: 669622806}
   m_Layer: 8
   m_Name: Pan_18
   m_TagString: SimObjPhysics
@@ -2381,139 +2378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114904480468113988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566619121563874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Pan|+00.00|+00.00|+00.00
-  Type: 9
-  PrimaryProperty: 3
-  SecondaryProperties: 0700000004000000
-  BoundingBox: {fileID: 1502129255235778}
-  VisibilityPoints:
-  - {fileID: 4224825201469082}
-  - {fileID: 4892211324465148}
-  - {fileID: 4211709444045256}
-  - {fileID: 4054830398200224}
-  - {fileID: 4895080289836352}
-  - {fileID: 4846836473295822}
-  - {fileID: 4449411589044474}
-  - {fileID: 4021982063006248}
-  - {fileID: 4770102029936452}
-  - {fileID: 4317743332192396}
-  - {fileID: 4115724712435570}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1299070804374104}
-  - {fileID: 1094767288940076}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65377145376255728}
-  - {fileID: 65468543086173454}
-  - {fileID: 65822108939139014}
-  - {fileID: 65215734974295420}
-  - {fileID: 65153482813139938}
-  - {fileID: 65155059745853914}
-  - {fileID: 65626949776585934}
-  - {fileID: 65097202418328664}
-  - {fileID: 65182291402877660}
-  - {fileID: 65775864683249778}
-  - {fileID: 65212881271635588}
-  - {fileID: 65481484112558052}
-  - {fileID: 65470311844853454}
-  - {fileID: 65061890066051132}
-  - {fileID: 65952685669609898}
-  - {fileID: 65240565813251952}
-  - {fileID: 65066781916350444}
-  - {fileID: 65712789271849974}
-  - {fileID: 65734779423783374}
-  - {fileID: 65456421370119006}
-  - {fileID: 65320361251536786}
-  - {fileID: 65077763525691276}
-  - {fileID: 65354641156968612}
-  - {fileID: 65490283261300370}
-  - {fileID: 65912504250627868}
-  - {fileID: 65991944051105786}
-  - {fileID: 65560937856189980}
-  - {fileID: 65167120793540624}
-  - {fileID: 65337528382574130}
-  - {fileID: 65046665068585042}
-  - {fileID: 65278262177039228}
-  - {fileID: 65490770514539202}
-  - {fileID: 65902177186365058}
-  - {fileID: 65840597838353484}
-  - {fileID: 65682599424248704}
-  - {fileID: 65569265002633230}
-  - {fileID: 65786123839589042}
-  - {fileID: 65841652562496610}
-  - {fileID: 65924544488007688}
-  - {fileID: 65158747086582440}
-  - {fileID: 65868648288214346}
-  HFdynamicfriction: 0.8
-  HFstaticfriction: 0.8
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 00000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54236765518814880
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566619121563874}
-  serializedVersion: 2
-  m_Mass: 0.67
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &669622806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566619121563874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d106cf009583a40e4a85d860c9830f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaterialSwapObjects:
-  - MyObject: {fileID: 1501513297335926}
-    OnMaterials:
-    - {fileID: 2100000, guid: 341c98f683e1f401e924cd4be7c4ff11, type: 2}
-    - {fileID: 2100000, guid: 769b8d6719cd04e4d82a58eadbb7ce61, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: d01124ba237e9fa47bdd85691d432be3, type: 2}
-    OffMaterials:
-    - {fileID: 2100000, guid: 341c98f683e1f401e924cd4be7c4ff11, type: 2}
-    - {fileID: 2100000, guid: 769b8d6719cd04e4d82a58eadbb7ce61, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: 7afd56a5a7d0e18448e7937b55261aee, type: 2}
-  ObjectsToEnableIfClean: []
-  ObjectsToEnableIfDirty: []
-  isDirty: 0
 --- !u!1 &1569208019870016
 GameObject:
   m_ObjectHideFlags: 0

@@ -150,9 +150,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4121570464410906}
-  - component: {fileID: 114803687929322820}
-  - component: {fileID: 54988367364963138}
-  - component: {fileID: 980887363}
   m_Layer: 8
   m_Name: Apple_11
   m_TagString: SimObjPhysics
@@ -179,78 +176,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114803687929322820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392974334402120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Apple|+00.00|+00.00|+00.00
-  Type: 1
-  PrimaryProperty: 3
-  SecondaryProperties: 09000000
-  BoundingBox: {fileID: 1716297729691900}
-  VisibilityPoints:
-  - {fileID: 4164222163010544}
-  - {fileID: 4558579450413608}
-  - {fileID: 4482666674845046}
-  - {fileID: 4835150217971302}
-  - {fileID: 4232096190916492}
-  - {fileID: 4662302551562872}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 136964231616974796}
-  HFdynamicfriction: 0.6
-  HFstaticfriction: 0.6
-  HFbounciness: 0.1
-  HFrbdrag: 3
-  HFrbangulardrag: 2
-  salientMaterials: 08000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54988367364963138
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392974334402120}
-  serializedVersion: 2
-  m_Mass: 0.2
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &980887363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392974334402120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07b0b60d7fb54ea9a1ddeca3f431392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToChangeTo: {fileID: 1629409416206690, guid: 9ea9ed4bbed2843328f78d130b510659,
-    type: 3}
-  isSliced: 0
 --- !u!1 &1453930448739384
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +291,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -377,6 +303,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

@@ -3780,8 +3780,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8852020834724626061}
-  - component: {fileID: 8852020834724626062}
-  - component: {fileID: 8852020834724626063}
   m_Layer: 8
   m_Name: thorkea_bed_meldal
   m_TagString: SimObjPhysics
@@ -3809,438 +3807,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8852020834724626062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8852020834724626048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Bed|+02.49|+00.00|-02.86
-  Type: 76
-  PrimaryProperty: 1
-  SecondaryProperties: 07000000
-  BoundingBox: {fileID: 8852020834915826157}
-  VisibilityPoints:
-  - {fileID: 8852020835919233548}
-  - {fileID: 8852020835827440386}
-  - {fileID: 8852020835698055054}
-  - {fileID: 8852020834549723412}
-  - {fileID: 8852020834449669718}
-  - {fileID: 8852020834519672159}
-  - {fileID: 8852020835798351940}
-  - {fileID: 8852020834866556622}
-  - {fileID: 8852020836352783947}
-  - {fileID: 8852020834435626292}
-  - {fileID: 8852020835932309292}
-  - {fileID: 8852020836265142342}
-  - {fileID: 8852020834450271806}
-  - {fileID: 8852020835823239113}
-  - {fileID: 8852020836195430641}
-  - {fileID: 8852020835346267478}
-  - {fileID: 8852020834900352755}
-  - {fileID: 8852020834606342373}
-  - {fileID: 8852020835950018866}
-  - {fileID: 8852020834647734367}
-  - {fileID: 8852020835671435659}
-  - {fileID: 8852020835323611686}
-  - {fileID: 8852020834600252434}
-  - {fileID: 8852020836201282956}
-  - {fileID: 8852020835548906832}
-  - {fileID: 8852020834408292182}
-  - {fileID: 8852020836465724467}
-  - {fileID: 8852020835600828018}
-  - {fileID: 8852020835493248171}
-  - {fileID: 8852020836026428056}
-  - {fileID: 8852020836215219438}
-  - {fileID: 8852020835656951423}
-  - {fileID: 8852020835756246153}
-  - {fileID: 8852020835832823582}
-  - {fileID: 8852020834694374991}
-  - {fileID: 8852020834715604647}
-  - {fileID: 8852020834979725423}
-  - {fileID: 8852020835141226472}
-  - {fileID: 8852020835983270069}
-  - {fileID: 8852020834988262745}
-  - {fileID: 8852020835130967703}
-  - {fileID: 8852020835530812926}
-  - {fileID: 8852020835795702746}
-  - {fileID: 8852020834918528216}
-  - {fileID: 8852020836188361753}
-  - {fileID: 8852020835420190275}
-  - {fileID: 8852020835160353610}
-  - {fileID: 8852020835316215140}
-  - {fileID: 8852020835377195779}
-  - {fileID: 8852020836360528773}
-  - {fileID: 8852020835658958108}
-  - {fileID: 8852020835520134078}
-  - {fileID: 8852020835365880288}
-  - {fileID: 8852020836014202384}
-  - {fileID: 8852020836301165456}
-  - {fileID: 8852020834450834812}
-  - {fileID: 8852020834683581443}
-  - {fileID: 8852020835474716172}
-  - {fileID: 8852020834697890811}
-  - {fileID: 8852020835076853226}
-  - {fileID: 8852020835134395977}
-  - {fileID: 8852020834405121401}
-  - {fileID: 8852020835080808608}
-  - {fileID: 8852020836209157289}
-  - {fileID: 8852020834670741014}
-  - {fileID: 8852020835386856006}
-  - {fileID: 8852020835883478337}
-  - {fileID: 8852020835493523101}
-  - {fileID: 8852020834532323968}
-  - {fileID: 8852020834629239203}
-  - {fileID: 8852020835235951328}
-  - {fileID: 8852020834517745651}
-  - {fileID: 8852020835723367549}
-  - {fileID: 8852020835031490320}
-  - {fileID: 8852020835060806234}
-  - {fileID: 8852020836313179453}
-  - {fileID: 8852020834433201315}
-  - {fileID: 8852020834662053834}
-  - {fileID: 8852020834766755753}
-  - {fileID: 8852020834508659885}
-  - {fileID: 8852020834550032792}
-  - {fileID: 8852020836289248581}
-  - {fileID: 8852020834480250180}
-  - {fileID: 8852020835217877677}
-  - {fileID: 8852020835950150024}
-  - {fileID: 8852020836369108618}
-  - {fileID: 8852020835981710352}
-  - {fileID: 8852020835153483357}
-  - {fileID: 8852020835978159120}
-  - {fileID: 8852020836089407627}
-  - {fileID: 8852020836118514758}
-  - {fileID: 8852020835701261890}
-  - {fileID: 8852020835060113446}
-  - {fileID: 8852020835906081720}
-  - {fileID: 8852020835780619470}
-  - {fileID: 8852020836375364392}
-  - {fileID: 8852020835206601569}
-  - {fileID: 8852020834815634787}
-  - {fileID: 8852020835426257230}
-  - {fileID: 8852020835770665422}
-  - {fileID: 8852020834981035666}
-  - {fileID: 8852020836414748643}
-  - {fileID: 8852020835018278518}
-  - {fileID: 8852020835284968249}
-  - {fileID: 8852020835990106551}
-  - {fileID: 8852020835754860198}
-  - {fileID: 8852020834534135832}
-  - {fileID: 8852020834708878573}
-  - {fileID: 8852020835615102437}
-  - {fileID: 8852020836367393748}
-  - {fileID: 8852020835550695464}
-  - {fileID: 8852020834599096566}
-  - {fileID: 8852020834422021695}
-  - {fileID: 8852020836422971961}
-  - {fileID: 8852020836371843507}
-  - {fileID: 8852020836097619341}
-  - {fileID: 8852020835072122400}
-  - {fileID: 8852020836149548708}
-  - {fileID: 8852020835246830283}
-  - {fileID: 8852020836121192751}
-  - {fileID: 8852020835775562299}
-  - {fileID: 8852020834780572010}
-  - {fileID: 8852020835880835925}
-  - {fileID: 8852020835170383716}
-  - {fileID: 8852020835743250336}
-  - {fileID: 8852020834909494788}
-  - {fileID: 8852020834669626377}
-  - {fileID: 8852020834387046448}
-  - {fileID: 8852020836188283520}
-  - {fileID: 8852020834439563333}
-  - {fileID: 8852020834728136609}
-  - {fileID: 8852020836060983105}
-  - {fileID: 8852020836182958500}
-  - {fileID: 8852020836277385223}
-  - {fileID: 8852020834472930861}
-  - {fileID: 8852020834837979800}
-  - {fileID: 8852020834655826100}
-  - {fileID: 8852020835402236302}
-  - {fileID: 8852020835721093815}
-  - {fileID: 8852020836366797925}
-  - {fileID: 8852020835544852499}
-  - {fileID: 8852020834448103797}
-  - {fileID: 8852020834709059180}
-  - {fileID: 8852020835946392124}
-  - {fileID: 8852020834495090010}
-  - {fileID: 8852020835134933151}
-  - {fileID: 8852020835341625035}
-  - {fileID: 8852020835025082513}
-  - {fileID: 8852020836401454619}
-  - {fileID: 8852020836048647392}
-  - {fileID: 8852020835181428884}
-  - {fileID: 8852020835386639229}
-  - {fileID: 8852020836263202365}
-  - {fileID: 8852020835686009080}
-  - {fileID: 8852020836002757031}
-  - {fileID: 8852020834376677211}
-  - {fileID: 8852020835586090853}
-  - {fileID: 8852020834394136865}
-  - {fileID: 8852020835181889624}
-  - {fileID: 8852020835600820762}
-  - {fileID: 8852020836069731375}
-  - {fileID: 8852020836385465886}
-  - {fileID: 8852020835522752590}
-  - {fileID: 8852020835809403695}
-  - {fileID: 8852020834986651265}
-  - {fileID: 8852020836132131256}
-  - {fileID: 8852020836384239571}
-  - {fileID: 8852020835612678633}
-  - {fileID: 8852020834517963328}
-  - {fileID: 8852020834514799973}
-  - {fileID: 8852020834590831921}
-  - {fileID: 8852020835447484084}
-  - {fileID: 8852020835943047677}
-  - {fileID: 8852020836223897010}
-  - {fileID: 8852020834955299199}
-  - {fileID: 8852020834651679129}
-  - {fileID: 8852020835865611797}
-  - {fileID: 8852020836485591026}
-  - {fileID: 8852020835134428742}
-  - {fileID: 8852020835027775991}
-  - {fileID: 8852020836307844419}
-  - {fileID: 8852020834698431421}
-  - {fileID: 8852020836342157937}
-  - {fileID: 8852020836253068363}
-  - {fileID: 8852020835241064201}
-  - {fileID: 8852020834559426818}
-  - {fileID: 8852020835874386080}
-  - {fileID: 8852020835412051261}
-  - {fileID: 8852020834621041208}
-  - {fileID: 8852020834729533026}
-  - {fileID: 8852020836184181884}
-  - {fileID: 8852020835838260247}
-  - {fileID: 8852020835798350518}
-  - {fileID: 8852020835646962225}
-  - {fileID: 8852020834441561554}
-  - {fileID: 8852020834381430214}
-  - {fileID: 8852020835044118033}
-  - {fileID: 8852020835918758413}
-  - {fileID: 8852020835511850816}
-  - {fileID: 8852020834459215523}
-  - {fileID: 8852020834882569896}
-  - {fileID: 8852020834640194906}
-  - {fileID: 8852020836236777888}
-  - {fileID: 8852020835977675020}
-  - {fileID: 8852020835503630315}
-  - {fileID: 8852020836092127476}
-  - {fileID: 8852020836258815769}
-  - {fileID: 8852020836078041304}
-  - {fileID: 8852020836219142821}
-  - {fileID: 8852020834698572441}
-  - {fileID: 8852020836265208999}
-  - {fileID: 8852020835461110214}
-  - {fileID: 8852020836027203414}
-  - {fileID: 8852020835161736677}
-  - {fileID: 8852020835961591842}
-  - {fileID: 8852020836446136888}
-  - {fileID: 8852020835553211234}
-  - {fileID: 8852020836026682618}
-  - {fileID: 8852020835462772747}
-  - {fileID: 8852020836233576606}
-  - {fileID: 8852020835959614468}
-  - {fileID: 8852020835578732753}
-  - {fileID: 8852020835537443176}
-  - {fileID: 8852020834510487486}
-  - {fileID: 8852020836182676141}
-  - {fileID: 8852020834944641294}
-  - {fileID: 8852020835120358999}
-  - {fileID: 8852020835313103185}
-  - {fileID: 8852020835636087611}
-  - {fileID: 8852020836166585974}
-  - {fileID: 8852020835138484391}
-  - {fileID: 8852020835222206825}
-  - {fileID: 8852020835361005021}
-  - {fileID: 8852020835893213397}
-  - {fileID: 8852020836218406663}
-  - {fileID: 8852020835109593593}
-  - {fileID: 8852020836020046338}
-  - {fileID: 8852020835041467704}
-  - {fileID: 8852020834903097519}
-  - {fileID: 8852020834723314988}
-  - {fileID: 8852020835710844519}
-  - {fileID: 8852020835861685930}
-  - {fileID: 8852020835298945064}
-  - {fileID: 8852020834849679363}
-  - {fileID: 8852020836255949598}
-  - {fileID: 8852020835928548187}
-  - {fileID: 8852020835456752771}
-  - {fileID: 8852020835256184399}
-  - {fileID: 8852020835701460676}
-  - {fileID: 8852020836498376512}
-  - {fileID: 8852020835479894192}
-  - {fileID: 8852020835585011584}
-  - {fileID: 8852020835121304080}
-  - {fileID: 8852020834443631204}
-  ReceptacleTriggerBoxes:
-  - {fileID: 8853120726169160397}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 8852020836222644028}
-  - {fileID: 8852020836489764497}
-  - {fileID: 8852020835024605904}
-  - {fileID: 8852020835538767070}
-  - {fileID: 8852020835647726486}
-  - {fileID: 8852020836438671656}
-  - {fileID: 8852020836343072231}
-  - {fileID: 8852020834813121800}
-  - {fileID: 8852020835525098415}
-  - {fileID: 8852020835383955213}
-  - {fileID: 8852020834481161901}
-  - {fileID: 8852020836069613443}
-  - {fileID: 8852020835840508002}
-  - {fileID: 8852020836176385577}
-  - {fileID: 8852020834669699845}
-  - {fileID: 8852020835523153698}
-  - {fileID: 8852020834463480785}
-  - {fileID: 8852020836151156960}
-  - {fileID: 8852020835327742292}
-  - {fileID: 8852020835955336823}
-  - {fileID: 8852020835256523582}
-  - {fileID: 8852020835643695975}
-  - {fileID: 8852020834434341235}
-  - {fileID: 8852020835786008951}
-  - {fileID: 8852020835773095479}
-  - {fileID: 8852020836421885814}
-  - {fileID: 8852020836213141668}
-  - {fileID: 8852020835344396808}
-  - {fileID: 8852020835455149574}
-  - {fileID: 8852020835958676528}
-  - {fileID: 8852020835531833702}
-  - {fileID: 8852020836478858432}
-  - {fileID: 8852020834492052127}
-  - {fileID: 8852020834690125814}
-  - {fileID: 8852020835166160152}
-  - {fileID: 8852020834402624984}
-  - {fileID: 8852020834485436580}
-  - {fileID: 8852020834921049074}
-  - {fileID: 8852020834441263280}
-  - {fileID: 8852020835912782938}
-  - {fileID: 8852020836060714078}
-  - {fileID: 8852020835524345995}
-  - {fileID: 8852020835125546351}
-  - {fileID: 8852020835155235791}
-  - {fileID: 8852020836122540032}
-  - {fileID: 8852020835064153592}
-  - {fileID: 8852020835997236148}
-  - {fileID: 8852020835183950777}
-  - {fileID: 8852020834679410654}
-  - {fileID: 8852020834989550363}
-  - {fileID: 8852020834771806372}
-  - {fileID: 8852020835339653977}
-  - {fileID: 8852020836027302936}
-  - {fileID: 8852020834388775835}
-  - {fileID: 8852020834702527997}
-  - {fileID: 8852020835073610111}
-  - {fileID: 8852020835881322814}
-  - {fileID: 8852020835140415278}
-  - {fileID: 8852020834549194315}
-  - {fileID: 8852020834838596048}
-  - {fileID: 8852020834820629843}
-  - {fileID: 8852020834825498298}
-  - {fileID: 8852020834448373432}
-  - {fileID: 8852020835693238385}
-  - {fileID: 8852020835867546448}
-  - {fileID: 8852020834419572679}
-  - {fileID: 8852020835513112504}
-  - {fileID: 8852020834671484332}
-  - {fileID: 8852020835391262418}
-  - {fileID: 8852020835636672494}
-  - {fileID: 8852020836069853813}
-  - {fileID: 8852020836388291342}
-  - {fileID: 8852020835310629199}
-  - {fileID: 8852020836447986899}
-  - {fileID: 8852020835362408894}
-  - {fileID: 8852020835248781305}
-  - {fileID: 8852020835842319153}
-  - {fileID: 8852020835156946460}
-  - {fileID: 8852020835154519590}
-  - {fileID: 8852020835201549848}
-  - {fileID: 8852020835820404385}
-  - {fileID: 8852020836482237396}
-  - {fileID: 8852020835624672118}
-  - {fileID: 8852020834898481848}
-  - {fileID: 8852020835673245178}
-  - {fileID: 8852020834999482387}
-  - {fileID: 8852020835909588650}
-  - {fileID: 8852020834437954115}
-  - {fileID: 8852020834965305781}
-  - {fileID: 8852020834955606288}
-  - {fileID: 8852020835550449002}
-  - {fileID: 8852020835443078618}
-  - {fileID: 8852020836186290628}
-  - {fileID: 8852020836081372393}
-  - {fileID: 8852020835180244011}
-  - {fileID: 8852020835847933643}
-  - {fileID: 8852020834686531164}
-  - {fileID: 8852020834389710969}
-  - {fileID: 8852020834620482544}
-  - {fileID: 8852020834999006502}
-  - {fileID: 8852020835657040307}
-  - {fileID: 8852020836138413709}
-  - {fileID: 8852020835091962490}
-  - {fileID: 8852020835272097517}
-  - {fileID: 8852020834955351562}
-  - {fileID: 8852020835625923341}
-  - {fileID: 8852020834894523124}
-  - {fileID: 8852020836218138078}
-  - {fileID: 8852020836370073150}
-  - {fileID: 8852020836443046969}
-  - {fileID: 8852020836031497990}
-  - {fileID: 8852020835861333939}
-  - {fileID: 8852020834780585460}
-  - {fileID: 8852020834399766466}
-  - {fileID: 8852020836176098707}
-  - {fileID: 8852020834906330598}
-  - {fileID: 8852020835061789633}
-  - {fileID: 8852020836249553443}
-  - {fileID: 8852020835717155813}
-  - {fileID: 8852020835747000771}
-  - {fileID: 8852020835879762384}
-  - {fileID: 8852020836069678970}
-  - {fileID: 8852020835566957473}
-  - {fileID: 8852020835984102752}
-  - {fileID: 8852020836179994381}
-  - {fileID: 8852020834929590130}
-  - {fileID: 8852020836431626625}
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 0600000000000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &8852020834724626063
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8852020834724626048}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8852020834728136610
 GameObject:
   m_ObjectHideFlags: 0
@@ -19920,6 +19486,10 @@ PrefabInstance:
       value: ReceptacleTriggerBox
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -19932,6 +19502,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -19942,14 +19516,6 @@ PrefabInstance:
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19965,13 +19531,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
-      propertyPath: m_Size.y
-      value: 0.33919817
+      propertyPath: m_Size.x
+      value: 1.7020152
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
-      propertyPath: m_Center.y
-      value: 0.17476061
+      propertyPath: m_Size.y
+      value: 0.33919817
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
@@ -19980,8 +19546,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
-      propertyPath: m_Size.x
-      value: 1.7020152
+      propertyPath: m_Center.y
+      value: 0.17476061
       objectReference: {fileID: 0}
     - target: {fileID: 114448760657764924, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
@@ -19990,12 +19556,6 @@ PrefabInstance:
       objectReference: {fileID: 8852020834724626048}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
---- !u!1 &8853120726169160397 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1170333579371094, guid: 6877aba5a696347dbb6c01f851f2da28,
-    type: 3}
-  m_PrefabInstance: {fileID: 8852020834382014619}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8851729081274651919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28,
@@ -20009,10 +19569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8852020834724626061}
     m_Modifications:
-    - target: {fileID: 9163566604290085684, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
+    - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
         type: 3}
-      propertyPath: m_Name
-      value: mesh
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
         type: 3}
@@ -20031,6 +19591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -20046,16 +19611,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163566604289593108, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -20068,6 +19623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163566604290085684, guid: 19aaeb5355f5b0a4eb416d53af7c8afa,
+        type: 3}
+      propertyPath: m_Name
+      value: mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19aaeb5355f5b0a4eb416d53af7c8afa, type: 3}

@@ -7,10 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4911637402546925473, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
+    - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
-      propertyPath: m_Name
-      value: Ottoman_203_Master
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
@@ -29,6 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -40,16 +45,6 @@ PrefabInstance:
     - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4911637402546925472, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
@@ -67,11 +62,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4911637402546925473, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
+        type: 3}
+      propertyPath: m_Name
+      value: Ottoman_203_1
+      objectReference: {fileID: 0}
     - target: {fileID: 4911637402546925486, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
       propertyPath: BoundingBox
       value: 
       objectReference: {fileID: 1427608477263746429}
+    - target: {fileID: 4911637402546925486, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
+        type: 3}
+      propertyPath: MyColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1427608476836764506}
     - target: {fileID: 4911637402546925486, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
       propertyPath: VisibilityPoints.Array.data[0]
@@ -142,17 +147,14 @@ PrefabInstance:
       propertyPath: ReceptacleTriggerBoxes.Array.data[0]
       value: 
       objectReference: {fileID: 1426456020711104580}
-    - target: {fileID: 4911637402546925486, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
-        type: 3}
-      propertyPath: MyColliders.Array.data[0]
-      value: 
-      objectReference: {fileID: 1427608476836764506}
     - target: {fileID: 5025804682925379750, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5,
         type: 3}
       propertyPath: myParent
       value: 
       objectReference: {fileID: 1427608476843843369}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4911637402546925486, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5, type: 3}
+    - {fileID: 4911637402546925487, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b7f13c6f2ea85994abb7d0dccf5d4ca5, type: 3}
 --- !u!1 &1427608476843843369 stripped
 GameObject:

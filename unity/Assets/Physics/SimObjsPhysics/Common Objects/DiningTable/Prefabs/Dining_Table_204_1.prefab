@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 6537059040784390184, guid: ad276f2f8ecd801448e0062636d4bb17,
         type: 3}
       propertyPath: m_Name
-      value: Table_204_Master
+      value: Dining_Table_204_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
         type: 3}
@@ -29,6 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -41,16 +51,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6537059040784390185, guid: ad276f2f8ecd801448e0062636d4bb17,
         type: 3}
@@ -172,7 +172,9 @@ PrefabInstance:
       propertyPath: myParent
       value: 
       objectReference: {fileID: 1588134627480711457}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6537059040784390187, guid: ad276f2f8ecd801448e0062636d4bb17, type: 3}
+    - {fileID: 6537059040784390186, guid: ad276f2f8ecd801448e0062636d4bb17, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad276f2f8ecd801448e0062636d4bb17, type: 3}
 --- !u!1 &1588134627480711457 stripped
 GameObject:

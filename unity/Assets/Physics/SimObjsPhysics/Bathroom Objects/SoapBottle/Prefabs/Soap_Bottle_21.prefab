@@ -466,6 +466,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -477,6 +478,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1276,9 +1278,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4287940584782898}
-  - component: {fileID: 114375870708466372}
-  - component: {fileID: 54582007869483682}
-  - component: {fileID: 4288989602254171324}
   m_Layer: 8
   m_Name: Soap_Bottle_21
   m_TagString: SimObjPhysics
@@ -1305,115 +1304,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114375870708466372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311392734201748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 67
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1032065807503310}
-  VisibilityPoints:
-  - {fileID: 4272104971703842}
-  - {fileID: 4987066826040582}
-  - {fileID: 4978048055340056}
-  - {fileID: 4448409745941148}
-  - {fileID: 4965013074078976}
-  - {fileID: 4891139663507272}
-  - {fileID: 4330124089278964}
-  - {fileID: 4072472458177856}
-  - {fileID: 4954356946203888}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65186472696062458}
-  - {fileID: 65828985922875534}
-  - {fileID: 65789445098857050}
-  - {fileID: 65785343531843072}
-  - {fileID: 65817672355315636}
-  - {fileID: 65468669188731540}
-  - {fileID: 65069721491711038}
-  - {fileID: 65207702720839164}
-  - {fileID: 65537702399258830}
-  - {fileID: 65408884744962314}
-  - {fileID: 65375436789763374}
-  - {fileID: 65137786371578920}
-  - {fileID: 65699084347047012}
-  - {fileID: 65842714000079422}
-  - {fileID: 65987421242069508}
-  - {fileID: 65493668727951418}
-  - {fileID: 65750584126174742}
-  - {fileID: 65368157892053236}
-  - {fileID: 65476019013477798}
-  - {fileID: 65886537888781498}
-  - {fileID: 65105912623334596}
-  - {fileID: 65010831948805340}
-  - {fileID: 65950230708380624}
-  - {fileID: 65926324480284250}
-  - {fileID: 65136880463683740}
-  - {fileID: 65919827280523322}
-  - {fileID: 65065286626884086}
-  - {fileID: 65682580278391028}
-  - {fileID: 65955357754867826}
-  - {fileID: 65438718300563712}
-  - {fileID: 65062347648288308}
-  - {fileID: 65295150184412756}
-  - {fileID: 65406586995061130}
-  - {fileID: 65759205704048022}
-  - {fileID: 65904632538554902}
-  - {fileID: 65960839755977618}
-  - {fileID: 65226299377504744}
-  - {fileID: 65382759652610634}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0
-  salientMaterials: 0000000003000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54582007869483682
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311392734201748}
-  serializedVersion: 2
-  m_Mass: 0.4
-  m_Drag: 0.2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4288989602254171324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311392734201748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisableThis: {fileID: 1070311279915800}
-  isUsedUp: 0
 --- !u!1 &1311822517679822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2727,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2850,6 +2741,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

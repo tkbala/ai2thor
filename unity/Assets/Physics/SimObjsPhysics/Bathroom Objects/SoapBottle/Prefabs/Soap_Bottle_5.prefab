@@ -1325,6 +1325,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1338,6 +1339,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2183,9 +2185,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4934314170784906}
-  - component: {fileID: 114748637972906148}
-  - component: {fileID: 54139838819839872}
-  - component: {fileID: 9191213850664756310}
   m_Layer: 8
   m_Name: Soap_Bottle_5
   m_TagString: SimObjPhysics
@@ -2212,102 +2211,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114748637972906148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783238115594076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 67
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1172732273084498}
-  VisibilityPoints:
-  - {fileID: 4704108986187938}
-  - {fileID: 4451299697305548}
-  - {fileID: 4489085136487836}
-  - {fileID: 4659098296900102}
-  - {fileID: 4569929420978134}
-  - {fileID: 4559349153634242}
-  - {fileID: 4324676948769554}
-  - {fileID: 4998638066988706}
-  - {fileID: 4718865680892312}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65435637940724556}
-  - {fileID: 65112591674767950}
-  - {fileID: 65891388973563342}
-  - {fileID: 65490070787125240}
-  - {fileID: 65009574914918686}
-  - {fileID: 65504917054255546}
-  - {fileID: 65460200937019878}
-  - {fileID: 65953402637032786}
-  - {fileID: 65312534540035758}
-  - {fileID: 65440336309842584}
-  - {fileID: 65234590722926154}
-  - {fileID: 65040797059363226}
-  - {fileID: 65962061782541466}
-  - {fileID: 65715352947486154}
-  - {fileID: 65056696659873944}
-  - {fileID: 65396195944644860}
-  - {fileID: 65181373517668440}
-  - {fileID: 65185173108494050}
-  - {fileID: 65804860818581808}
-  - {fileID: 65804860715147234}
-  - {fileID: 65480454707106056}
-  - {fileID: 65147852093522392}
-  - {fileID: 65436456612343514}
-  - {fileID: 65900455861758540}
-  - {fileID: 65502137999100080}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0
-  salientMaterials: 02000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54139838819839872
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783238115594076}
-  serializedVersion: 2
-  m_Mass: 0.4
-  m_Drag: 0.2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &9191213850664756310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783238115594076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisableThis: {fileID: 1892459262305262}
-  isUsedUp: 0
 --- !u!1 &1827128375149948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2392,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2500,6 +2404,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

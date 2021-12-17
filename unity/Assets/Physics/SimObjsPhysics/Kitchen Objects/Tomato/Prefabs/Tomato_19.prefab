@@ -84,6 +84,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,6 +96,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -360,9 +362,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4101997919964318}
-  - component: {fileID: 114431780046959298}
-  - component: {fileID: 54298424315163790}
-  - component: {fileID: 3341466903067513413}
   m_Layer: 8
   m_Name: Tomato_19
   m_TagString: SimObjPhysics
@@ -389,81 +388,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114431780046959298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516045624267486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Tomato|+00.00|+00.00|+00.00
-  Type: 3
-  PrimaryProperty: 3
-  SecondaryProperties: 09000000
-  BoundingBox: {fileID: 1812673652534766}
-  VisibilityPoints:
-  - {fileID: 4393261684033278}
-  - {fileID: 4346217675887712}
-  - {fileID: 4623537544289868}
-  - {fileID: 4613373271585588}
-  - {fileID: 4419605790025744}
-  - {fileID: 4361128514933132}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 136090767928181006}
-  - {fileID: 136788389862327512}
-  - {fileID: 136333591732875018}
-  - {fileID: 136079804183525466}
-  HFdynamicfriction: 0.9
-  HFstaticfriction: 0.9
-  HFbounciness: 0
-  HFrbdrag: 5
-  HFrbangulardrag: 5
-  salientMaterials: 08000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54298424315163790
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516045624267486}
-  serializedVersion: 2
-  m_Mass: 0.12
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3341466903067513413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516045624267486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07b0b60d7fb54ea9a1ddeca3f431392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToChangeTo: {fileID: 1178825849131765538, guid: ec02e22ba0d5abc49bbd14dd17a1a272,
-    type: 3}
-  isSliced: 0
 --- !u!1 &1520751422732618
 GameObject:
   m_ObjectHideFlags: 0

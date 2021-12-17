@@ -114,9 +114,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4446181234178872}
-  - component: {fileID: 114459830116396558}
-  - component: {fileID: 54579480931362518}
-  - component: {fileID: 5399463329964508378}
   m_Layer: 8
   m_Name: Tomato_12
   m_TagString: SimObjPhysics
@@ -143,78 +140,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114459830116396558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105193807930442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Tomato|+00.00|+00.00|+00.00
-  Type: 3
-  PrimaryProperty: 3
-  SecondaryProperties: 09000000
-  BoundingBox: {fileID: 1088067804449272}
-  VisibilityPoints:
-  - {fileID: 4476700433841410}
-  - {fileID: 4820410630092442}
-  - {fileID: 4699655192498168}
-  - {fileID: 4555750583266226}
-  - {fileID: 4688335597267022}
-  - {fileID: 4457138581456550}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 136554845467020058}
-  HFdynamicfriction: 0.9
-  HFstaticfriction: 0.9
-  HFbounciness: 0
-  HFrbdrag: 5
-  HFrbangulardrag: 5
-  salientMaterials: 08000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54579480931362518
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105193807930442}
-  serializedVersion: 2
-  m_Mass: 0.12
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &5399463329964508378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105193807930442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07b0b60d7fb54ea9a1ddeca3f431392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToChangeTo: {fileID: 1717219938373935513, guid: e5ffd4f5c6ab1b2468a97c34baac6b93,
-    type: 3}
-  isSliced: 0
 --- !u!1 &1115473492007282
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +284,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -370,6 +296,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

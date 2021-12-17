@@ -84,6 +84,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,6 +96,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -302,9 +304,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4427486073308700}
-  - component: {fileID: 114059690707079078}
-  - component: {fileID: 54699333267345732}
-  - component: {fileID: 1655869273}
   m_Layer: 8
   m_Name: Lettuce_23
   m_TagString: SimObjPhysics
@@ -331,79 +330,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114059690707079078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494753141769762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Lettuce|+00.00|+00.00|+00.00
-  Type: 22
-  PrimaryProperty: 3
-  SecondaryProperties: 09000000
-  BoundingBox: {fileID: 1716247471490118}
-  VisibilityPoints:
-  - {fileID: 4564819720230048}
-  - {fileID: 4295523634175908}
-  - {fileID: 4951374083398858}
-  - {fileID: 4572188098097824}
-  - {fileID: 4549230760606664}
-  - {fileID: 4431597996348968}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 136201037504192602}
-  - {fileID: 136746678327899444}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0.1
-  HFrbdrag: 0
-  HFrbangulardrag: 2.5
-  salientMaterials: 08000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54699333267345732
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494753141769762}
-  serializedVersion: 2
-  m_Mass: 0.47
-  m_Drag: 2
-  m_AngularDrag: 1.5
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1655869273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494753141769762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07b0b60d7fb54ea9a1ddeca3f431392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToChangeTo: {fileID: 2985459977701338676, guid: 03877f0d9782a084f8cbb316b7c92f01,
-    type: 3}
-  isSliced: 0
 --- !u!1 &1542793199275556
 GameObject:
   m_ObjectHideFlags: 0

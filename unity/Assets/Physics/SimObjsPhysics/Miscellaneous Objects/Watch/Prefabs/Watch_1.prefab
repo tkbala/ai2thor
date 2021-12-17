@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4894504124381950}
-  - component: {fileID: 114810944438312232}
-  - component: {fileID: 54783650999480704}
   m_Layer: 8
   m_Name: Watch_1
   m_TagString: SimObjPhysics
@@ -37,79 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114810944438312232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034148534541902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Watch|-01.31|-00.25|-05.52
-  Type: 86
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1536987138947992}
-  VisibilityPoints:
-  - {fileID: 4357054566527644}
-  - {fileID: 4371135302224534}
-  - {fileID: 4310787741937860}
-  - {fileID: 4573749945838610}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65425151332314278}
-  - {fileID: 65368714637912810}
-  - {fileID: 65368281844802732}
-  - {fileID: 65750200756706816}
-  - {fileID: 65869515892476714}
-  - {fileID: 65620863982055006}
-  - {fileID: 65767526445171884}
-  - {fileID: 65031793902183382}
-  - {fileID: 65147412323152138}
-  - {fileID: 65924550111573904}
-  - {fileID: 65569617688808692}
-  - {fileID: 65604184964669682}
-  - {fileID: 65620068151798386}
-  - {fileID: 65576086360611504}
-  - {fileID: 65416989518494212}
-  - {fileID: 65412843160837502}
-  - {fileID: 65121476626825332}
-  - {fileID: 65065832285069284}
-  - {fileID: 65591489972277726}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 000000000300000002000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54783650999480704
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034148534541902}
-  serializedVersion: 2
-  m_Mass: 0.07
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1047991275282758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +1917,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2003,6 +1929,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

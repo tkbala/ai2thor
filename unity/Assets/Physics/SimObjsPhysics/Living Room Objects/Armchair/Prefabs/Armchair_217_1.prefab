@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 7087939402859003025, guid: c3ebd33755b317a409cd297e84ce5899,
         type: 3}
       propertyPath: m_Name
-      value: Armchair_217_Master
+      value: Armchair_217_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
         type: 3}
@@ -29,6 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -41,16 +51,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7087939402859003026, guid: c3ebd33755b317a409cd297e84ce5899,
         type: 3}
@@ -132,7 +132,9 @@ PrefabInstance:
       propertyPath: myParent
       value: 
       objectReference: {fileID: 4065557009978879815}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7087939402859003036, guid: c3ebd33755b317a409cd297e84ce5899, type: 3}
+    - {fileID: 7087939402859003027, guid: c3ebd33755b317a409cd297e84ce5899, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c3ebd33755b317a409cd297e84ce5899, type: 3}
 --- !u!1 &4065557009978879815 stripped
 GameObject:

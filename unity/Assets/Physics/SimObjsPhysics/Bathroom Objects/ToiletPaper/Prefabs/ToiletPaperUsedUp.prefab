@@ -413,9 +413,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4619907589594400}
-  - component: {fileID: 114476784421980902}
-  - component: {fileID: 54898805543689942}
-  - component: {fileID: 2844311413876763435}
   m_Layer: 8
   m_Name: ToiletPaperUsedUp
   m_TagString: SimObjPhysics
@@ -440,109 +437,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114476784421980902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885319937763980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  Type: 65
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1562660347130956}
-  VisibilityPoints:
-  - {fileID: 4457005277040860}
-  - {fileID: 4065489043979366}
-  - {fileID: 4078467961625246}
-  - {fileID: 6277711205705120450}
-  - {fileID: 6269105281908894596}
-  - {fileID: 6269126013485532966}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 7653554149251459514}
-  - {fileID: 4207224018905791750}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0.1
-  HFrbdrag: 0
-  HFrbangulardrag: 1.8
-  salientMaterials: 09000000
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  numSimObjHit: 0
-  numFloorHit: 0
-  numStructureHit: 0
-  lastVelocity: 0
-  IsReceptacle: 0
-  IsPickupable: 0
-  IsMoveable: 0
-  IsToggleable: 0
-  IsOpenable: 0
-  IsBreakable: 0
-  IsFillable: 0
-  IsDirtyable: 0
-  IsCookable: 0
-  IsSliceable: 0
-  canChangeTempToHot: 0
-  canChangeTempToCold: 0
-  ContainedObjectReferences: []
-  CurrentlyContains: []
---- !u!54 &54898805543689942
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885319937763980}
-  serializedVersion: 2
-  m_Mass: 0.2
-  m_Drag: 0
-  m_AngularDrag: 1.3
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2844311413876763435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885319937763980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  usedUpRenderer: {fileID: 6295141527934921458}
-  usedUpColliders:
-  - {fileID: 6263739629903768720}
-  - {fileID: 65379406611350326}
-  - {fileID: 6334704019966282412}
-  usedUpTriggerColliders:
-  - {fileID: 6263856256365318164}
-  - {fileID: 6334034136314325840}
-  - {fileID: 6334737303699932766}
-  alwaysActiveColliders:
-  - {fileID: 7653554149251459514}
-  - {fileID: 4207224018905791750}
-  alwaysActiveTriggerColliders:
-  - {fileID: 3583347929216771200}
-  - {fileID: 6158127277633229278}
-  isUsedUp: 1
 --- !u!1 &1922953887864208
 GameObject:
   m_ObjectHideFlags: 0

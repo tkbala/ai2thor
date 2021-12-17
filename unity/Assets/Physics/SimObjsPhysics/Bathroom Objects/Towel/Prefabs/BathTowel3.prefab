@@ -227,8 +227,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4973661842313404}
-  - component: {fileID: 114551044046173078}
-  - component: {fileID: 54175473561167630}
   m_Layer: 8
   m_Name: BathTowel3
   m_TagString: SimObjPhysics
@@ -255,62 +253,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114551044046173078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557894392149754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Towel|-00.17|+01.41|+02.42
-  Type: 85
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1992146740804506}
-  VisibilityPoints:
-  - {fileID: 4281348416779412}
-  - {fileID: 4486751924760242}
-  - {fileID: 4494405866290564}
-  - {fileID: 4409688646192230}
-  - {fileID: 4689534411961432}
-  - {fileID: 4316069811170086}
-  - {fileID: 4151114028632954}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65246746322756858}
-  HFdynamicfriction: 1.7
-  HFstaticfriction: 1.7
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0.1
-  salientMaterials: 06000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54175473561167630
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557894392149754}
-  serializedVersion: 2
-  m_Mass: 0.57
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1649884521427236
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +307,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -376,6 +319,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

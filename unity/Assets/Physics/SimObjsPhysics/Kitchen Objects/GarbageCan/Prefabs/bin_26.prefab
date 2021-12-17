@@ -59,7 +59,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1506446439275130}
-  occupied: 0
 --- !u!1 &1062299745176302
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +324,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1506446439275130}
-  occupied: 0
 --- !u!1 &1200586537213510
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +452,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -467,6 +466,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -665,8 +665,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4491447725096282}
-  - component: {fileID: 54186622910912130}
-  - component: {fileID: 114113340765156384}
   m_Layer: 8
   m_Name: bin_26
   m_TagString: SimObjPhysics
@@ -698,88 +696,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54186622910912130
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506446439275130}
-  serializedVersion: 2
-  m_Mass: 0.7
-  m_Drag: 1
-  m_AngularDrag: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &114113340765156384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506446439275130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: GarbageCan|+00.00|+00.00|+00.00
-  Type: 28
-  PrimaryProperty: 2
-  SecondaryProperties: 07000000
-  BoundingBox: {fileID: 461513377584313951}
-  VisibilityPoints:
-  - {fileID: 4366674856131424}
-  - {fileID: 4336211353355036}
-  - {fileID: 4148291289875718}
-  - {fileID: 4188641881542192}
-  - {fileID: 4993147971437018}
-  - {fileID: 4527211073212184}
-  - {fileID: 4103019735396530}
-  - {fileID: 4623378422120960}
-  - {fileID: 4043482293309722}
-  - {fileID: 4034065270948184}
-  - {fileID: 4745460095238368}
-  - {fileID: 4811154399569652}
-  - {fileID: 4274573711571132}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1164553878347190}
-  - {fileID: 1016958042072126}
-  - {fileID: 1781118258280620}
-  - {fileID: 1638636181053158}
-  - {fileID: 1875072256731070}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65472202697095888}
-  - {fileID: 65092000893599618}
-  - {fileID: 65188812146772660}
-  - {fileID: 65756923146513056}
-  - {fileID: 65811129725467526}
-  - {fileID: 65167809447403080}
-  - {fileID: 65237556682857258}
-  - {fileID: 65655924261374736}
-  - {fileID: 65902409997713870}
-  - {fileID: 65499229497257664}
-  - {fileID: 65015397316829922}
-  - {fileID: 65203595246521472}
-  - {fileID: 65596453106941778}
-  HFdynamicfriction: 0.9
-  HFstaticfriction: 0.9
-  HFbounciness: 0
-  HFrbdrag: 1.5
-  HFrbangulardrag: 1.5
-  salientMaterials: 02000000
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
 --- !u!1 &1507093461508208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1037,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1506446439275130}
-  occupied: 0
 --- !u!1 &1685391870805034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1506446439275130}
-  occupied: 0
 --- !u!1 &1855481076942558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1506446439275130}
-  occupied: 0
 --- !u!1 &1893223258759226
 GameObject:
   m_ObjectHideFlags: 0

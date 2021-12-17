@@ -762,7 +762,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1322540087336438}
-  occupied: 0
 --- !u!1 &1322540087336438
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,9 +771,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4143695206002774}
-  - component: {fileID: 54017013501562934}
-  - component: {fileID: 114376099219962954}
-  - component: {fileID: 114831248470132956}
   m_Layer: 8
   m_Name: Fridge_21
   m_TagString: SimObjPhysics
@@ -805,132 +801,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54017013501562934
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322540087336438}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &114376099219962954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322540087336438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  Type: 18
-  PrimaryProperty: 1
-  SecondaryProperties: 07000000080000000d000000
-  BoundingBox: {fileID: 1810630859417642}
-  VisibilityPoints:
-  - {fileID: 4531716022024046}
-  - {fileID: 4741413500276646}
-  - {fileID: 4105213837071462}
-  - {fileID: 4646975943600404}
-  - {fileID: 4715841968086914}
-  - {fileID: 4892281442024688}
-  - {fileID: 4301932426993858}
-  - {fileID: 4724805749339152}
-  - {fileID: 4815153126687920}
-  - {fileID: 4707723778201002}
-  - {fileID: 4878038121022700}
-  - {fileID: 4947445142630064}
-  - {fileID: 4643315160486538}
-  - {fileID: 4933307758123464}
-  - {fileID: 4856821038151084}
-  - {fileID: 4941102557561608}
-  - {fileID: 4875208757346040}
-  - {fileID: 4470423776707820}
-  - {fileID: 4496798147488348}
-  - {fileID: 4409546522191030}
-  - {fileID: 4600984368096122}
-  - {fileID: 4116009249677084}
-  - {fileID: 4041179243791344}
-  - {fileID: 4285736199772998}
-  - {fileID: 4679456974858952}
-  - {fileID: 4644850499767284}
-  - {fileID: 4445056722085828}
-  - {fileID: 4169541050870412}
-  - {fileID: 4880126882619332}
-  - {fileID: 4999296332967602}
-  - {fileID: 4941190853985240}
-  - {fileID: 4030193710989464}
-  - {fileID: 4333187944181998}
-  - {fileID: 4097555830762086}
-  - {fileID: 4716185224852522}
-  - {fileID: 4272245148247930}
-  - {fileID: 4313513980464764}
-  - {fileID: 4158139001885996}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1373625616773098}
-  - {fileID: 1508056531577084}
-  - {fileID: 1477358578780298}
-  - {fileID: 1468101688389316}
-  - {fileID: 1308755231518018}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders: []
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  numSimObjHit: 0
-  numFloorHit: 0
-  numStructureHit: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!114 &114831248470132956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322540087336438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f742cdae0124730b5b59765384368a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovingParts:
-  - {fileID: 1287906671055176}
-  - {fileID: 1304498575389008}
-  openPositions:
-  - {x: 0, y: 90, z: 0}
-  - {x: 0, y: 90, z: 0}
-  closedPositions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  animationTime: 0.2
-  openPercentage: 1
-  IgnoreTheseObjects: []
-  isOpen: 0
-  canReset: 1
-  movementType: 1
-  OpenBoundingBox: {fileID: 4154509530538088282}
-  ClosedBoundingBox: {fileID: 1810630859417642}
 --- !u!1 &1353794046183340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1322540087336438}
-  occupied: 0
 --- !u!1 &1373991897490664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1084,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1322540087336438}
-  occupied: 0
 --- !u!1 &1477358578780298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1322540087336438}
-  occupied: 0
 --- !u!1 &1479019664148868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,7 +1262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1322540087336438}
-  occupied: 0
 --- !u!1 &1514467918680836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.047
       objectReference: {fileID: 0}
@@ -2494,6 +2365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000001872535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -2506,16 +2382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.0000001872535
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}

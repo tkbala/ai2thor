@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 577273119488782676, guid: e799cbc0427aeb24da84a4564e3dd01b,
         type: 3}
       propertyPath: m_Name
-      value: Dining_Table_221_Master
+      value: Dining_Table_221_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
         type: 3}
@@ -29,6 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -41,16 +51,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 577273119488782677, guid: e799cbc0427aeb24da84a4564e3dd01b,
         type: 3}
@@ -162,7 +162,9 @@ PrefabInstance:
       propertyPath: myParent
       value: 
       objectReference: {fileID: 1774162849721961598}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 577273119488782679, guid: e799cbc0427aeb24da84a4564e3dd01b, type: 3}
+    - {fileID: 577273119488782678, guid: e799cbc0427aeb24da84a4564e3dd01b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e799cbc0427aeb24da84a4564e3dd01b, type: 3}
 --- !u!1 &1774162849721961598 stripped
 GameObject:

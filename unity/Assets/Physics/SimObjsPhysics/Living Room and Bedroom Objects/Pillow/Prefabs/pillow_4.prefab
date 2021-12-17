@@ -206,8 +206,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4850071613100980}
-  - component: {fileID: 114564374551038992}
-  - component: {fileID: 54722317158139752}
   m_Layer: 8
   m_Name: pillow_4
   m_TagString: SimObjPhysics
@@ -234,87 +232,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114564374551038992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195763746732188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  Type: 130
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1689846535400126}
-  VisibilityPoints:
-  - {fileID: 4604268082011734}
-  - {fileID: 4289126454976920}
-  - {fileID: 4744130346094422}
-  - {fileID: 4978210341724260}
-  - {fileID: 4939141043121206}
-  - {fileID: 4415161359115978}
-  - {fileID: 4655772398270738}
-  - {fileID: 4854354870292344}
-  - {fileID: 4638964020235260}
-  - {fileID: 4108272378791592}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65799676666837258}
-  - {fileID: 65515600704298756}
-  - {fileID: 65754137250971896}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0
-  HFrbdrag: 0.8
-  HFrbangulardrag: 0.1
-  salientMaterials: 06000000
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  numSimObjHit: 0
-  numFloorHit: 0
-  numStructureHit: 0
-  lastVelocity: 0
-  IsReceptacle: 0
-  IsPickupable: 0
-  IsMoveable: 0
-  isStatic: 0
-  IsToggleable: 0
-  IsOpenable: 0
-  IsBreakable: 0
-  IsFillable: 0
-  IsDirtyable: 0
-  IsCookable: 0
-  IsSliceable: 0
-  canChangeTempToHot: 0
-  canChangeTempToCold: 0
-  ContainedObjectReferences: []
-  CurrentlyContains: []
---- !u!54 &54722317158139752
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195763746732188}
-  serializedVersion: 2
-  m_Mass: 0.7
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1232033892762278
 GameObject:
   m_ObjectHideFlags: 0

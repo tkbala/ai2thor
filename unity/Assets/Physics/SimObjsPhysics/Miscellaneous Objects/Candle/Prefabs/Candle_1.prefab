@@ -735,9 +735,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726037933143866}
-  - component: {fileID: 114636868379925046}
-  - component: {fileID: 54540246337116112}
-  - component: {fileID: 8829746098632621762}
   m_Layer: 8
   m_Name: Candle_1
   m_TagString: SimObjPhysics
@@ -766,97 +763,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114636868379925046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606295063909508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Candle|-03.63|+00.63|-06.25
-  Type: 61
-  PrimaryProperty: 3
-  SecondaryProperties: 1d000000
-  BoundingBox: {fileID: 1198434702647332}
-  VisibilityPoints:
-  - {fileID: 4056252601335016}
-  - {fileID: 4033355727700780}
-  - {fileID: 4462413735445006}
-  - {fileID: 4979316152087174}
-  - {fileID: 4090422392452512}
-  - {fileID: 4583421750977496}
-  - {fileID: 4837573047488548}
-  - {fileID: 4544965192970982}
-  - {fileID: 4608430195607926}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65048392746258972}
-  - {fileID: 65207019858633040}
-  - {fileID: 65013948543861824}
-  - {fileID: 65736902823467614}
-  - {fileID: 65495656172965006}
-  - {fileID: 65123395559066820}
-  - {fileID: 65778677593561476}
-  - {fileID: 65814230027354710}
-  - {fileID: 65836867216641042}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0.1
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 0a000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54540246337116112
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606295063909508}
-  serializedVersion: 2
-  m_Mass: 0.2
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &8829746098632621762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606295063909508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fd556226fd294b1c845aae4efb365a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovingParts: []
-  MaterialSwapObjects: []
-  LightSources:
-  - {fileID: 3547375537427877299}
-  OnPositions: []
-  OffPositions: []
-  animationTime: 0.05
-  isOn: 0
-  movementType: 0
-  SelfControlled: 1
-  ControlledSimObjects: []
 --- !u!1 &1660490051780266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +927,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1033,6 +940,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1497,15 +1405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4726037933143866}
     m_Modifications:
-    - target: {fileID: 2648947281952273767, guid: 45eb477277eaa4c0a82f50039894d693,
+    - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
         type: 3}
-      propertyPath: m_Name
-      value: CandleFlameParticle
-      objectReference: {fileID: 0}
-    - target: {fileID: 2648947281952273767, guid: 45eb477277eaa4c0a82f50039894d693,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
         type: 3}
@@ -1524,6 +1427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
@@ -1536,16 +1444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,
         type: 3}
@@ -1562,14 +1460,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2648947281952273767, guid: 45eb477277eaa4c0a82f50039894d693,
+        type: 3}
+      propertyPath: m_Name
+      value: CandleFlameParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648947281952273767, guid: 45eb477277eaa4c0a82f50039894d693,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45eb477277eaa4c0a82f50039894d693, type: 3}
---- !u!1 &3547375537427877299 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2648947281952273767, guid: 45eb477277eaa4c0a82f50039894d693,
-    type: 3}
-  m_PrefabInstance: {fileID: 1583082085840386260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3547375537427877302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2648947281952273762, guid: 45eb477277eaa4c0a82f50039894d693,

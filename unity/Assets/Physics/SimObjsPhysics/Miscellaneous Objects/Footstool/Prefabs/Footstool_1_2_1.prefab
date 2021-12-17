@@ -7,10 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8561797659746621436, guid: aa556235d4d95ad4097456358489b46c,
+    - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
         type: 3}
-      propertyPath: m_Name
-      value: Footstool_320_2_Master
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
         type: 3}
@@ -29,6 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -41,16 +46,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7880641176546702051, guid: aa556235d4d95ad4097456358489b46c,
         type: 3}
@@ -67,5 +62,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8561797659746621436, guid: aa556235d4d95ad4097456358489b46c,
+        type: 3}
+      propertyPath: m_Name
+      value: Footstool_1_2_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8081317494169795262, guid: aa556235d4d95ad4097456358489b46c, type: 3}
+    - {fileID: 217756066, guid: aa556235d4d95ad4097456358489b46c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa556235d4d95ad4097456358489b46c, type: 3}

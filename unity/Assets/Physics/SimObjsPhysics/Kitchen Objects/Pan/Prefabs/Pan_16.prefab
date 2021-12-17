@@ -686,6 +686,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -701,6 +702,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1904,7 +1906,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1459226364814946}
-  occupied: 0
 --- !u!1 &1333055715677732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1459226364814946}
-  occupied: 0
 --- !u!1 &1409853960193116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,9 +2722,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4460768756542890}
-  - component: {fileID: 114025713519064656}
-  - component: {fileID: 54939939543605678}
-  - component: {fileID: 1422523047}
   m_Layer: 8
   m_Name: Pan_16
   m_TagString: SimObjPhysics
@@ -2753,155 +2750,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114025713519064656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459226364814946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Pan|+00.00|+00.00|+00.00
-  Type: 9
-  PrimaryProperty: 3
-  SecondaryProperties: 0700000004000000
-  BoundingBox: {fileID: 1926022301616258}
-  VisibilityPoints:
-  - {fileID: 4473747349866998}
-  - {fileID: 4910008553271538}
-  - {fileID: 4731361781542944}
-  - {fileID: 4034835199702830}
-  - {fileID: 4934063825861988}
-  - {fileID: 4716200458212114}
-  - {fileID: 4167179279623302}
-  - {fileID: 4115766955587960}
-  - {fileID: 4612613556119104}
-  - {fileID: 4812758016493978}
-  - {fileID: 4426710341743932}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1326613060813448}
-  - {fileID: 1397606368586176}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65157364035149694}
-  - {fileID: 65102422363169282}
-  - {fileID: 65489285971531488}
-  - {fileID: 65736388089457982}
-  - {fileID: 65953384750492010}
-  - {fileID: 65177831763265066}
-  - {fileID: 65950997172384612}
-  - {fileID: 65284444614683262}
-  - {fileID: 65484291693528424}
-  - {fileID: 65559442928685578}
-  - {fileID: 65159209572459482}
-  - {fileID: 65369868905778966}
-  - {fileID: 65549928912008352}
-  - {fileID: 65446442775411484}
-  - {fileID: 65160974727865618}
-  - {fileID: 65824630761650290}
-  - {fileID: 65561892978044784}
-  - {fileID: 65800353276688530}
-  - {fileID: 65953957538687038}
-  - {fileID: 65386223563828182}
-  - {fileID: 65758827072504624}
-  - {fileID: 65037177311033272}
-  - {fileID: 65387203436991496}
-  - {fileID: 65314013252630090}
-  - {fileID: 65868352528253676}
-  - {fileID: 65988273496430570}
-  - {fileID: 65442939487825492}
-  - {fileID: 65616953426626788}
-  - {fileID: 65202428034286152}
-  - {fileID: 65000363248150814}
-  - {fileID: 65161589423796248}
-  - {fileID: 65236641276841312}
-  - {fileID: 65699334264290132}
-  - {fileID: 65505105171879916}
-  - {fileID: 65138839671727738}
-  - {fileID: 65053564956542616}
-  - {fileID: 65533667420872072}
-  - {fileID: 65647210350900368}
-  - {fileID: 65408075773989940}
-  - {fileID: 65987242385543634}
-  - {fileID: 65947250369587322}
-  - {fileID: 65481420603084670}
-  - {fileID: 65375576579031720}
-  - {fileID: 65517071108221334}
-  - {fileID: 65956145213582900}
-  - {fileID: 65106866264988876}
-  - {fileID: 65396968271597382}
-  - {fileID: 65794875170716502}
-  - {fileID: 65186940494090610}
-  - {fileID: 65309490508397204}
-  - {fileID: 65802080494697436}
-  - {fileID: 65371130250026996}
-  - {fileID: 65541568388056352}
-  - {fileID: 65414891429803330}
-  - {fileID: 65173581132998840}
-  - {fileID: 65172256407763552}
-  - {fileID: 65315344468838898}
-  HFdynamicfriction: 0.8
-  HFstaticfriction: 0.8
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 00000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54939939543605678
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459226364814946}
-  serializedVersion: 2
-  m_Mass: 0.67
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1422523047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459226364814946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d106cf009583a40e4a85d860c9830f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaterialSwapObjects:
-  - MyObject: {fileID: 1102076652402966}
-    OnMaterials:
-    - {fileID: 2100000, guid: be4f394b09c72284a9bc9eb925bc15b7, type: 2}
-    - {fileID: 2100000, guid: 4a544a4e9eee70648876bbfdf36f8db3, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: 68a0ad4012bfdac48a026048278c99ac, type: 2}
-    OffMaterials:
-    - {fileID: 2100000, guid: be4f394b09c72284a9bc9eb925bc15b7, type: 2}
-    - {fileID: 2100000, guid: 4a544a4e9eee70648876bbfdf36f8db3, type: 2}
-    - {fileID: 2100000, guid: 49cda992fe956784c9bfc0ef1823f165, type: 2}
-    - {fileID: 2100000, guid: d3b9e669b9d7f3342af647e94c7399a4, type: 2}
-    - {fileID: 2100000, guid: 7afd56a5a7d0e18448e7937b55261aee, type: 2}
-  ObjectsToEnableIfClean: []
-  ObjectsToEnableIfDirty: []
-  isDirty: 0
 --- !u!1 &1462686277059416
 GameObject:
   m_ObjectHideFlags: 0

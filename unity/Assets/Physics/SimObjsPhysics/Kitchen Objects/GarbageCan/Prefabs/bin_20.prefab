@@ -103,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1819524102285898}
-  occupied: 0
 --- !u!1 &1102448625742954
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +187,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -201,6 +201,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -640,7 +641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1819524102285898}
-  occupied: 0
 --- !u!1 &1561421288776106
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +908,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1819524102285898}
-  occupied: 0
 --- !u!1 &1775061090664294
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,8 +995,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4425465320824976}
-  - component: {fileID: 114051162624596858}
-  - component: {fileID: 54210624094358824}
   m_Layer: 8
   m_Name: bin_20
   m_TagString: SimObjPhysics
@@ -1028,79 +1025,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114051162624596858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819524102285898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: GarbageCan|+00.00|+00.00|+00.00
-  Type: 28
-  PrimaryProperty: 2
-  SecondaryProperties: 07000000
-  BoundingBox: {fileID: 8668055019420619173}
-  VisibilityPoints:
-  - {fileID: 4989220644415184}
-  - {fileID: 4354146960173002}
-  - {fileID: 4379825514756510}
-  - {fileID: 4225445856626424}
-  - {fileID: 4948986335158774}
-  - {fileID: 4480386772731004}
-  - {fileID: 4589985294473290}
-  - {fileID: 4060542355529854}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1749547804737626}
-  - {fileID: 1078752811322760}
-  - {fileID: 1489154936954260}
-  - {fileID: 1899205885209312}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65582407430124080}
-  - {fileID: 65850485794098812}
-  - {fileID: 65480600249539396}
-  - {fileID: 65896781483139008}
-  - {fileID: 65980841544313238}
-  - {fileID: 65757739174159646}
-  - {fileID: 65241866305728810}
-  - {fileID: 65950138663756384}
-  - {fileID: 65456267362557988}
-  - {fileID: 65109087812812526}
-  HFdynamicfriction: 0.9
-  HFstaticfriction: 0.9
-  HFbounciness: 0
-  HFrbdrag: 1.5
-  HFrbangulardrag: 1.5
-  salientMaterials: 02000000
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54210624094358824
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819524102285898}
-  serializedVersion: 2
-  m_Mass: 0.7
-  m_Drag: 1
-  m_AngularDrag: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1899205885209312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1084,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1819524102285898}
-  occupied: 0
 --- !u!1 &1991117379042032
 GameObject:
   m_ObjectHideFlags: 0

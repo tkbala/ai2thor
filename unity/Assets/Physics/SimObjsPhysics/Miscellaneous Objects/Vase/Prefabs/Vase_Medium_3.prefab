@@ -2297,9 +2297,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4146797058179168}
-  - component: {fileID: 114873203475784066}
-  - component: {fileID: 54453803078801918}
-  - component: {fileID: 5601781916808922692}
   m_Layer: 8
   m_Name: Vase_Medium_3
   m_TagString: SimObjPhysics
@@ -2326,129 +2323,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114873203475784066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572227596864996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Vase|+00.00|+00.00|+00.00
-  Type: 121
-  PrimaryProperty: 3
-  SecondaryProperties: 0b000000
-  BoundingBox: {fileID: 1950361630498686}
-  VisibilityPoints:
-  - {fileID: 4203875345045900}
-  - {fileID: 4440845786567512}
-  - {fileID: 4591172954780510}
-  - {fileID: 4320562860534452}
-  - {fileID: 4524003309262336}
-  - {fileID: 4776447475481930}
-  - {fileID: 4445834218220296}
-  - {fileID: 4477446655339982}
-  - {fileID: 4448901424318766}
-  - {fileID: 4494513699918762}
-  - {fileID: 4669810553111002}
-  - {fileID: 4858901113649812}
-  - {fileID: 4672396066513704}
-  - {fileID: 4089479895573202}
-  - {fileID: 4169357242989280}
-  - {fileID: 4908017027116908}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65033202633886942}
-  - {fileID: 65245457834977888}
-  - {fileID: 65532992544346018}
-  - {fileID: 65647666406807292}
-  - {fileID: 65568233688440606}
-  - {fileID: 65483047429652844}
-  - {fileID: 65765234444014662}
-  - {fileID: 65784221876859468}
-  - {fileID: 65157138009846452}
-  - {fileID: 65742582058842882}
-  - {fileID: 65202616824725928}
-  - {fileID: 65552537039881636}
-  - {fileID: 65154597693074820}
-  - {fileID: 65841683226137106}
-  - {fileID: 65269517237481980}
-  - {fileID: 65079299128034448}
-  - {fileID: 65171395409044126}
-  - {fileID: 65290969883901020}
-  - {fileID: 65010265104266784}
-  - {fileID: 65488362461540600}
-  - {fileID: 65470745104086992}
-  - {fileID: 65823232227385532}
-  - {fileID: 65670516880687810}
-  - {fileID: 65156289480575502}
-  - {fileID: 65196787841008528}
-  - {fileID: 65562622274773572}
-  - {fileID: 65558438229886052}
-  - {fileID: 65751853860517292}
-  - {fileID: 65297011135274014}
-  - {fileID: 65524438386079144}
-  - {fileID: 65541502968152420}
-  - {fileID: 65044684390426804}
-  - {fileID: 65931962603915550}
-  - {fileID: 65509508652442198}
-  - {fileID: 65062310708660112}
-  - {fileID: 65986846245252970}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 04000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54453803078801918
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572227596864996}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &5601781916808922692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572227596864996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b2beb760fcd4a6f957400c276adb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PrefabToSwapTo: {fileID: 2740463400193617681, guid: f515a478f90255f4ca1922d3a78da672,
-    type: 3}
-  DirtyPrefabToSwapTo: {fileID: 0}
-  ImpulseThreshold: 4
-  HighFrictionImpulseOffset: 2
-  readytobreak: 1
-  broken: 0
-  breakType: 0
-  MaterialSwapObjects: []
 --- !u!1 &1585459189723608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3953,6 +3827,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3964,6 +3839,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

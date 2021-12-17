@@ -213,7 +213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1579711442373822}
-  occupied: 0
 --- !u!1 &1161437111764318
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1579711442373822}
-  occupied: 0
 --- !u!1 &1173658005828830
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1579711442373822}
-  occupied: 0
 --- !u!1 &1205584038910678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,9 +1174,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4961698670117206}
-  - component: {fileID: 54205835057733764}
-  - component: {fileID: 114434474428182418}
-  - component: {fileID: 114838199594542230}
   m_Layer: 8
   m_Name: Fridge_15
   m_TagString: SimObjPhysics
@@ -1209,121 +1203,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54205835057733764
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579711442373822}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &114434474428182418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579711442373822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  Type: 18
-  PrimaryProperty: 1
-  SecondaryProperties: 07000000080000000d000000
-  BoundingBox: {fileID: 1086894089152430}
-  VisibilityPoints:
-  - {fileID: 4802524844994688}
-  - {fileID: 4752914220265092}
-  - {fileID: 4068757018107984}
-  - {fileID: 4474749171017580}
-  - {fileID: 4877772188105038}
-  - {fileID: 4167612084737448}
-  - {fileID: 4677094073756674}
-  - {fileID: 4825791583407694}
-  - {fileID: 4665370855367398}
-  - {fileID: 4047632515267892}
-  - {fileID: 4304910901474000}
-  - {fileID: 4193252017870582}
-  - {fileID: 4234799990729734}
-  - {fileID: 4358558549597126}
-  - {fileID: 4179575310731102}
-  - {fileID: 4103969954819494}
-  - {fileID: 4395537442972404}
-  - {fileID: 4434039717456266}
-  - {fileID: 4314908433507182}
-  - {fileID: 4576237754097396}
-  - {fileID: 4131205311836734}
-  - {fileID: 4163289433739002}
-  - {fileID: 4784401818017014}
-  - {fileID: 4090032395651728}
-  - {fileID: 4179444361071708}
-  - {fileID: 4877399037808248}
-  - {fileID: 4348454614587040}
-  - {fileID: 4164782040619434}
-  - {fileID: 4639202506883166}
-  - {fileID: 4602071556295752}
-  - {fileID: 4557125690619008}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1795205319675992}
-  - {fileID: 1190983516708266}
-  - {fileID: 1168526825625140}
-  - {fileID: 1108459398109712}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders: []
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 
-  MySpawnPoints: []
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  numSimObjHit: 0
-  numFloorHit: 0
-  numStructureHit: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!114 &114838199594542230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579711442373822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f742cdae0124730b5b59765384368a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovingParts:
-  - {fileID: 1734745228916924}
-  openPositions:
-  - {x: 0, y: 90, z: 0}
-  closedPositions:
-  - {x: 0, y: 0, z: 0}
-  animationTime: 0.2
-  openPercentage: 1
-  IgnoreTheseObjects: []
-  isOpen: 0
-  canReset: 1
-  movementType: 1
-  OpenBoundingBox: {fileID: 6023215409070131979}
-  ClosedBoundingBox: {fileID: 1086894089152430}
 --- !u!1 &1581222352691050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1579711442373822}
-  occupied: 0
 --- !u!1 &1798391765493508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +1970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.015
       objectReference: {fileID: 0}
@@ -2107,6 +1990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0000001872535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -2119,16 +2007,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.0000001872535
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5376431395650311469, guid: ed15616270d4de14ca70042691c091f6,
         type: 3}

@@ -940,6 +940,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -955,6 +956,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1064,8 +1066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4945291837798774}
-  - component: {fileID: 114367225018799394}
-  - component: {fileID: 54558641938806602}
   m_Layer: 8
   m_Name: Alarm_Clock_7
   m_TagString: SimObjPhysics
@@ -1092,96 +1092,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114367225018799394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470455388520372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: AlarmClock|+07.00|+07.00|+07.00
-  Type: 78
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1164893076193938}
-  VisibilityPoints:
-  - {fileID: 4734162331836016}
-  - {fileID: 4862105434227660}
-  - {fileID: 4369142708407034}
-  - {fileID: 4669258592319118}
-  - {fileID: 4906210104743862}
-  - {fileID: 4144113285839420}
-  - {fileID: 4479222144977818}
-  - {fileID: 4411456819026472}
-  - {fileID: 4962386880788076}
-  - {fileID: 4855520902154986}
-  - {fileID: 4464449925951924}
-  - {fileID: 4130963512088380}
-  - {fileID: 4006317393770976}
-  - {fileID: 4618659756650412}
-  - {fileID: 4366856591957940}
-  - {fileID: 4127508039224498}
-  - {fileID: 4436586705025280}
-  - {fileID: 4289452766389250}
-  - {fileID: 4660642647590984}
-  - {fileID: 4937164604696364}
-  - {fileID: 4792409337019016}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65543848597483720}
-  - {fileID: 65971992994678398}
-  - {fileID: 65866478739364388}
-  - {fileID: 65516013975326000}
-  - {fileID: 65282602902325728}
-  - {fileID: 65799414747239106}
-  - {fileID: 65653368446541272}
-  - {fileID: 65775466082257652}
-  - {fileID: 136282111918287474}
-  - {fileID: 136449133099051846}
-  - {fileID: 65296269732665034}
-  - {fileID: 65206002697944288}
-  - {fileID: 65778179844013178}
-  - {fileID: 136089438716082622}
-  - {fileID: 65808299021661362}
-  - {fileID: 136732075472711272}
-  - {fileID: 65615322039643638}
-  - {fileID: 65411088369452026}
-  - {fileID: 65051919939488476}
-  HFdynamicfriction: 0.8
-  HFstaticfriction: 0.8
-  HFbounciness: 0
-  HFrbdrag: 5
-  HFrbangulardrag: 200
-  salientMaterials: 000000000200000003000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54558641938806602
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470455388520372}
-  serializedVersion: 2
-  m_Mass: 0.8
-  m_Drag: 0.5
-  m_AngularDrag: 100
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1476188223322340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1194,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1299,6 +1210,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1617,6 +1529,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1628,6 +1541,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2256,6 +2170,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2267,6 +2182,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2723,6 +2639,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2734,6 +2651,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

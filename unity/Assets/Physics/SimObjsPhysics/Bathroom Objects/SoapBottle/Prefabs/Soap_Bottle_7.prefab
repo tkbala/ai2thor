@@ -1354,9 +1354,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4633156311076668}
-  - component: {fileID: 114985618875957146}
-  - component: {fileID: 54587287708327196}
-  - component: {fileID: 2584054924099459230}
   m_Layer: 8
   m_Name: Soap_Bottle_7
   m_TagString: SimObjPhysics
@@ -1383,113 +1380,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114985618875957146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451403365470408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 67
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1081333177222236}
-  VisibilityPoints:
-  - {fileID: 4753217238157714}
-  - {fileID: 4703720783242860}
-  - {fileID: 4973402524869784}
-  - {fileID: 4580031230461558}
-  - {fileID: 4321504539254478}
-  - {fileID: 4159754726905762}
-  - {fileID: 4296165743219550}
-  - {fileID: 4398760672983232}
-  - {fileID: 4256776599012592}
-  - {fileID: 4206713969772598}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65682879671109996}
-  - {fileID: 65735571499292700}
-  - {fileID: 65656465634344132}
-  - {fileID: 65216479044246926}
-  - {fileID: 65851711308115178}
-  - {fileID: 65758196659204842}
-  - {fileID: 65189670996115020}
-  - {fileID: 65588643041445684}
-  - {fileID: 65444497755411820}
-  - {fileID: 65333121435953156}
-  - {fileID: 65770915654830260}
-  - {fileID: 65736697022322422}
-  - {fileID: 65051179437999378}
-  - {fileID: 65519715075038306}
-  - {fileID: 65361476814640342}
-  - {fileID: 65907978045297720}
-  - {fileID: 65343860355314806}
-  - {fileID: 65571677790075956}
-  - {fileID: 65790954595560070}
-  - {fileID: 65342979250810072}
-  - {fileID: 65593279945562876}
-  - {fileID: 65593890389297684}
-  - {fileID: 65450864857679794}
-  - {fileID: 65154369293447668}
-  - {fileID: 65811943551398146}
-  - {fileID: 65024381211014116}
-  - {fileID: 65828901994619038}
-  - {fileID: 65883468779450616}
-  - {fileID: 65416426993215740}
-  - {fileID: 65489378990476584}
-  - {fileID: 65622925416063746}
-  - {fileID: 65044980195117790}
-  - {fileID: 65647652024563962}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0
-  salientMaterials: 02000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54587287708327196
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451403365470408}
-  serializedVersion: 2
-  m_Mass: 0.4
-  m_Drag: 0.2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2584054924099459230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451403365470408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisableThis: {fileID: 1503253421830514}
-  isUsedUp: 0
 --- !u!1 &1464077504437226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,6 +1566,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1687,6 +1578,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2308,6 +2200,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2321,6 +2214,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

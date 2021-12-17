@@ -7,10 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8972506599944169611, guid: 0899a7d2e91ed2445a80122d0e49d234,
+    - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
-      propertyPath: m_Name
-      value: Ottoman_208_Master
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
@@ -29,6 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -40,16 +45,6 @@ PrefabInstance:
     - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8972506599944169608, guid: 0899a7d2e91ed2445a80122d0e49d234,
@@ -67,11 +62,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8972506599944169611, guid: 0899a7d2e91ed2445a80122d0e49d234,
+        type: 3}
+      propertyPath: m_Name
+      value: Ottoman_208_1
+      objectReference: {fileID: 0}
     - target: {fileID: 8972506599944169718, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
       propertyPath: BoundingBox
       value: 
       objectReference: {fileID: 4825802462248286809}
+    - target: {fileID: 8972506599944169718, guid: 0899a7d2e91ed2445a80122d0e49d234,
+        type: 3}
+      propertyPath: MyColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 4825802460870306712}
     - target: {fileID: 8972506599944169718, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
       propertyPath: VisibilityPoints.Array.data[0]
@@ -122,17 +127,14 @@ PrefabInstance:
       propertyPath: ReceptacleTriggerBoxes.Array.data[0]
       value: 
       objectReference: {fileID: 4826901867632552823}
-    - target: {fileID: 8972506599944169718, guid: 0899a7d2e91ed2445a80122d0e49d234,
-        type: 3}
-      propertyPath: MyColliders.Array.data[0]
-      value: 
-      objectReference: {fileID: 4825802460870306712}
     - target: {fileID: 9012307294291304763, guid: 0899a7d2e91ed2445a80122d0e49d234,
         type: 3}
       propertyPath: myParent
       value: 
       objectReference: {fileID: 4825802461857014445}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8972506599944169718, guid: 0899a7d2e91ed2445a80122d0e49d234, type: 3}
+    - {fileID: 8972506599944169609, guid: 0899a7d2e91ed2445a80122d0e49d234, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0899a7d2e91ed2445a80122d0e49d234, type: 3}
 --- !u!1 &4825802461857014445 stripped
 GameObject:

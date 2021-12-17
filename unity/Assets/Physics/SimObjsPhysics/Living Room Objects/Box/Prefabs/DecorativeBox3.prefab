@@ -89,7 +89,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1789132262655670}
-  occupied: 0
 --- !u!1 &1025449826270416
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyContains: []
   myParent: {fileID: 1789132262655670}
-  occupied: 0
 --- !u!1 &1104517511295018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2301,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2314,6 +2313,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2335,8 +2335,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4040949677708724}
-  - component: {fileID: 114784415513769008}
-  - component: {fileID: 54050971051059656}
   m_Layer: 8
   m_Name: DecorativeBox3
   m_TagString: SimObjPhysics
@@ -2365,89 +2363,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114784415513769008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789132262655670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Box|+04.03|-00.34|+07.28
-  Type: 52
-  PrimaryProperty: 3
-  SecondaryProperties: 07000000
-  BoundingBox: {fileID: 1535755187365184}
-  VisibilityPoints:
-  - {fileID: 4907485782812078}
-  - {fileID: 4705925982260196}
-  - {fileID: 4542260931930738}
-  - {fileID: 4340762985739404}
-  - {fileID: 4275915140876838}
-  - {fileID: 4302549107920238}
-  - {fileID: 4370868697994002}
-  - {fileID: 4939101879564072}
-  - {fileID: 4074892186408958}
-  ReceptacleTriggerBoxes:
-  - {fileID: 1102418464919978}
-  - {fileID: 1020439790837568}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65238072091288042}
-  - {fileID: 65163461342191338}
-  - {fileID: 65441178501991616}
-  - {fileID: 65673763830008088}
-  - {fileID: 65374695691491576}
-  - {fileID: 65391701393049574}
-  - {fileID: 65662202350128170}
-  - {fileID: 65512184165764478}
-  - {fileID: 65456242430018638}
-  - {fileID: 65959669068465110}
-  - {fileID: 65667208601555780}
-  - {fileID: 65421983706571990}
-  - {fileID: 65782326477339722}
-  - {fileID: 65772280118703572}
-  - {fileID: 65501836203409108}
-  - {fileID: 65316975554098436}
-  - {fileID: 65885888749584834}
-  - {fileID: 65622478024247872}
-  - {fileID: 65388831677989152}
-  - {fileID: 65690549891050706}
-  - {fileID: 65001609655560408}
-  - {fileID: 65689013150341060}
-  HFdynamicfriction: 1.5
-  HFstaticfriction: 1.5
-  HFbounciness: 0
-  HFrbdrag: 0.3
-  HFrbangulardrag: 0.1
-  salientMaterials: 09000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54050971051059656
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789132262655670}
-  serializedVersion: 2
-  m_Mass: 0.14
-  m_Drag: 0.5
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1833988933271362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2506,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2602,6 +2518,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

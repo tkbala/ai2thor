@@ -871,9 +871,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4269077010394320}
-  - component: {fileID: 114466295823916254}
-  - component: {fileID: 54446828772730858}
-  - component: {fileID: 4280494634989384995}
   m_Layer: 8
   m_Name: Vase_Open_2
   m_TagString: SimObjPhysics
@@ -900,113 +897,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114466295823916254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257885013209146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Vase|+00.00|+00.00|+00.00
-  Type: 121
-  PrimaryProperty: 3
-  SecondaryProperties: 0b00000033000000
-  BoundingBox: {fileID: 1392675012980472}
-  VisibilityPoints:
-  - {fileID: 4953206212321230}
-  - {fileID: 4833029683514060}
-  - {fileID: 4567374865198940}
-  - {fileID: 4391989680694234}
-  - {fileID: 4127408008102022}
-  - {fileID: 4338406149389984}
-  - {fileID: 4176713794538192}
-  - {fileID: 4039721557761864}
-  - {fileID: 4675767312315206}
-  - {fileID: 4671536284658536}
-  - {fileID: 4176579912634982}
-  - {fileID: 4902365783565168}
-  - {fileID: 4341735654219586}
-  - {fileID: 4531435228127714}
-  - {fileID: 4629483235700898}
-  - {fileID: 4182215610680702}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65606012149634204}
-  - {fileID: 65073344092179778}
-  - {fileID: 65761481431870712}
-  - {fileID: 65923664009996142}
-  - {fileID: 65011555052254408}
-  - {fileID: 65240853702522324}
-  - {fileID: 65800355801084646}
-  - {fileID: 65956541631683964}
-  - {fileID: 65539242996508296}
-  - {fileID: 65298789566791408}
-  - {fileID: 65310191322263754}
-  - {fileID: 65647315945575978}
-  - {fileID: 65265078233108586}
-  - {fileID: 65229754998016646}
-  - {fileID: 65609161454492276}
-  - {fileID: 65338727141304454}
-  - {fileID: 65772617958993238}
-  - {fileID: 65587449494980086}
-  - {fileID: 65507241297053702}
-  - {fileID: 65589440370033944}
-  HFdynamicfriction: 1
-  HFstaticfriction: 1
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 03000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54446828772730858
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257885013209146}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4280494634989384995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257885013209146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b2beb760fcd4a6f957400c276adb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PrefabToSwapTo: {fileID: 4888266005341909105, guid: b8b10a25575128f4eb6600151139dd58,
-    type: 3}
-  DirtyPrefabToSwapTo: {fileID: 0}
-  ImpulseThreshold: 4
-  HighFrictionImpulseOffset: 2
-  readytobreak: 1
-  broken: 0
-  breakType: 0
-  MaterialSwapObjects: []
 --- !u!1 &1259031980812158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,6 +2445,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2566,6 +2457,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

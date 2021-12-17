@@ -346,6 +346,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -357,6 +358,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -483,8 +485,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4830292002858172}
-  - component: {fileID: 114005518827684496}
-  - component: {fileID: 54833417889224738}
   m_Layer: 8
   m_Name: BathTowel1
   m_TagString: SimObjPhysics
@@ -511,62 +511,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114005518827684496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851059753860886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Towel|-01.15|+00.46|-05.90
-  Type: 85
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1609020989337176}
-  VisibilityPoints:
-  - {fileID: 4088521010937262}
-  - {fileID: 4009611993110914}
-  - {fileID: 4153693697830316}
-  - {fileID: 4084227047803630}
-  - {fileID: 4702955464126806}
-  - {fileID: 4715576004473178}
-  - {fileID: 4197449823587000}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65285980380777910}
-  HFdynamicfriction: 1.7
-  HFstaticfriction: 1.7
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0.1
-  salientMaterials: 06000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54833417889224738
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851059753860886}
-  serializedVersion: 2
-  m_Mass: 0.57
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1997777976870792
 GameObject:
   m_ObjectHideFlags: 0

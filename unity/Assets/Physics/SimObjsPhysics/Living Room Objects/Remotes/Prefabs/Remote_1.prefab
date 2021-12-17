@@ -461,6 +461,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -472,6 +473,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -563,8 +565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4220143736793536}
-  - component: {fileID: 114808468742549482}
-  - component: {fileID: 54642347945416388}
   m_Layer: 8
   m_Name: Remote_1
   m_TagString: SimObjPhysics
@@ -591,68 +591,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114808468742549482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795126485433074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: RemoteControl|+00.00|-00.24|-06.01
-  Type: 51
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1039967997684424}
-  VisibilityPoints:
-  - {fileID: 4377516472577604}
-  - {fileID: 4120472781707748}
-  - {fileID: 4516257105806618}
-  - {fileID: 4235126164901538}
-  - {fileID: 4853462449657074}
-  - {fileID: 4260024797309720}
-  - {fileID: 4613322300595288}
-  - {fileID: 4362140704677538}
-  - {fileID: 4692199971234178}
-  - {fileID: 4396899579871640}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65987792925830684}
-  - {fileID: 65661309591982814}
-  HFdynamicfriction: 1.8
-  HFstaticfriction: 1.8
-  HFbounciness: 0.1
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 0000000002000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54642347945416388
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795126485433074}
-  serializedVersion: 2
-  m_Mass: 0.15
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1825566436570808
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +793,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -870,6 +809,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

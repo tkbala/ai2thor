@@ -853,6 +853,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -868,6 +869,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1230,6 +1232,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1245,6 +1248,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1296,8 +1300,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4949930955180152}
-  - component: {fileID: 114030738461256286}
-  - component: {fileID: 54815604571533028}
   m_Layer: 8
   m_Name: Alarm_Clock_24
   m_TagString: SimObjPhysics
@@ -1324,78 +1326,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114030738461256286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886415681041474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: AlarmClock|+24.00|+24.00|+24.00
-  Type: 78
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1818933163838140}
-  VisibilityPoints:
-  - {fileID: 4230742315400310}
-  - {fileID: 4870773301551610}
-  - {fileID: 4706459740313108}
-  - {fileID: 4024133777046506}
-  - {fileID: 4576025538795588}
-  - {fileID: 4037206058893504}
-  - {fileID: 4944264018723884}
-  - {fileID: 4090438480194682}
-  - {fileID: 4915994219310704}
-  - {fileID: 4306105164386046}
-  - {fileID: 4191780962915420}
-  - {fileID: 4579452005914354}
-  - {fileID: 4615724304071026}
-  - {fileID: 4324166788537372}
-  - {fileID: 4937825281276014}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65535370618386318}
-  - {fileID: 65021275268371178}
-  - {fileID: 65834825050922088}
-  - {fileID: 65349767357127626}
-  - {fileID: 65270254391542666}
-  - {fileID: 65405041401665224}
-  - {fileID: 65470495174434820}
-  HFdynamicfriction: 0.8
-  HFstaticfriction: 0.8
-  HFbounciness: 0
-  HFrbdrag: 5
-  HFrbangulardrag: 200
-  salientMaterials: 000000000200000003000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54815604571533028
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886415681041474}
-  serializedVersion: 2
-  m_Mass: 0.8
-  m_Drag: 0.5
-  m_AngularDrag: 100
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1954980656277744
 GameObject:
   m_ObjectHideFlags: 0

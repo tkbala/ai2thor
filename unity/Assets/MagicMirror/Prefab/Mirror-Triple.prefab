@@ -429,7 +429,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4180354014619964}
-  - component: {fileID: 114625461685769272}
   m_Layer: 0
   m_Name: Mirror-Triple
   m_TagString: Untagged
@@ -458,29 +457,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114625461685769272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693127448620886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b7fc7cdbba2b4489915a8923a46f91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaximumPerPixelLights: 2
-  TextureSize: 512
-  ClipPlaneOffset: 0.07
-  FarClipPlane: 1000
-  ReflectLayers:
-    serializedVersion: 2
-    m_Bits: 1847
-  AddFlareLayer: 0
-  NormalIsForward: 1
-  AspectRatio: 1.5
-  MirrorRecursion: 0
 --- !u!1 &1386175622947370694
 GameObject:
   m_ObjectHideFlags: 0

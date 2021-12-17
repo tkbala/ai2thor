@@ -1070,6 +1070,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1082,6 +1083,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2418,8 +2420,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4451647671820680}
-  - component: {fileID: 114286447433065998}
-  - component: {fileID: 54733276190384710}
   m_Layer: 8
   m_Name: Ladle_3
   m_TagString: SimObjPhysics
@@ -2446,93 +2446,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114286447433065998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736316611057674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Ladle|+00.00|+00.00|+00.00
-  Type: 143
-  PrimaryProperty: 3
-  SecondaryProperties: 
-  BoundingBox: {fileID: 1899972427414336}
-  VisibilityPoints:
-  - {fileID: 4976701536669826}
-  - {fileID: 4541269618607896}
-  - {fileID: 4817531035689588}
-  - {fileID: 4079187646326356}
-  - {fileID: 4623768930026964}
-  - {fileID: 4514412547887958}
-  - {fileID: 4679336976360926}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65783580088214668}
-  - {fileID: 65877540358070082}
-  - {fileID: 65257857130566034}
-  - {fileID: 65817822938188732}
-  - {fileID: 65261736207398876}
-  - {fileID: 65491663393911306}
-  - {fileID: 65507120752143194}
-  - {fileID: 65636774081697966}
-  - {fileID: 65284698422456934}
-  - {fileID: 65034194612355450}
-  - {fileID: 65542818977553554}
-  - {fileID: 65499661423746724}
-  - {fileID: 65029837096630384}
-  - {fileID: 65027928526640470}
-  - {fileID: 65900479811655908}
-  - {fileID: 65200126846370256}
-  - {fileID: 65797965979820316}
-  - {fileID: 65506303363428202}
-  - {fileID: 65697469095111354}
-  - {fileID: 65563473565652210}
-  - {fileID: 65092488798938000}
-  - {fileID: 65026158240708816}
-  - {fileID: 65780312004783024}
-  - {fileID: 65476687894088208}
-  - {fileID: 65759946504510836}
-  - {fileID: 65153127345059356}
-  - {fileID: 65326568721064324}
-  - {fileID: 65241743335948584}
-  - {fileID: 65576955922824926}
-  - {fileID: 65852017354155806}
-  HFdynamicfriction: 1.2
-  HFstaticfriction: 1.2
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 0000000002000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54733276190384710
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736316611057674}
-  serializedVersion: 2
-  m_Mass: 0.08
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1755011407486604
 GameObject:
   m_ObjectHideFlags: 0

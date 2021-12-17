@@ -1827,8 +1827,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3576242109363204043}
-  - component: {fileID: 3576242109363204040}
-  - component: {fileID: 3576242109363204042}
   m_Layer: 8
   m_Name: thorkea_sofa_vreta
   m_TagString: SimObjPhysics
@@ -1856,215 +1854,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3576242109363204040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576242109363204041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Sofa|-00.84|+00.00|-10.59
-  Type: 115
-  PrimaryProperty: 1
-  SecondaryProperties: 07000000
-  BoundingBox: {fileID: 3576242110175998422}
-  VisibilityPoints:
-  - {fileID: 3576242109169545748}
-  - {fileID: 1314235261881298991}
-  - {fileID: 969902963188349778}
-  - {fileID: 5931250297296688011}
-  - {fileID: 7624328911574206662}
-  - {fileID: 1053845880310362900}
-  - {fileID: 7554877769095905169}
-  - {fileID: 1083977895481765408}
-  - {fileID: 878193934794614512}
-  - {fileID: 5687668591125898553}
-  - {fileID: 3128711217034895231}
-  - {fileID: 5944548332603008225}
-  - {fileID: 434563090468067993}
-  - {fileID: 1330371878945550953}
-  - {fileID: 4616479438695403846}
-  - {fileID: 2870450490029017502}
-  - {fileID: 3156896339625388768}
-  - {fileID: 8734874654785727189}
-  - {fileID: 2990593530857896287}
-  - {fileID: 8031739683589235520}
-  - {fileID: 2892614064272683981}
-  - {fileID: 4372709268453194858}
-  - {fileID: 2469456472392612637}
-  - {fileID: 595253072337996101}
-  - {fileID: 2281445392516481134}
-  - {fileID: 5237525729886265965}
-  - {fileID: 6728508492938031768}
-  - {fileID: 1003195307261538822}
-  - {fileID: 4436728107189125250}
-  - {fileID: 2842644835332990422}
-  - {fileID: 91516668294796679}
-  - {fileID: 2419270424058904890}
-  - {fileID: 5616213191702183601}
-  - {fileID: 3146116049529760978}
-  - {fileID: 656531174109973650}
-  - {fileID: 808339940161912332}
-  - {fileID: 4685667101447696213}
-  - {fileID: 4138548689403603172}
-  - {fileID: 1655563718906297373}
-  - {fileID: 3340194672917385049}
-  - {fileID: 3725254575265356836}
-  - {fileID: 7249020280769603330}
-  - {fileID: 1520902189627168301}
-  - {fileID: 417869986869987872}
-  - {fileID: 3869018923462145898}
-  - {fileID: 5031278155267034596}
-  - {fileID: 6078300223575044699}
-  - {fileID: 7626620742889244835}
-  - {fileID: 7112476984568138695}
-  - {fileID: 7517427782499837699}
-  - {fileID: 1032683992994499688}
-  - {fileID: 3160573160236600724}
-  - {fileID: 2519569723137344375}
-  - {fileID: 6916965925008997039}
-  - {fileID: 5096755197105550499}
-  - {fileID: 3803668499351555406}
-  - {fileID: 3329094670168957507}
-  - {fileID: 5311570050168872094}
-  - {fileID: 443795774366158352}
-  - {fileID: 830402128475794360}
-  - {fileID: 2850453156171476393}
-  - {fileID: 2837173339425741817}
-  - {fileID: 1825042704935189419}
-  - {fileID: 7028919538881059757}
-  - {fileID: 5512223634744664993}
-  - {fileID: 7042459775937366695}
-  - {fileID: 5064867727532200001}
-  - {fileID: 7371531714528678425}
-  - {fileID: 1546721269753988257}
-  - {fileID: 7447986883442499485}
-  - {fileID: 3406491476425759921}
-  - {fileID: 3057898373945406198}
-  - {fileID: 7309397419141294435}
-  - {fileID: 6345296789240002140}
-  - {fileID: 3158423823124339659}
-  - {fileID: 2174098725457299464}
-  - {fileID: 8962465808733673446}
-  - {fileID: 6803635740324817444}
-  - {fileID: 1482249805359820196}
-  - {fileID: 1933300706244151372}
-  - {fileID: 9064561797431398064}
-  - {fileID: 140259492612693955}
-  - {fileID: 1910143508689257906}
-  - {fileID: 3383870606053744794}
-  - {fileID: 6103163728225672687}
-  - {fileID: 3762721037725610581}
-  - {fileID: 5522288317495549100}
-  - {fileID: 9046291679823296699}
-  - {fileID: 3296958889379571207}
-  - {fileID: 1478099141721847519}
-  - {fileID: 6066480640641464663}
-  - {fileID: 3557570409477680461}
-  - {fileID: 3783757742555425158}
-  - {fileID: 84568773974315296}
-  - {fileID: 5455061417371123827}
-  - {fileID: 7870206082312505527}
-  - {fileID: 342780730173187037}
-  - {fileID: 3907642451592801674}
-  - {fileID: 999997990480058452}
-  - {fileID: 2639672255261850262}
-  - {fileID: 1299118751514263491}
-  - {fileID: 4545846627936274218}
-  - {fileID: 8071929161737907251}
-  - {fileID: 8797797040595682831}
-  - {fileID: 2585267233853803671}
-  - {fileID: 5969947078023842116}
-  - {fileID: 3615658213202493141}
-  - {fileID: 2433619956497901647}
-  - {fileID: 2278224503902993201}
-  - {fileID: 8162392313093896826}
-  - {fileID: 7891910452622115230}
-  - {fileID: 8771569746530560429}
-  - {fileID: 939248079357487147}
-  - {fileID: 3899693503499885324}
-  - {fileID: 5214694906935617887}
-  - {fileID: 1532259741222852795}
-  - {fileID: 6713095751928239002}
-  - {fileID: 7713534948123124946}
-  - {fileID: 1252777120285893357}
-  - {fileID: 8027420045977096395}
-  - {fileID: 2165698036115900193}
-  - {fileID: 3243563188891169543}
-  - {fileID: 6599980294098008933}
-  - {fileID: 7929292121078505115}
-  - {fileID: 7156345537259732078}
-  - {fileID: 3392004570859010479}
-  - {fileID: 2731773076843819056}
-  - {fileID: 8384382562777526479}
-  - {fileID: 7437173255178674826}
-  - {fileID: 5993241351940279324}
-  - {fileID: 8862536479158045527}
-  - {fileID: 9201648871377800439}
-  - {fileID: 3089994893828899555}
-  - {fileID: 361926796765953688}
-  - {fileID: 2101813564117749839}
-  - {fileID: 3884462692680190118}
-  - {fileID: 2525849736589558476}
-  - {fileID: 5382857331778355841}
-  - {fileID: 2932273910267858312}
-  - {fileID: 8713637517825919167}
-  - {fileID: 1938641986161250638}
-  - {fileID: 4625913754044019621}
-  - {fileID: 1878157934737778764}
-  - {fileID: 8599255676606465492}
-  - {fileID: 3927814982518036619}
-  - {fileID: 20241981266775290}
-  - {fileID: 13653521190817326}
-  - {fileID: 6016285880320569886}
-  - {fileID: 2020105371185753852}
-  - {fileID: 2334381573987052562}
-  ReceptacleTriggerBoxes:
-  - {fileID: 3577394300493612977}
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 3576242109180658957}
-  - {fileID: 4792320509088026709}
-  - {fileID: 6549469232733015975}
-  - {fileID: 955445744544718057}
-  - {fileID: 6419305979355580643}
-  - {fileID: 1388402073666375727}
-  - {fileID: 7043117364093415842}
-  - {fileID: 7112388707267349051}
-  HFdynamicfriction: 0
-  HFstaticfriction: 0
-  HFbounciness: 0
-  HFrbdrag: 0
-  HFrbangulardrag: 0
-  salientMaterials: 06000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &3576242109363204042
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576242109363204041}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3576242110175998422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,6 +5552,10 @@ PrefabInstance:
       value: ReceptacleTriggerBox
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5775,6 +5568,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -5785,14 +5582,6 @@ PrefabInstance:
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4251536333782420, guid: 6877aba5a696347dbb6c01f851f2da28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5808,18 +5597,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
+      propertyPath: m_Size.x
+      value: 2.6411586
+      objectReference: {fileID: 0}
+    - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
+        type: 3}
       propertyPath: m_Size.y
       value: 0.36666167
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
-      propertyPath: m_Center.y
-      value: 0.18333083
-      objectReference: {fileID: 0}
-    - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.6411586
+      propertyPath: m_Size.z
+      value: 1.2158499
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
@@ -5828,8 +5617,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
-      propertyPath: m_Size.z
-      value: 1.2158499
+      propertyPath: m_Center.y
+      value: 0.18333083
       objectReference: {fileID: 0}
     - target: {fileID: 65569799956894354, guid: 6877aba5a696347dbb6c01f851f2da28,
         type: 3}
@@ -5849,12 +5638,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3576242108889671143}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3577394300493612977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1170333579371094, guid: 6877aba5a696347dbb6c01f851f2da28,
-    type: 3}
-  m_PrefabInstance: {fileID: 3576242108889671143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3576242109792163592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5866,6 +5649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
         type: 3}
@@ -5884,6 +5672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -5896,16 +5689,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 981150644175131759, guid: 56858120e2c5fd940ae0d49ebaede09e,
         type: 3}

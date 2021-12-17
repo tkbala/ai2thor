@@ -97,9 +97,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4163819541419734}
-  - component: {fileID: 114515852017132224}
-  - component: {fileID: 54476125202591708}
-  - component: {fileID: 3516560498200235686}
   m_Layer: 8
   m_Name: Soap_Bottle_6
   m_TagString: SimObjPhysics
@@ -126,106 +123,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114515852017132224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041746718281678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: 
-  Type: 67
-  PrimaryProperty: 3
-  SecondaryProperties: 06000000
-  BoundingBox: {fileID: 1917663072312438}
-  VisibilityPoints:
-  - {fileID: 4855758094516422}
-  - {fileID: 4940458630225246}
-  - {fileID: 4929739645084742}
-  - {fileID: 4572311796614412}
-  - {fileID: 4334734542430302}
-  - {fileID: 4537406208060464}
-  - {fileID: 4003061001239008}
-  - {fileID: 4113973186644320}
-  - {fileID: 4377894787261420}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65896639503628650}
-  - {fileID: 65673026929561844}
-  - {fileID: 65694870058529088}
-  - {fileID: 65146373205484702}
-  - {fileID: 65586526007775136}
-  - {fileID: 65575798309310954}
-  - {fileID: 65972670002199174}
-  - {fileID: 65908767833841628}
-  - {fileID: 65318576892087714}
-  - {fileID: 65112714482118218}
-  - {fileID: 65570675944065442}
-  - {fileID: 65760829388299532}
-  - {fileID: 65547340455160460}
-  - {fileID: 65413274340372012}
-  - {fileID: 65610385127444716}
-  - {fileID: 65350136799170456}
-  - {fileID: 65743514810966220}
-  - {fileID: 65846879636096674}
-  - {fileID: 65775500951249626}
-  - {fileID: 65178932215139630}
-  - {fileID: 65720031612419394}
-  - {fileID: 65895576939330558}
-  - {fileID: 65055096079156212}
-  - {fileID: 65363120147355514}
-  - {fileID: 65290262804276602}
-  - {fileID: 65130559531715104}
-  - {fileID: 65859406684296506}
-  - {fileID: 65203285290420910}
-  - {fileID: 65853781472430628}
-  HFdynamicfriction: 1.1
-  HFstaticfriction: 1.1
-  HFbounciness: 0
-  HFrbdrag: 0.4
-  HFrbangulardrag: 0
-  salientMaterials: 02000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  ContainedObjectReferences: []
---- !u!54 &54476125202591708
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041746718281678}
-  serializedVersion: 2
-  m_Mass: 0.4
-  m_Drag: 0.2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3516560498200235686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041746718281678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82c2105f4dc674ce9835e05ace7e011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisableThis: {fileID: 1718261429668656}
-  isUsedUp: 0
 --- !u!1 &1078301953221586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2054,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2168,6 +2066,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2367,6 +2266,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2380,6 +2280,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

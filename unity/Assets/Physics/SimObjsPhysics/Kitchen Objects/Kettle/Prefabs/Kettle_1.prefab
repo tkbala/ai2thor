@@ -599,10 +599,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4149437557687504}
-  - component: {fileID: 114364109663043602}
-  - component: {fileID: 54107814694180392}
-  - component: {fileID: 1460805962944373418}
-  - component: {fileID: 5774410682915560510}
   m_Layer: 8
   m_Name: Kettle_1
   m_TagString: SimObjPhysics
@@ -633,183 +629,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114364109663043602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158546357057600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b439f6e4ef5714ee2a3643acf37b7a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueID: Kettle|+00.00|+00.00|+00.00
-  Type: 97
-  PrimaryProperty: 3
-  SecondaryProperties: 0500000008000000
-  BoundingBox: {fileID: 1421546548949674}
-  VisibilityPoints:
-  - {fileID: 4289929660632892}
-  - {fileID: 4792747494362622}
-  - {fileID: 4840731686817062}
-  - {fileID: 4911598303142180}
-  - {fileID: 4842022836021326}
-  - {fileID: 4335305098096456}
-  - {fileID: 4429645429729832}
-  - {fileID: 4837160935425502}
-  - {fileID: 4679863217158438}
-  - {fileID: 4621471547130396}
-  - {fileID: 4045427472459044}
-  - {fileID: 4535460344605320}
-  - {fileID: 4375718152361812}
-  - {fileID: 4608448705659752}
-  - {fileID: 4122944498288290}
-  - {fileID: 4458663157542084}
-  - {fileID: 4924381907283742}
-  - {fileID: 3686476061812960166}
-  - {fileID: 587271017430841305}
-  - {fileID: 6720882852194946326}
-  - {fileID: 2728826828982084763}
-  ReceptacleTriggerBoxes: []
-  isVisible: 0
-  isInteractable: 0
-  isInAgentHand: 0
-  MyColliders:
-  - {fileID: 65488255272266370}
-  - {fileID: 65944032960789680}
-  - {fileID: 65067400466602634}
-  - {fileID: 65663511150687590}
-  - {fileID: 65887375644373492}
-  - {fileID: 65296474937214648}
-  - {fileID: 65644370892929512}
-  - {fileID: 65395582809217438}
-  - {fileID: 65000266684306590}
-  - {fileID: 65053447201254738}
-  - {fileID: 65387430479320588}
-  - {fileID: 65882173176189530}
-  - {fileID: 65650697807278060}
-  - {fileID: 65753520132822330}
-  - {fileID: 65590368449736120}
-  - {fileID: 65959371693144590}
-  - {fileID: 65184318250906056}
-  - {fileID: 65223076852416062}
-  - {fileID: 65880221596152896}
-  - {fileID: 65892746281177422}
-  - {fileID: 65887813101236484}
-  - {fileID: 65343204133728976}
-  - {fileID: 65186406564159696}
-  - {fileID: 65834192751059892}
-  - {fileID: 65710713491119870}
-  - {fileID: 65562287460650804}
-  - {fileID: 65386046454751130}
-  - {fileID: 65294234049242794}
-  - {fileID: 65020611287355912}
-  - {fileID: 65188078613905184}
-  - {fileID: 65480539686637798}
-  - {fileID: 65632353154862470}
-  - {fileID: 65530988732856838}
-  - {fileID: 65115284829439466}
-  - {fileID: 65282105954234034}
-  - {fileID: 65101316462484466}
-  - {fileID: 65692071961423332}
-  - {fileID: 65554525062608800}
-  - {fileID: 65137462749739022}
-  - {fileID: 65374306709465936}
-  - {fileID: 65159887772265710}
-  - {fileID: 65086830974826108}
-  - {fileID: 65043652419612916}
-  - {fileID: 65609854817229540}
-  - {fileID: 65131677644769916}
-  - {fileID: 65965293386006810}
-  - {fileID: 65518157547441734}
-  - {fileID: 65807546229500910}
-  - {fileID: 65805670251376308}
-  - {fileID: 65817669148861104}
-  - {fileID: 65938380113180204}
-  - {fileID: 65591174900289082}
-  - {fileID: 65843222110304792}
-  - {fileID: 65557558133714174}
-  - {fileID: 65372813475200664}
-  - {fileID: 65315100879879450}
-  - {fileID: 65656212815089982}
-  - {fileID: 65782601337665050}
-  - {fileID: 65603639726752660}
-  - {fileID: 9208798669747538217}
-  - {fileID: 8128031987768923537}
-  - {fileID: 4905665586415249270}
-  - {fileID: 1030769205352892922}
-  - {fileID: 8515160047187396363}
-  HFdynamicfriction: 3
-  HFstaticfriction: 3
-  HFbounciness: 0
-  HFrbdrag: 3
-  HFrbangulardrag: 0.3
-  salientMaterials: 0000000002000000
-  CurrentTemperature: 0
-  HowManySecondsUntilRoomTemp: 10
-  inMotion: 0
-  lastVelocity: 0
-  ContainedObjectReferences: []
---- !u!54 &54107814694180392
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158546357057600}
-  serializedVersion: 2
-  m_Mass: 0.8
-  m_Drag: 1
-  m_AngularDrag: 0.3
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1460805962944373418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158546357057600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd11d6a356024a8fa04845f53405c23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WaterObject: {fileID: 3685028592178658280}
-  CoffeeObject: {fileID: 82538264593656548}
-  WineObject: {fileID: 7792734193836005377}
-  isFilled: 0
---- !u!114 &5774410682915560510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158546357057600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f742cdae0124730b5b59765384368a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovingParts:
-  - {fileID: 1172295551995046656}
-  openPositions:
-  - {x: -120, y: 0, z: 0}
-  closedPositions:
-  - {x: 0, y: 0, z: 0}
-  animationTime: 0.2
-  openPercentage: 1
-  IgnoreTheseObjects: []
-  isOpen: 0
-  canReset: 1
-  movementType: 1
-  OpenBoundingBox: {fileID: 0}
-  ClosedBoundingBox: {fileID: 0}
 --- !u!1 &1203549288584494
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +801,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -994,6 +814,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1972,6 +1793,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1984,6 +1806,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7412,10 +7235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4149437557687504}
     m_Modifications:
-    - target: {fileID: 3523776463415279335, guid: fe48d1fb6c421134d94035380061de84,
+    - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
         type: 3}
-      propertyPath: m_Name
-      value: Kettle_Volume_Water_1
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
         type: 3}
@@ -7434,6 +7257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -7446,16 +7274,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
         type: 3}
@@ -7472,14 +7290,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3523776463415279335, guid: fe48d1fb6c421134d94035380061de84,
+        type: 3}
+      propertyPath: m_Name
+      value: Kettle_Volume_Water_1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe48d1fb6c421134d94035380061de84, type: 3}
---- !u!1 &3685028592178658280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3523776463415279335, guid: fe48d1fb6c421134d94035380061de84,
-    type: 3}
-  m_PrefabInstance: {fileID: 271660722738988303}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3685028592178227144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3523776463414780615, guid: fe48d1fb6c421134d94035380061de84,
@@ -7500,6 +7317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -7515,6 +7337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -7527,16 +7354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
         type: 3}
@@ -7555,12 +7372,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1df0854eb11d4f40b77ffce93977d27, type: 3}
---- !u!1 &82538264593656548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3051719294103231687, guid: e1df0854eb11d4f40b77ffce93977d27,
-    type: 3}
-  m_PrefabInstance: {fileID: 3133624194726753827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &82538264593757892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3051719294103388391, guid: e1df0854eb11d4f40b77ffce93977d27,
@@ -7574,10 +7385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4149437557687504}
     m_Modifications:
-    - target: {fileID: 359878891090055341, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
+    - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
         type: 3}
-      propertyPath: m_Name
-      value: Kettle_Volume_Wine_1
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
         type: 3}
@@ -7596,6 +7407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -7608,16 +7424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
         type: 3}
@@ -7634,14 +7440,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 359878891090055341, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
+        type: 3}
+      propertyPath: m_Name
+      value: Kettle_Volume_Wine_1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aab3471fc03aa8c4d86a7b85036d5a4f, type: 3}
---- !u!1 &7792734193836005377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 359878891090055341, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7555863181708953772}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7792734193836164129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 359878891089824909, guid: aab3471fc03aa8c4d86a7b85036d5a4f,
